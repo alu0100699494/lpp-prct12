@@ -1,5 +1,9 @@
 require "math_expansion/version"
+require "math_expansion/matriz.rb"
+require "math_expansion/matriz_densa.rb"
+require "math_expansion/matriz_dispersa.rb"
 
 module MathExpansion
-  # Your code goes here...
+  class Vacio
+  end
 end
