@@ -1,5 +1,7 @@
 require "./lib/math_expansion/matriz.rb"
 
-class ME__Matriz_Densa < ME__Matriz
+module MathExpansion
+  class Matriz_Densa < Matriz
 
+  end
 end

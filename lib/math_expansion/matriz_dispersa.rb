@@ -1,5 +1,7 @@
 require "./lib/math_expansion/matriz.rb"
 
-class ME__Matriz_Dispersa < ME__Matriz
+module MathExpansion
+  class Matriz_Dispersa < Matriz
 
+  end
 end

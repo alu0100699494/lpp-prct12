@@ -3,7 +3,7 @@
 require "./lib/math_expansion.rb"
 require "test/unit"
 
-class Test_Fraccion < Test::Unit::TestCase
+class Test_Matriz < Test::Unit::TestCase
 	def test_simple
 
 	end

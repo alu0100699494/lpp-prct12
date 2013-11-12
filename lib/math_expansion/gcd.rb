@@ -1,7 +1,9 @@
-def ME__gcd(a, b)
-  a, b = a.abs, b.abs
-  while b != 0
-    a, b = b, a % b
+module MathExpansion
+  def self.gcd(a, b)
+    a, b = a.abs, b.abs
+    while b != 0
+      a, b = b, a % b
+    end
+    a
   end
-  a
 end

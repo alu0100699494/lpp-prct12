@@ -1,14 +1,14 @@
 require "./lib/math_expansion/matriz.rb"
 
-describe ME__Matriz do
+describe Matriz do
 
 end
 
-describe ME__Matriz_Densa do
+describe Matriz_Densa do
 
 end
 
 
-describe ME__Matriz_Dispersa do
+describe Matriz_Dispersa do
 
 end
