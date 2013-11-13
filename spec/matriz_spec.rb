@@ -77,5 +77,46 @@ end
 
 
 describe MathExpansion::Matriz_Dispersa do
-
+	before :all do
+		class Fixnum
+			def self.null
+				0
+			end
+		end
+		
+		class String
+			def self.null
+				""
+			end
+		end
+		
+		class Float
+			def self.null
+				0.0
+			end
+		end
+		
+		# Etc
+	end
+	
+	before :each do
+		@m1 = MathExpansion::Matriz_Densa.new(3,2)
+		
+		@m1.set(0,0,0)
+		@m1.set(0,1,0)
+		
+		@m1.set(1,0,1)
+		@m1.set(1,1,1)
+		
+		@m1.set(2,0,0)
+		@m1.set(2,1,0)
+		
+	end
+	
+    describe " # Almacenamiento de matrices. " do
+		it " # Se debe poder crear matrices dispersas vacias o a partir de matrices densas " do		
+			MathExpansion::Matriz_Dispersa.new(5, 5)
+			MathExpansion::Matriz_Dispersa.new(@m1)
+		end
+	end
 end

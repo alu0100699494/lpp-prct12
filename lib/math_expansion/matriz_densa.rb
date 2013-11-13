@@ -32,9 +32,11 @@ module MathExpansion
 	  end
 
 	  # Contar elementos nulos y comprobar si se hace una matriz dispersa
-	  if(value != nil and value != value.class.null) # Y se puede comprobar para todos los tipos si es necesario. (con un método zero, por ejemplo)
+	  # De momento, no dejamos añadir elementos nulos
+	  # ¿o si?
+	  #if(value != nil and value != value.class.null) # Y se puede comprobar para todos los tipos si es necesario. (con un método zero, por ejemplo)
 	    contenido[i][j] = value
-	  end
+	  #end
 	end
 	
     def to_s
