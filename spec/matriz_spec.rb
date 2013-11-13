@@ -112,7 +112,7 @@ describe MathExpansion::Matriz_Dispersa do
 		@m1.set(2,1,0)
 		
 		@md1 = MathExpansion::Matriz_Dispersa.copy(@m1)
-		@md2 = MathExpansion::Matriz_Dispersa.new(5, 5)
+		@md2 = MathExpansion::Matriz_Dispersa.new(3, 2)
 		
 	end
 	
@@ -140,6 +140,14 @@ describe MathExpansion::Matriz_Dispersa do
 		it " # Se deben poder modificar los elementos de la matriz dispersa." do
 		    @md2.set(0,0,1)
 			@md2.get(0,0).should == 1
+			
+			@md2.set(0,1,1)
+			@md2.set(1,0,1)
+			@md2.set(1,1,1)
+			@md2.set(2,0,1)
+			@md2.set(2,1,1)
+			
+			@md2.get(2,1).should == 0 # Elemento nulo debido a que ha sobrepasado el porcentaje máximo de valores nulo
 			
 			@md1.set(1,1,4)
 			@md1.set(1,0,2)
