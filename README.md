@@ -25,7 +25,7 @@ TODO: Write usage instructions here
 La clase Matriz contendrá el número de filas, número de columnas y un vector de contenido.
 
 La matriz densa se representará como en la práctica anterior.
-La matriz dispersa se representará como un array bidimensional de elementos no nulos, un array bidimensional con las filas de cada elemento no nulo, valores auxiliares, etc. Las matrices dispersas se crearán a partir de matrices densas.
+La matriz dispersa se representará como un Array que contendrá un Hash por cada fila. Cada par clave-valor del hash representará la fila de un elemento no nulo y el valor de ese elemento, respectivamente.
 
 Las operaciones entre matrices de cualquier tipo se acabarán realizando como una operación entre matrices densas. Dependiendo del porcentaje de valores nulos, se devolverá la matriz densa resultado o una matriz dispersa creada a partir de esta matriz densa resultado.
 Por tanto, sólo se podrán realizar operaciones del tipo:

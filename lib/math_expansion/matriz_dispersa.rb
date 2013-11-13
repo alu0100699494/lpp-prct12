@@ -2,16 +2,7 @@ require "./lib/math_expansion/matriz.rb"
 require "./lib/math_expansion/matriz_densa.rb"
 
 module MathExpansion
-  class Matriz_Dispersa < Matriz
-    class Elemento
-      attr_reader :columna
-      attr_accessor :valor
-      def initialize(columna, valor)
-        @columna, @valor = columna, valor
-      end
-    end
-    # Nota: el contenido se podria representar de forma mas sencilla con un Array de Hashes, y no con un Array de Arrays
-    
+  class Matriz_Dispersa < Matriz  
     def reset
       @contenido = Array.new(@N) # Array con @N filas y ninguna columna (vacio)
       i = 0
@@ -106,7 +97,7 @@ module MathExpansion
       output = ""
       while(i < @N)
         output += "Fila #{i}: "
-        contenido[i].each{|k, v| output += "#{k}=>#{v} "}
+        contenido[i].sort.each{|k, v| output += "#{k}=>#{v} "}
         output += "\n"
         i += 1
       end
