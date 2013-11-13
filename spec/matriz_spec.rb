@@ -139,7 +139,7 @@ describe MathExpansion::Matriz_Dispersa do
 		
 		it " # Se deben poder modificar los elementos de la matriz dispersa." do
 		    @md2.set(0,0,1)
-			@md2.set(0,0).should == 1
+			@md2.get(0,0).should == 1
 			
 			@md1.set(1,1,4)
 			@md1.set(1,0,2)

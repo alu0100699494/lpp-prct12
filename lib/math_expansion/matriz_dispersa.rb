@@ -4,7 +4,8 @@ require "./lib/math_expansion/matriz_densa.rb"
 module MathExpansion
   class Matriz_Dispersa < Matriz
     class Elemento
-	  attr_reader :columna, :valor
+	  attr_reader :columna
+	  attr_accessor :valor
 	  def initialize(columna, valor)
 	    @columna, @valor = columna, valor
 	  end
@@ -78,8 +79,30 @@ module MathExpansion
 	    k += 1
 	  end
 	  return 0
-	end
+	end #endmethod get
 	
+	def set(i, j, value)
+	  if( i < 0 or i >=@N or j < 0 or j >= @M)
+	    return nil
+	  end
+	  
+	  # COMPROBAR VALORES NULOS!
+	  if(@contenido[i].size == 0)
+	    @contenido[i].insert(0, Elemento.new(j, value))
+      else
+        k = 0
+  	    while( k < @contenido[i].size and @contenido[i].size > 0 and j > @contenido[i][k].columna)
+	      k += 1
+	    end
+	  
+	    # 2 casos:
+	    if(j == @contenido[i][k].columna)    # j == @contenido[i][k].column
+	      @contenido[i][k].valor = value
+	    elsif(j < @contenido[i][k].columna)  # j  < @contenido[i][k].column
+	      @contenido[i].insert(k, value)
+	    end
+	  end #endif
+	end #endmethod set
 	
   end #endclass
 end #end module
