@@ -97,5 +97,21 @@ module MathExpansion
 	  
 	end #endmethod set
 	
+	def to_s
+	  # Ejemplo: "Fila 0: \nFila 1: 0=>1 1=>3 \nFila 2: \n"
+	  # 0 0
+	  # 1 3
+	  # 0 0
+	  i = 0
+	  output = ""
+	  while(i < @N)
+	    output += "Fila #{i}: "
+		contenido[i].each{|k, v| output += "#{k}=>#{v} "}
+		output += "\n"
+	    i += 1
+	  end
+	  output
+	end
+	
   end #endclass
 end #end module

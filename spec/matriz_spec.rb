@@ -160,6 +160,7 @@ describe MathExpansion::Matriz_Dispersa do
 		
 		it " # Se debe poder transformar una matriz dispersa a una cadena de caracteres." do
 			@md1.to_s.should == "Fila 0: \nFila 1: 0=>1 1=>3 \nFila 2: \n"
+			@md2.to_s.should == "Fila 0: \nFila 1: \nFila 2: \n"
 		end
 	end
 end
