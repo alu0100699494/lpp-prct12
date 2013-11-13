@@ -124,7 +124,7 @@ describe MathExpansion::Matriz_Dispersa do
 		
 		it " # Se debe poder calcular el porcentaje de elementos nulos de la matriz dispersa." do
 		    @md2.null_percent.should == 1.0
-			@md1.null_percert.should == 4.0/6.0
+			@md1.null_percent.should == 4.0/6.0
 		end
 	end
 end
