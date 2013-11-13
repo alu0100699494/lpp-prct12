@@ -106,7 +106,7 @@ describe MathExpansion::Matriz_Dispersa do
 		@m1.set(0,1,0)
 		
 		@m1.set(1,0,1)
-		@m1.set(1,1,1)
+		@m1.set(1,1,3)
 		
 		@m1.set(2,0,0)
 		@m1.set(2,1,0)
@@ -125,6 +125,11 @@ describe MathExpansion::Matriz_Dispersa do
 		it " # Se debe poder calcular el porcentaje de elementos nulos de la matriz dispersa." do
 		    @md2.null_percent.should == 1.0
 			@md1.null_percent.should == 4.0/6.0
+		end
+		
+		it " # Se debe poder acceder a los elementos de la matriz dispersa." do
+		    @md2.get(0,0).should == 0
+			@md1.get(1,1).should == 3
 		end
 	end
 end
