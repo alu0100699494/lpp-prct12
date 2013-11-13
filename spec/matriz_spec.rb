@@ -147,7 +147,8 @@ describe MathExpansion::Matriz_Dispersa do
 			@md2.set(2,0,1)
 			@md2.set(2,1,1)
 			
-			@md2.get(2,1).should == 0 # Elemento nulo debido a que ha sobrepasado el porcentaje máximo de valores nulo
+			# Elemento nulo debido a que ha sobrepasado el porcentaje maximo de valores nulos
+			@md2.get(2,1).should == 0
 			
 			@md1.set(1,1,4)
 			@md1.set(1,0,2)
