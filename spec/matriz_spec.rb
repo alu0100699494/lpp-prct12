@@ -116,7 +116,7 @@ describe MathExpansion::Matriz_Dispersa do
     describe " # Almacenamiento de matrices. " do
 		it " # Se debe poder crear matrices dispersas vacias o a partir de matrices densas " do		
 			MathExpansion::Matriz_Dispersa.new(5, 5)
-			MathExpansion::Matriz_Dispersa.new(@m1)
+			MathExpansion::Matriz_Dispersa.copy(@m1)
 		end
 	end
 end
