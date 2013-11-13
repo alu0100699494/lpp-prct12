@@ -34,6 +34,10 @@ module MathExpansion
 	  def coerce(other)
 		  [Fraccion.new(other,1),self]	
 	  end
+	  
+	  def self.null
+		  Fraccion.new(0,1)
+	  end
 
 	  def to_s
 		  "#{@num}/#{@den}"
@@ -74,26 +78,35 @@ module MathExpansion
 
 	# Operadores aritméticos
 	  def +(other) # Operación suma
-		  raise ArgumentError, 'Argumento no racional' unless other.is_a? Fraccion
-		  Fraccion.new(@num*other.den + @den*other.num, @den*other.den) # a/b + c/d = (a*d + b*c)/(b*d)
+		  if(other.respond_to? :den and other.respond_to? :num)
+		    Fraccion.new(@num*other.den + @den*other.num, @den*other.den) # a/b + c/d = (a*d + b*c)/(b*d)
+		  else
+		    Fraccion.new(@num*other + @den*other, @den*other)
+		  end
 	  end
 	
 	  def -(other) # Operación resta
-		  raise ArgumentError, 'Argumento no racional' unless other.is_a? Fraccion
-	
-		  Fraccion.new(@num*other.den - @den*other.num, @den*other.den) # a/b - c/d = (a*d - b*c)/(b*d)
+	      if(other.respond_to? :den and other.respond_to? :num)
+		    Fraccion.new(@num*other.den - @den*other.num, @den*other.den) # a/b - c/d = (a*d - b*c)/(b*d)
+		  else
+		    Fraccion.new(@num*other - @den*other, @den*other)
+		  end
 	  end
 	  
 	  def *(other) # Operación producto
-		  raise ArgumentError, 'Argumento no racional' unless other.is_a? Fraccion
-	
-		  Fraccion.new(@num*other.num, @den*other.den) # a/b * c/d = (a*c)/(b*d)
+	      if(other.respond_to? :den and other.respond_to? :num)
+		    Fraccion.new(@num*other.num, @den*other.den) # a/b * c/d = (a*c)/(b*d)
+		  else
+		    Fraccion.new(@num*other, @den)
+		  end
 	  end
 
 	  def /(other) # Operación división
-		  raise ArgumentError, 'Argumento no racional' unless other.is_a? Fraccion
-	
-		  Fraccion.new(@num*other.den, @den*other.num) # a/b / c/d = (a*d)/(b*c)
+	      if(other.respond_to? :den and other.respond_to? :num)
+		    Fraccion.new(@num*other.den, @den*other.num) # a/b / c/d = (a*d)/(b*c)
+		  else
+		    Fraccion.new(@num, @den*other)
+		  end
 	  end
 	
 	  def %(other) # Operación módulo
@@ -104,10 +117,14 @@ module MathExpansion
 	
     # Operadores comparacionales
 	  def <=> (other)
-		  raise ArgumentError, 'Argumento no racional' unless other.is_a? Fraccion
+		  #raise ArgumentError, 'Argumento no racional' unless other.is_a? Fraccion
 		
 		  # a/b <=> c/d -> (a*d)/(b*d) <=> (c*b)/(d*b) -> a*d <=> c*b
-		  (@num * other.den) <=> (other.num * @den)
+		  if(other.respond_to? :den and other.respond_to? :num)
+		    (@num * other.den) <=> (other.num * @den)
+		  else
+		    (@num.to_f / @den.to_f) <=> (other)
+		  end
 	  end
   end
 end
