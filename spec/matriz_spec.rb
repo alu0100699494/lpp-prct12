@@ -12,7 +12,7 @@ describe MathExpansion::Matriz do
 			@m1.M
 		end
 		it " # Se debe almacenar un contenido." do
-			@m1.M
+			@m1.contenido
 		end
 	end
 end
