@@ -129,7 +129,12 @@ describe MathExpansion::Matriz_Dispersa do
 		
 		it " # Se debe poder acceder a los elementos de la matriz dispersa." do
 		    @md2.get(0,0).should == 0
+			
 			@md1.get(1,1).should == 3
+			@md1.get(1,0).should == 1
+			@md1.get(0,0).should == 0
+			
+			@md1.get(10,10).should == nil
 		end
 	end
 end

@@ -4,6 +4,7 @@ require "./lib/math_expansion/matriz_densa.rb"
 module MathExpansion
   class Matriz_Dispersa < Matriz
     class Elemento
+	  attr_reader :columna, :valor
 	  def initialize(columna, valor)
 	    @columna, @valor = columna, valor
 	  end
@@ -62,6 +63,23 @@ module MathExpansion
 	  
 	  nulos = total - no_nulos
 	  nulos.to_f/total.to_f
+	end #endmethod null_percent
+	
+	def get(i, j)
+	  if( i < 0 or i >=@N or j < 0 or j >= @M)
+	    return nil
+	  end
+	  
+	  k = 0
+	  while( k < @contenido[i].size and @contenido[i].size > 0)
+	    if(@contenido[i][k].columna == j)
+		  return @contenido[i][k].valor
+		end
+	    k += 1
+	  end
+	  return 0
 	end
+	
+	
   end #endclass
 end #end module
