@@ -136,5 +136,17 @@ describe MathExpansion::Matriz_Dispersa do
 			
 			@md1.get(10,10).should == nil
 		end
+		
+		it " # Se deben poder modificar los elementos de la matriz dispersa." do
+		    @md2.set(0,0,1)
+			@md2.set(0,0).should == 1
+			
+			@md1.set(1,1,4)
+			@md1.set(1,0,2)
+			@md1.get(1,1).should == 4
+			@md1.get(1,0).should == 2
+			
+			@md1.get(0,0).should == 0
+		end
 	end
 end
