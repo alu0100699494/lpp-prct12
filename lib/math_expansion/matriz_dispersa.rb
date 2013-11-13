@@ -11,7 +11,7 @@ module MathExpansion
 	#@contenido guarda los valores no nulos.
 	#@indice_contenido guarda la fila del valor no nulo correspondiente a @contenido.
 	#@comienzo_columna guarda la posición de comienzo de la columna.
-	#@elementos_columna es un vector que contiene el número de elementos de la columna.
+	#@elementos_columna es un vector que contiene el numero de elementos de la columna.
 	#@n_nonulo: número de valores no nulos.
 	
 	def reset
@@ -49,5 +49,19 @@ module MathExpansion
 	  end #endwhile i
 	  obj
 	end #endmethod copy
+	
+	def null_percent
+	  total = @N*@M
+	  no_nulos = 0
+	  
+	  i = 0
+	  while(i < @N)
+	    no_nulos += @contenido[i].size # Nunca habra elementos nulos en alguna fila
+	    i += 1
+	  end
+	  
+	  nulos = total - no_nulos
+	  nulos.to_f/total.to_f
+	end
   end #endclass
 end #end module
