@@ -111,12 +111,20 @@ describe MathExpansion::Matriz_Dispersa do
 		@m1.set(2,0,0)
 		@m1.set(2,1,0)
 		
+		@md1 = MathExpansion::Matriz_Dispersa.copy(@m1)
+		@md2 = MathExpansion::Matriz_Dispersa.new(5, 5)
+		
 	end
 	
     describe " # Almacenamiento de matrices. " do
-		it " # Se debe poder crear matrices dispersas vacias o a partir de matrices densas " do		
+		it " # Se debe poder crear matrices dispersas vacias o a partir de matrices densas." do		
 			MathExpansion::Matriz_Dispersa.new(5, 5)
 			MathExpansion::Matriz_Dispersa.copy(@m1)
+		end
+		
+		it " # Se debe poder calcular el porcentaje de elementos nulos de la matriz dispersa." do
+		    @md2.null_percent.should == 1.0
+			@md1.null_percert.should == 4.0/6.0
 		end
 	end
 end
