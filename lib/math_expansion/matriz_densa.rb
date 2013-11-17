@@ -18,9 +18,29 @@ module MathExpansion
         return nil
       end
 
-      contenido[i][j]
+      @contenido[i][j]
     end
+    
+   def null_percent
+      total = @N*@M
+      no_nulos = 0
       
+      i = 0
+      while(i < @N)
+        j = 0
+        while(j < @M)
+          if(@contenido[i][j] != @contenido[i][j].class.null)
+            no_nulos += 1
+	  end
+          j += 1
+        end
+        i += 1
+      end
+      
+      nulos = total - no_nulos
+      nulos.to_f/total.to_f
+    end #endmethod null_percent      
+
     def set(i, j, value)
       if( i < 0 or i >=@N or j < 0 or j >= @M)
        return nil
@@ -35,7 +55,7 @@ module MathExpansion
       # De momento, no dejamos añadir elementos nulos
       # ¿o si?
       #if(value != nil and value != value.class.null) # Y se puede comprobar para todos los tipos si es necesario. (con un método zero, por ejemplo)
-        contenido[i][j] = value
+        @contenido[i][j] = value
       #end
     end
     
@@ -45,7 +65,7 @@ module MathExpansion
       while(i < @N)
         j = 0
         while(j < @M)
-          s += "#{contenido[i][j].to_s}\t"
+          s += "#{@contenido[i][j].to_s}\t"
           j += 1
         end
         s += "\n"

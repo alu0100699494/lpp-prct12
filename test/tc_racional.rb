@@ -51,7 +51,7 @@ class Test_Matriz < Test::Unit::TestCase
 	def test_simple2
 		@md1 = MathExpansion::Matriz_Dispersa.new(2,2)
 		@md2 = MathExpansion::Matriz_Dispersa.new(2,2)
-		@m3 = MathExpansion::Matriz_Densa.new(2,2)
+		@m3 = MathExpansion::Matriz_Dispersa.new(2,2)
 
 		@md1.set(0,0,0)
 		@md1.set(0,1,0)

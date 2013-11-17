@@ -97,7 +97,7 @@ module MathExpansion
       output = ""
       while(i < @N)
         output += "Fila #{i}: "
-        contenido[i].sort.each{|k, v| output += "#{k}=>#{v} "}
+        @contenido[i].sort.each{|k, v| output += "#{k}=>#{v} "}
         output += "\n"
         i += 1
       end
@@ -118,6 +118,9 @@ module MathExpansion
     			end 
     			i += 1
       		end
+		if(c.null_percent > 0.6)
+			c = Matriz_Dispersa.copy(c)
+		end
       		c
     end
 	
@@ -135,6 +138,9 @@ module MathExpansion
     			end
     			i += 1
       		end
+		if(c.null_percent > 0.6)
+			c = Matriz_Dispersa.copy(c)
+		end		
       		c
     end
 	
@@ -174,7 +180,9 @@ module MathExpansion
 	    			i += 1
       			end # while i
     		end # while else
-  
+		if(c.null_percent > 0.6)
+			c = Matriz_Dispersa.copy(c)
+		end  
     		c
     end # *(other)
     
