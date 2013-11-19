@@ -147,5 +147,37 @@ module MathExpansion
   
     		c
     end # *(other)
+
+    def max
+	m = get(0,0)
+        i = 0
+	while(i < @N)
+		j = 0
+		while(j < @M)
+			if (get(i,j) > m)
+				m = get(i,j)
+			end
+			j += 1
+		end
+		i += 1
+	end
+	m
+    end
+
+    def min
+	m = get(0,0)
+        i = 0
+	while(i < @N)
+		j = 0
+		while(j < @M)
+			if (get(i,j) < m)
+				m = get(i,j)
+			end
+			j += 1
+		end
+		i += 1
+	end
+	m
+    end # Method min
   end # Class
 end # Module

@@ -104,6 +104,14 @@ describe MathExpansion::Matriz_Densa do
         (@m1*@m2).to_s.should eq(@m3.to_s)
     end
     end
+    describe " # Operaciones varias. " do
+        it " # Se debe poder calcular el maximo de una matriz densa (elemento no nulo)" do
+		  @m1.max.should == 4
+		end
+		it " # Se debe poder calcular el minimo de una matriz densa (elemento no nulo)" do
+		  @m2.min.should == 5
+		end
+    end
 end
 
 
@@ -243,11 +251,11 @@ describe MathExpansion::Matriz_Dispersa do
 
     end
 	    describe " # Operaciones varias. " do
-        it " # Se debe poder calcular el máximo de una matriz densa (elemento no nulo)" do
+        it " # Se debe poder calcular el maximo de una matriz densa (elemento no nulo)" do
 		  @md1.set(1,0,4)
 		  @md1.max.should == 4
 		end
-		it " # Se debe poder calcular el mínimo de una matriz densa (elemento no nulo)" do
+		it " # Se debe poder calcular el minimo de una matriz densa (elemento no nulo)" do
 		  @md1.min.should == 1
 		end
     end
