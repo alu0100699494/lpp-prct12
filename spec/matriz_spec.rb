@@ -129,6 +129,18 @@ describe MathExpansion::Matriz_Densa do
 	@mf_res.set(1,1,MathExpansion::Fraccion.new(2,3))
 
 	(@mf+@mf).to_s.should eq(@mf_res.to_s)
+    
+    @mf1 = MathExpansion::Matriz_Densa.new(2,2)
+    @mf1.set(1,0,MathExpansion::Fraccion.new(1,4))
+     
+    @mf2 = MathExpansion::Matriz_Densa.new(2,2)
+    @mf2.set(0,0,1)
+    
+    @mf_res = MathExpansion::Matriz_Dispersa.new(2,2)
+    @mf_res.set(1,0,MathExpansion::Fraccion.new(1,4))
+        
+    (@mf1 * @mf2).to_s.should == @mf_res.to_s
+    
     end
     end
     describe " # Operaciones varias. " do
@@ -286,6 +298,16 @@ describe MathExpansion::Matriz_Dispersa do
 	@mf_res.set(1,0,MathExpansion::Fraccion.new(1,2))
 
 	(@mf1-@mf2).to_s.should eq(@mf_res.to_s)
+    
+    
+     @mf3 = MathExpansion::Matriz_Dispersa.new(2,2)
+     @mf3.set(1,0,MathExpansion::Fraccion.new(1,4))
+     
+     @mf4 = MathExpansion::Matriz_Dispersa.new(2,2)
+     @mf4.set(0,0,1)
+     
+     (@mf3 * @mf4).to_s.should == @mf3.to_s
+    
     end
 
     end

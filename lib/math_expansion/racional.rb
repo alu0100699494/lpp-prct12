@@ -81,7 +81,7 @@ module MathExpansion
           if(other.respond_to? :den and other.respond_to? :num)
             Fraccion.new(@num*other.den + @den*other.num, @den*other.den) # a/b + c/d = (a*d + b*c)/(b*d)
           else
-            Fraccion.new(@num*other + @den*other, @den*other)
+            Fraccion.new(@num + @den*other, @den) # a/b + c = (a + b*c)/b
           end
       end
     
@@ -89,23 +89,35 @@ module MathExpansion
           if(other.respond_to? :den and other.respond_to? :num)
             Fraccion.new(@num*other.den - @den*other.num, @den*other.den) # a/b - c/d = (a*d - b*c)/(b*d)
           else
-            Fraccion.new(@num*other - @den*other, @den*other)
+            Fraccion.new(@num - @den*other, @den) # a/b - c = (a - b*c)/b
           end
       end
       
       def *(other) # Operación producto
           if(other.respond_to? :den and other.respond_to? :num)
-            Fraccion.new(@num*other.num, @den*other.den) # a/b * c/d = (a*c)/(b*d)
+            if(@num*other.num == 0)
+              Fraccion.null
+            else
+              Fraccion.new(@num*other.num, @den*other.den) # a/b * c/d = (a*c)/(b*d)
+            end
           else
-            Fraccion.new(@num*other, @den)
+            Fraccion.new(@num*other, @den)  # a/b * c = (a*c)/b
           end
       end
 
       def /(other) # Operación división
           if(other.respond_to? :den and other.respond_to? :num)
-            Fraccion.new(@num*other.den, @den*other.num) # a/b / c/d = (a*d)/(b*c)
+            if(other.num == 0)
+              Fraccion.null
+            else
+              Fraccion.new(@num*other.den, @den*other.num) # a/b / c/d = (a*d)/(b*c)
+            end
           else
-            Fraccion.new(@num, @den*other)
+            if(other == 0)
+              Fraccion.null
+            else
+              Fraccion.new(@num, @den*other)
+            end
           end
       end
     

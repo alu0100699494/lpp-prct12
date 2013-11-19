@@ -97,7 +97,7 @@ module MathExpansion
       output = ""
       while(i < @N)
         output += "Fila #{i}: "
-        @contenido[i].sort.each{|k, v| output += "#{k}=>#{v} "}
+        @contenido[i].sort.each{|k, v| output += "#{k.to_s}=>#{v.to_s} "}
         output += "\n"
         i += 1
       end
@@ -165,13 +165,13 @@ module MathExpansion
       			while(i < @N)
         			j = 0
         			while(j < other.M)
-	      				k = 0
+                    k = 0
 					#if (get(i,j).is_a? Fraccion)	      				
 					#	c.set(i, j, Fraccion.null
 					#else
 					#	c.set(i, j, 0)
 					#end
-	      				while(k < @M)
+                        while(k < @M)
 	        				c.set(i, j, get(i, k) * other.get(k,j) + c.get(i,j))
 	        				k += 1
 	      				end # while k
