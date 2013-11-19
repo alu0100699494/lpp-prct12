@@ -75,34 +75,34 @@ describe MathExpansion::Matriz_Densa do
     end
 
     describe " # Operaciones con matrices densas. " do
-	it " # Se debe poder sumar dos matrices " do
-		@m3 = MathExpansion::Matriz_Densa.new(2,2)
-		@m3.set(0,0,6)
-		@m3.set(0,1,8)
-		@m3.set(1,0,10)
-		@m3.set(1,1,12)
+    it " # Se debe poder sumar dos matrices " do
+        @m3 = MathExpansion::Matriz_Densa.new(2,2)
+        @m3.set(0,0,6)
+        @m3.set(0,1,8)
+        @m3.set(1,0,10)
+        @m3.set(1,1,12)
 
-		(@m1+@m2).to_s.should eq(@m3.to_s)
-	end
+        (@m1+@m2).to_s.should eq(@m3.to_s)
+    end
 
-	it " # Se debe poder restar dos matrices " do
-		@m3 = MathExpansion::Matriz_Densa.new(2,2)
-		@m3.set(0,0,4)
-		@m3.set(0,1,4)
-		@m3.set(1,0,4)
-		@m3.set(1,1,4)
+    it " # Se debe poder restar dos matrices " do
+        @m3 = MathExpansion::Matriz_Densa.new(2,2)
+        @m3.set(0,0,4)
+        @m3.set(0,1,4)
+        @m3.set(1,0,4)
+        @m3.set(1,1,4)
 
-		(@m2-@m1).to_s.should eq(@m3.to_s)
-	end
-	it " # Se debe poder multiplicar dos matrices " do
-		@m3 = MathExpansion::Matriz_Densa.new(2,2)
-		@m3.set(0,0,19)
-		@m3.set(0,1,22)
-		@m3.set(1,0,43)
-		@m3.set(1,1,50)
+        (@m2-@m1).to_s.should eq(@m3.to_s)
+    end
+    it " # Se debe poder multiplicar dos matrices " do
+        @m3 = MathExpansion::Matriz_Densa.new(2,2)
+        @m3.set(0,0,19)
+        @m3.set(0,1,22)
+        @m3.set(1,0,43)
+        @m3.set(1,1,50)
 
-		(@m1*@m2).to_s.should eq(@m3.to_s)
-	end
+        (@m1*@m2).to_s.should eq(@m3.to_s)
+    end
     end
 end
 
@@ -194,52 +194,60 @@ describe MathExpansion::Matriz_Dispersa do
             @md2.to_s.should == "Fila 0: \nFila 1: \nFila 2: \n"
         end
 
-	
+    
     end
 
     describe " # Operaciones con matrices dispersas. " do
-	it " # Se debe poder sumar dos matrices " do		
-		@md3 = MathExpansion::Matriz_Dispersa.new(3,2)
-		@md3.set(0,0,0)
-		@md3.set(0,1,0)
-		@md3.set(1,0,1)
-		@md3.set(1,1,3)
-		@md3.set(2,0,0)
-		@md3.set(2,1,0)
-		
-		
-		(@md1+@md2).to_s.should eq(@md3.to_s)
-	end
-	it " # Se debe poder restar dos matrices " do
-		@md3 = MathExpansion::Matriz_Dispersa.new(3,2)
-		@md3.set(0,0,0)
-		@md3.set(0,1,0)
-		@md3.set(1,0,-1)
-		@md3.set(1,1,-3)
-		@md3.set(2,0,0)
-		@md3.set(2,1,0)
+    it " # Se debe poder sumar dos matrices " do        
+        @md3 = MathExpansion::Matriz_Dispersa.new(3,2)
+        @md3.set(0,0,0)
+        @md3.set(0,1,0)
+        @md3.set(1,0,1)
+        @md3.set(1,1,3)
+        @md3.set(2,0,0)
+        @md3.set(2,1,0)
+        
+        
+        (@md1+@md2).to_s.should eq(@md3.to_s)
+    end
+    it " # Se debe poder restar dos matrices " do
+        @md3 = MathExpansion::Matriz_Dispersa.new(3,2)
+        @md3.set(0,0,0)
+        @md3.set(0,1,0)
+        @md3.set(1,0,-1)
+        @md3.set(1,1,-3)
+        @md3.set(2,0,0)
+        @md3.set(2,1,0)
 
-		(@md2-@md1).to_s.should eq(@md3.to_s)
-	end
-	it " # Se debe poder multiplicar dos matrices " do
-		@md4 = MathExpansion::Matriz_Dispersa.new(2,3)
-		@md4.set(1,0,-1)
-		@md4.set(1,1,-1)
-		@md4.set(1,2,0)
-		
-		@md3 = MathExpansion::Matriz_Dispersa.new(3,3)
-		@md3.set(0,0,0)
-		@md3.set(0,1,0)
-		@md3.set(0,2,0)
-		@md3.set(1,0,-3)
-		@md3.set(1,1,-3)
-		@md3.set(1,2,0)
-		@md3.set(2,0,0)
-		@md3.set(2,1,0)
-		@md3.set(2,2,0)
+        (@md2-@md1).to_s.should eq(@md3.to_s)
+    end
+    it " # Se debe poder multiplicar dos matrices " do
+        @md4 = MathExpansion::Matriz_Dispersa.new(2,3)
+        @md4.set(1,0,-1)
+        @md4.set(1,1,-1)
+        @md4.set(1,2,0)
+        
+        @md3 = MathExpansion::Matriz_Dispersa.new(3,3)
+        @md3.set(0,0,0)
+        @md3.set(0,1,0)
+        @md3.set(0,2,0)
+        @md3.set(1,0,-3)
+        @md3.set(1,1,-3)
+        @md3.set(1,2,0)
+        @md3.set(2,0,0)
+        @md3.set(2,1,0)
+        @md3.set(2,2,0)
 
-		(@md1*@md4).to_s.should eq(@md3.to_s)
-	end
+        (@md1*@md4).to_s.should eq(@md3.to_s)
+    end
 
+    end
+	    describe " # Operaciones varias. " do
+        it " # Se debe poder calcular el máximo de una matriz densa (elemento no nulo)" do
+		  @md1.max.should == 3
+		end
+		it " # Se debe poder calcular el mínimo de una matriz densa (elemento no nulo)" do
+		  @md1.min.should == 1
+		end
     end
 end
