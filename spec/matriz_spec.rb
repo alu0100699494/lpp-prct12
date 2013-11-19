@@ -115,6 +115,21 @@ describe MathExpansion::Matriz_Densa do
 
 	(@m1+@m_neg).to_s.should eq(@m3.to_s)
     end
+    it " # Se debe poder operar con Fracciones." do
+	@mf = MathExpansion::Matriz_Densa.new(2,2)
+	@mf.set(0,0,MathExpansion::Fraccion.new(1,3))
+	@mf.set(0,1,MathExpansion::Fraccion.new(1,3))
+	@mf.set(1,0,MathExpansion::Fraccion.new(1,3))
+	@mf.set(1,1,MathExpansion::Fraccion.new(1,3))
+
+	@mf_res = MathExpansion::Matriz_Densa.new(2,2)
+	@mf_res.set(0,0,MathExpansion::Fraccion.new(2,3))
+	@mf_res.set(0,1,MathExpansion::Fraccion.new(2,3))
+	@mf_res.set(1,0,MathExpansion::Fraccion.new(2,3))
+	@mf_res.set(1,1,MathExpansion::Fraccion.new(2,3))
+
+	(@mf+@mf).to_s.should eq(@mf_res.to_s)
+    end
     end
     describe " # Operaciones varias. " do
         it " # Se debe poder calcular el maximo de una matriz densa (elemento no nulo)" do
@@ -259,6 +274,18 @@ describe MathExpansion::Matriz_Dispersa do
         @md3.set(2,2,0)
 
         (@md1*@md4).to_s.should eq(@md3.to_s)
+    end
+    it " # Se debe poder hacer operaciones con Fracciones. " do
+	@mf1 = MathExpansion::Matriz_Dispersa.new(2,2)
+	@mf1.set(1,0,MathExpansion::Fraccion.new(1,4))
+
+	@mf2 = MathExpansion::Matriz_Dispersa.new(2,2)
+	@mf2.set(1,0,MathExpansion::Fraccion.new(-1,4))
+
+	@mf_res = MathExpansion::Matriz_Dispersa.new(2,2)
+	@mf_res.set(1,0,MathExpansion::Fraccion.new(1,2))
+
+	(@mf1-@mf2).to_s.should eq(@mf_res.to_s)
     end
 
     end
