@@ -88,6 +88,9 @@ module MathExpansion
     			end 
     			i += 1
       		end
+		if (c.null_percent > 0.6)
+			c = MathExpansion::Matriz_Dispersa.copy(c)
+		end
       		c
     end
 	
@@ -105,6 +108,9 @@ module MathExpansion
     			end
     			i += 1
       		end
+		if (c.null_percent > 0.6)
+			c = MathExpansion::Matriz_Dispersa.copy(c)
+		end
       		c
     end
 	
@@ -144,7 +150,9 @@ module MathExpansion
 	    			i += 1
       			end # while i
     		end # while else
-  
+  		if (c.null_percent > 0.6)
+			c = MathExpansion::Matriz_Dispersa.copy(c)
+		end
     		c
     end # *(other)
 

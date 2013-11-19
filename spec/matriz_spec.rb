@@ -103,6 +103,18 @@ describe MathExpansion::Matriz_Densa do
 
         (@m1*@m2).to_s.should eq(@m3.to_s)
     end
+    it " # Si una m. densa tiene mas de un 60% de nulos, debe ser dispersa." do
+	@m_neg = MathExpansion::Matriz_Densa.new(2,2)
+	@m_neg.set(0,0,-1)
+	@m_neg.set(0,1,-2)
+	@m_neg.set(1,0,-3)
+	@m_neg.set(1,1,-1)
+
+	@m3 = MathExpansion::Matriz_Dispersa.new(2,2)
+	@m3.set(1,1,3)
+
+	(@m1+@m_neg).to_s.should eq(@m3.to_s)
+    end
     end
     describe " # Operaciones varias. " do
         it " # Se debe poder calcular el maximo de una matriz densa (elemento no nulo)" do
