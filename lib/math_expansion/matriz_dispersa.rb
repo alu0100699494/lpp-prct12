@@ -185,6 +185,66 @@ module MathExpansion
 		end  
     		c
     end # *(other)
+	
+	def max
+	  if(null_percent == 1.0)
+	    return nil # o return 0
+	  end
+		
+	  # Valor máximo: si todos los elementos son menores que el elemento nulo
+	  # Se devolverá el mayor elemento no nulo.
+	  max = nil
+	  
+	  # Asignar al primer valor no-nulo de la matriz
+	  i = 0
+	  while(max == nil)
+	    if(@contenido[i].size != 0)
+		  max = @contenido[i].values[0]
+		end
+		i += 1
+	  end
+	  
+	  # Iterar por todos los elementos no nulos para encontrar el maximo
+	  i = 0
+	  while(i < @contenido.size)
+	    if(@contenido[i].values.max != nil and @contenido[i].values.max > max)
+		  max = @contenido[i].values.max
+		end
+	    i += 1
+	  end
+	  
+	  max
+	end
+	
+	def min
+	  if(null_percent == 1.0)
+	    return nil # o return 0
+	  end
+		
+	  # Valor máximo: si todos los elementos son menores que el elemento nulo
+	  # Se devolverá el mayor elemento no nulo.
+	  min = nil
+	  
+	  # Asignar al primer valor no-nulo de la matriz
+	  i = 0
+	  while(min == nil)
+	    if(@contenido[i].size != 0)
+		  min = @contenido[i].values[0]
+		end
+		i += 1
+	  end
+	  
+	  # Iterar por todos los elementos no nulos para encontrar el maximo
+	  i = 0
+	  while(i < @contenido.size)
+	    if(@contenido[i].values.min != nil and @contenido[i].values.min < min)
+		  min = @contenido[i].values.min
+		end
+	    i += 1
+	  end
+	  
+	  min
+    end
     
   end #endclass
 end #end module

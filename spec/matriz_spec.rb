@@ -244,7 +244,8 @@ describe MathExpansion::Matriz_Dispersa do
     end
 	    describe " # Operaciones varias. " do
         it " # Se debe poder calcular el máximo de una matriz densa (elemento no nulo)" do
-		  @md1.max.should == 3
+		  @md1.set(1,0,4)
+		  @md1.max.should == 4
 		end
 		it " # Se debe poder calcular el mínimo de una matriz densa (elemento no nulo)" do
 		  @md1.min.should == 1
