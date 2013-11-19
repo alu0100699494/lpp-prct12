@@ -1,0 +1,44 @@
+
+MathExpansion::Matriz
+  # Almacenamiento de matrices.
+    # Se debe almacenar el numero de filas.
+    # Se debe almacenar el numero de columnas.
+    # Se debe almacenar un contenido.
+
+MathExpansion::Matriz_Densa
+  # Almacenamiento de matrices.
+    # Se debe poder acceder a los datos almacenados en la matriz
+    # Se deben poder modificar los datos almacenados en la matriz
+    # Se deben poder almacenar todo tipo de datos numericos (flotantes, enteros, etc...)
+  # Operaciones con matrices densas.
+    # Se debe poder sumar dos matrices
+    # Se debe poder restar dos matrices
+    # Se debe poder multiplicar dos matrices
+    # Si una m. densa tiene mas de un 60% de nulos, debe ser dispersa.
+    # Se debe poder operar con Fracciones.
+  # Operaciones varias.
+    # Se debe poder calcular el maximo de una matriz densa (elemento no nulo)
+    # Se debe poder calcular el minimo de una matriz densa (elemento no nulo)
+
+MathExpansion::Matriz_Dispersa
+  # Almacenamiento de matrices.
+    # Se debe poder crear matrices dispersas vacias o a partir de matrices densas.
+    # Se debe poder calcular el porcentaje de elementos nulos de la matriz dispersa.
+    # Se debe poder acceder a los elementos de la matriz dispersa.
+Borrado el elemento 1,0 por sobrepasar el numero de elementos no nulos (Porcentaje actual: 0.6666666666666666
+Borrado el elemento 1,1 por sobrepasar el numero de elementos no nulos (Porcentaje actual: 0.6666666666666666
+Borrado el elemento 2,0 por sobrepasar el numero de elementos no nulos (Porcentaje actual: 0.6666666666666666
+Borrado el elemento 2,1 por sobrepasar el numero de elementos no nulos (Porcentaje actual: 0.6666666666666666
+    # Se deben poder modificar los elementos de la matriz dispersa.
+    # Se debe poder transformar una matriz dispersa a una cadena de caracteres.
+  # Operaciones con matrices dispersas.
+    # Se debe poder sumar dos matrices
+    # Se debe poder restar dos matrices
+    # Se debe poder multiplicar dos matrices
+    # Se debe poder hacer operaciones con Fracciones.
+  # Operaciones varias.
+    # Se debe poder calcular el maximo de una matriz densa (elemento no nulo)
+    # Se debe poder calcular el minimo de una matriz densa (elemento no nulo)
+
+Finished in 0.01 seconds
+24 examples, 0 failures
