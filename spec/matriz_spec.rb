@@ -307,8 +307,27 @@ describe MathExpansion::Matriz_Dispersa do
      @mf4.set(0,0,1)
      
      (@mf3 * @mf4).to_s.should == @mf3.to_s
+     
+     @mf5 = MathExpansion::Matriz_Densa.new(2,2)
+     @mf6 = MathExpansion::Matriz_Dispersa.new(2,2)
+
+     @mf5.set(0,0,3)
+     @mf5.set(0,1,4)
+     @mf5.set(1,0,5)
+     @mf5.set(1,1,6)
+
+     @mf6.set(0,0,MathExpansion::Fraccion.new(1,2))
+
+     @mf_res2 = MathExpansion::Matriz_Densa.new(2,2)
+     @mf_res2.set(0,0,MathExpansion::Fraccion.new(7,2))
+     @mf_res2.set(0,1,4)
+     @mf_res2.set(1,0,5)
+     @mf_res2.set(1,1,6)
+
+     (@mf5+@mf6).to_s.should == @mf_res2.to_s
     
     end
+
 
     end
 	    describe " # Operaciones varias. " do
