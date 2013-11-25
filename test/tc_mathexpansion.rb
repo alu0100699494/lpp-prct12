@@ -3,28 +3,32 @@
 require "./lib/math_expansion.rb"
 require "test/unit"
 
-
+# Fixnum
 class Fixnum
+        # Devuelve el valor nulo de la clase Fixnum (0).
 	def self.null
        		0
 	end
 end
-        
+#String        
 class String
+        # Devuelve el valor nulo de la clase String (cadena vacía).
 	def self.null
        		""
 	end
 end
-        
+#Float
 class Float
+        # Devuelve el valor nulo de la clase Float (0.0).
 	def self.null
        		0.0
 	end
 end	
 	
-
+# Clase de pruebas unitarias.
 class Test_Matriz < Test::Unit::TestCase
-	def test_simple
+	# En este método se prueba que la suma de dos matrices densas @m1 y @m2 coincida con una matriz resultado densa @m3.
+        def test_simple
 		@m1 = MathExpansion::Matriz_Densa.new(2,2)
 	        @m2 = MathExpansion::Matriz_Densa.new(2,2)
 		@m3 = MathExpansion::Matriz_Densa.new(2,2)
@@ -47,7 +51,7 @@ class Test_Matriz < Test::Unit::TestCase
 
 		assert_equal(@m3.to_s,(@m1+@m2).to_s)
 	end
-	
+	# En este método se prueba que la resta entre dos matrices dispersas @md1 y @md2 coincida con una matriz dispersa resultado @m3.
 	def test_simple2
 		@md1 = MathExpansion::Matriz_Dispersa.new(2,2)
 		@md2 = MathExpansion::Matriz_Dispersa.new(2,2)
@@ -72,7 +76,7 @@ class Test_Matriz < Test::Unit::TestCase
 
 
 	end
-	
+	# En este método se prueba que se de un fallo de tipo (TypeError).
 	def test_typecheck
 		@m1 = MathExpansion::Matriz_Densa.new(1,1)
 		@m2 = MathExpansion::Matriz_Densa.new(1,1)
@@ -81,7 +85,7 @@ class Test_Matriz < Test::Unit::TestCase
 
 		assert_raise(TypeError) {@m1+@m2}
 	end
-	
+	# En este test se hace fallar intencionadamente al programa.
 	def test_failure
 		@m1 = MathExpansion::Matriz_Densa.new(1,1)
 		@m2 = MathExpansion::Matriz_Densa.new(2,2)

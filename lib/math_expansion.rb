@@ -6,7 +6,11 @@ require "./lib/math_expansion/matriz_dispersa.rb"
 require "./lib/math_expansion/racional.rb"
 require "./lib/math_expansion/gcd.rb"
 
-# Vacío
+# Gema que permite la representación de números racionales y matrices (en forma densa y dispersa).
+#
+# *Autores*: Daniel Herzog, Eliasib García
+#
+# *Version*: 0.0.1
 module MathExpansion
 
 end

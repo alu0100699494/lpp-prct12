@@ -1,7 +1,12 @@
 require "./lib/math_expansion/matriz.rb"
 
 module MathExpansion
+  # Esta clase permite representar matrices densas. Las matrices densas son aquellas que no tienen más de un 60% de elementos nulos.
+  # Su representación será muy similar a como se suelen representar tradicionalmente.
   class Matriz_Densa < Matriz
+    # Se pasará por parámetros las filas y columnas de la matriz:
+    # * *n*: Número de filas.
+    # * *m*: Número de columnas.
     def initialize(n, m)
       super
       
@@ -12,7 +17,9 @@ module MathExpansion
         i += 1  
       end
     end
-      
+    # Permite obtener el elemento en la posición (i,j), donde:
+    # * *i*: Número de fila.
+    # * *j*: Número de columna.
     def get(i, j)
       if( i < 0 or i >=@N or j < 0 or j >= @M)
         return nil
@@ -20,7 +27,7 @@ module MathExpansion
 
       @contenido[i][j]
     end
-    
+    # Devuelve el porcentaje de valores nulos que hay en la matriz.
    def null_percent
       total = @N*@M
       no_nulos = 0
@@ -39,8 +46,12 @@ module MathExpansion
       
       nulos = total - no_nulos
       nulos.to_f/total.to_f
-    end #endmethod null_percent      
+    end #-- #endmethod null_percent  #++
 
+    # Establece el valor _value_ en la posición (i,j) de la matriz, donde:
+    # * *i*: Número de fila.
+    # * *j*: Número de columna.
+    # * *value*: Valor a insertar en la matriz.
     def set(i, j, value)
       if( i < 0 or i >=@N or j < 0 or j >= @M)
        return nil
@@ -50,15 +61,16 @@ module MathExpansion
         puts "Se debe definir el metodo \"null\" que devuelva un elemento nulo para la clase #{value.class}"
         return nil
       end
-
+      #--
       # Contar elementos nulos y comprobar si se hace una matriz dispersa
       # De momento, no dejamos añadir elementos nulos
       # ¿o si?
       #if(value != nil and value != value.class.null) # Y se puede comprobar para todos los tipos si es necesario. (con un método zero, por ejemplo)
         @contenido[i][j] = value
-      #end
+      #end 
+      #++
     end
-    
+    # Permite representar de manera gráfica la matriz por consola.
     def to_s
       s = ""
       i = 0
@@ -73,7 +85,7 @@ module MathExpansion
       end
       s
     end
-    
+    # Permite sumar un elemento a una matriz
     def +(other)
       		raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
       		raise ArgumentError , 'Matriz no compatible' unless @N == other.N and @M == other.M
@@ -93,7 +105,7 @@ module MathExpansion
 		end
       		c
     end
-	
+    # Permite restar un elemento a una matriz.
     def -(other)
       		raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
       		raise ArgumentError , 'Matriz no compatible' unless @N == other.N and @M == other.M
@@ -113,7 +125,8 @@ module MathExpansion
 		end
       		c
     end
-	
+    # Permite multiplicar un elemento a una matriz.
+    #--
     def *(other)
     		raise ArgumentError , 'Parametro invalido' unless other.is_a? Numeric or other.is_a? Matriz
 
@@ -154,8 +167,8 @@ module MathExpansion
 			c = MathExpansion::Matriz_Dispersa.copy(c)
 		end
     		c
-    end # *(other)
-
+    end # *(other) #++
+    # Devuelve el máximo valor almacenado en la matriz.
     def max
 	m = get(0,0)
         i = 0
@@ -171,7 +184,7 @@ module MathExpansion
 	end
 	m
     end
-
+    # Devuelve el mínimo valor almacenado en la matriz.
     def min
 	m = get(0,0)
         i = 0
@@ -186,6 +199,6 @@ module MathExpansion
 		i += 1
 	end
 	m
-    end # Method min
+    end #-- # Method min
   end # Class
-end # Module
+end # Module #++
