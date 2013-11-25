@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: MathExpansion::Matriz_Densa</title>
+
+  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="../lib/math_expansion/matriz_densa_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/math_expansion/matriz_densa.rb">lib/math_expansion/matriz_densa.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link"><a href="Matriz.html">MathExpansion::Matriz</a></p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-2A">#*</a></li>
+          
+          <li><a href="#method-i-2B">#+</a></li>
+          
+          <li><a href="#method-i-2D">#-</a></li>
+          
+          <li><a href="#method-i-get">#get</a></li>
+          
+          <li><a href="#method-i-max">#max</a></li>
+          
+          <li><a href="#method-i-min">#min</a></li>
+          
+          <li><a href="#method-i-null_percent">#null_percent</a></li>
+          
+          <li><a href="#method-i-set">#set</a></li>
+          
+          <li><a href="#method-i-to_s">#to_s</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="../Gemfile.html">Gemfile</a></li>
+        
+          <li class="file"><a href="../Guardfile.html">Guardfile</a></li>
+        
+          <li class="file"><a href="../LICENSE_txt.html">LICENSE.txt</a></li>
+        
+          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="../log_txt.html">log.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="../images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="../MathExpansion.html">MathExpansion</a></li>
+        
+          <li><a href="../MathExpansion/Fraccion.html">MathExpansion::Fraccion</a></li>
+        
+          <li><a href="../MathExpansion/Matriz.html">MathExpansion::Matriz</a></li>
+        
+          <li><a href="../MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a></li>
+        
+          <li><a href="../MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a></li>
+        
+          <li><a href="../Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="../Float.html">Float</a></li>
+        
+          <li><a href="../String.html">String</a></li>
+        
+          <li><a href="../Test_Matriz.html">Test_Matriz</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">MathExpansion::Matriz_Densa</h1>
+
+    <div id="description" class="description">
+      
+<p>Esta clase permite representar matrices densas. Las matrices densas son
+aquellas que no tienen más de un 60% de elementos nulos. Su representación
+será muy similar a como se suelen representar tradicionalmente.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(n, m)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Se pasará por parámetros las filas y columnas de la matriz:</p>
+<ul><li>
+<p><b>n</b>: Número de filas.</p>
+</li><li>
+<p><b>m</b>: Número de columnas.</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">n</span>, <span class="ruby-identifier">m</span>)
+  <span class="ruby-keyword">super</span>
+  
+  <span class="ruby-ivar">@contenido</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>,<span class="ruby-value">0</span>)
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@N</span>
+    <span class="ruby-ivar">@contenido</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@M</span>,<span class="ruby-value">0</span>)
+    <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>  
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="2A-method" class="method-detail ">
+          <a name="method-i-2A"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">*</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Permite multiplicar un elemento a una matriz.</p>
+            
+
+            
+            <div class="method-source-code" id="2A-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 130</span>
+<span class="ruby-keyword">def</span> *(<span class="ruby-identifier">other</span>)
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Parametro invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+
+            <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>) <span class="ruby-comment"># Matriz * numero</span>
+                    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span>)
+                   <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+                    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@N</span>)
+                            <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+                            <span class="ruby-keyword">while</span>(<span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@M</span>)
+                                    <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)*<span class="ruby-identifier">other</span>)
+                                    <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                           <span class="ruby-keyword">end</span> <span class="ruby-comment"># while j</span>
+                           <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                    <span class="ruby-keyword">end</span> <span class="ruby-comment"># while i</span>
+            <span class="ruby-keyword">else</span> <span class="ruby-comment"># Matriz * Matriz</span>
+                    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Matriz no compatible (A.N == B.M)'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@M</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">N</span>
+                    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>)
+                    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+                    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@N</span>)
+                            <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+                            <span class="ruby-keyword">while</span>(<span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>)
+                                   <span class="ruby-identifier">k</span> = <span class="ruby-value">0</span>
+                                    <span class="ruby-comment">#if (get(i,j).is_a? Fraccion)                                           </span>
+                                    <span class="ruby-comment">#  c.set(i, j, Fraccion.null</span>
+                                    <span class="ruby-comment">#else</span>
+                                    <span class="ruby-comment">#  c.set(i, j, 0)</span>
+                                    <span class="ruby-comment">#end</span>
+                                   <span class="ruby-keyword">while</span>(<span class="ruby-identifier">k</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@M</span>)
+                                           <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">k</span>) * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+                                           <span class="ruby-identifier">k</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                                   <span class="ruby-keyword">end</span> <span class="ruby-comment"># while k</span>
+                                    <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                            <span class="ruby-keyword">end</span> <span class="ruby-comment"># while j</span>
+                           <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                    <span class="ruby-keyword">end</span> <span class="ruby-comment"># while i</span>
+            <span class="ruby-keyword">end</span> <span class="ruby-comment"># while else</span>
+            <span class="ruby-keyword">if</span> (<span class="ruby-identifier">c</span>.<span class="ruby-identifier">null_percent</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+                    <span class="ruby-identifier">c</span> = <span class="ruby-constant">MathExpansion</span><span class="ruby-operator">::</span><span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 2A-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 2A-method -->
+
+      
+        <div id="2B-method" class="method-detail ">
+          <a name="method-i-2B"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">+</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Permite sumar un elemento a una matriz</p>
+            
+
+            
+            <div class="method-source-code" id="2B-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 89</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>)
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Tipo invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Matriz no compatible'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@N</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">N</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@M</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>
+  
+            <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span>)
+            <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+            <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@N</span>)
+                    <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+                    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@M</span>)
+                           <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+                       <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                    <span class="ruby-keyword">end</span> 
+                    <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">if</span> (<span class="ruby-identifier">c</span>.<span class="ruby-identifier">null_percent</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+                    <span class="ruby-identifier">c</span> = <span class="ruby-constant">MathExpansion</span><span class="ruby-operator">::</span><span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 2B-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 2B-method -->
+
+      
+        <div id="2D-method" class="method-detail ">
+          <a name="method-i-2D"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">-</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Permite restar un elemento a una matriz.</p>
+            
+
+            
+            <div class="method-source-code" id="2D-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Tipo invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+            <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Matriz no compatible'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@N</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">N</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@M</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>
+  
+            <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span>)
+            <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+            <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@N</span>)
+                    <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+                    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@M</span>)
+                           <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+                       <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+                    <span class="ruby-keyword">end</span>
+                    <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-keyword">if</span> (<span class="ruby-identifier">c</span>.<span class="ruby-identifier">null_percent</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+                    <span class="ruby-identifier">c</span> = <span class="ruby-constant">MathExpansion</span><span class="ruby-operator">::</span><span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- 2D-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- 2D-method -->
+
+      
+        <div id="get-method" class="method-detail ">
+          <a name="method-i-get"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get</span><span
+              class="method-args">(i, j)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Permite obtener el elemento en la posición (i,j), donde:</p>
+<ul><li>
+<p><b>i</b>: Número de fila.</p>
+</li><li>
+<p><b>j</b>: Número de columna.</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="get-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>)
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;=</span><span class="ruby-ivar">@N</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@M</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@contenido</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>]
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get-method -->
+
+      
+        <div id="max-method" class="method-detail ">
+          <a name="method-i-max"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">max</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Devuelve el máximo valor almacenado en la matriz.</p>
+            
+
+            
+            <div class="method-source-code" id="max-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 172</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">max</span>
+    <span class="ruby-identifier">m</span> = <span class="ruby-identifier">get</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>)
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@N</span>)
+            <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+            <span class="ruby-keyword">while</span>(<span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@M</span>)
+                    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">m</span>)
+                            <span class="ruby-identifier">m</span> = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)
+                    <span class="ruby-keyword">end</span>
+                    <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">m</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- max-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- max-method -->
+
+      
+        <div id="min-method" class="method-detail ">
+          <a name="method-i-min"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">min</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Devuelve el mínimo valor almacenado en la matriz.</p>
+            
+
+            
+            <div class="method-source-code" id="min-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">min</span>
+    <span class="ruby-identifier">m</span> = <span class="ruby-identifier">get</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>)
+    <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@N</span>)
+            <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+            <span class="ruby-keyword">while</span>(<span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@M</span>)
+                    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">m</span>)
+                            <span class="ruby-identifier">m</span> = <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)
+                    <span class="ruby-keyword">end</span>
+                    <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">m</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- min-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- min-method -->
+
+      
+        <div id="null_percent-method" class="method-detail ">
+          <a name="method-i-null_percent"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">null_percent</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Devuelve el porcentaje de valores nulos que hay en la matriz.</p>
+            
+
+            
+            <div class="method-source-code" id="null_percent-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">null_percent</span>
+   <span class="ruby-identifier">total</span> = <span class="ruby-ivar">@N</span>*<span class="ruby-ivar">@M</span>
+   <span class="ruby-identifier">no_nulos</span> = <span class="ruby-value">0</span>
+   
+   <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+   <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@N</span>)
+     <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+     <span class="ruby-keyword">while</span>(<span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@M</span>)
+       <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@contenido</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] <span class="ruby-operator">!=</span> <span class="ruby-ivar">@contenido</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>].<span class="ruby-identifier">class</span>.<span class="ruby-identifier">null</span>)
+         <span class="ruby-identifier">no_nulos</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+       <span class="ruby-keyword">end</span>
+       <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+     <span class="ruby-keyword">end</span>
+     <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+   <span class="ruby-keyword">end</span>
+   
+   <span class="ruby-identifier">nulos</span> = <span class="ruby-identifier">total</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">no_nulos</span>
+   <span class="ruby-identifier">nulos</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">total</span>.<span class="ruby-identifier">to_f</span>
+ <span class="ruby-keyword">end</span></pre>
+            </div><!-- null_percent-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- null_percent-method -->
+
+      
+        <div id="set-method" class="method-detail ">
+          <a name="method-i-set"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">set</span><span
+              class="method-args">(i, j, value)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Establece el valor <em>value</em> en la posición (i,j) de la matriz, donde:</p>
+<ul><li>
+<p><b>i</b>: Número de fila.</p>
+</li><li>
+<p><b>j</b>: Número de columna.</p>
+</li><li>
+<p><b>value</b>: Valor a insertar en la matriz.</p>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="set-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 55</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">if</span>( <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;=</span><span class="ruby-ivar">@N</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@M</span>)
+   <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+    
+  <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:null</span>))
+    <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Se debe definir el metodo \&quot;null\&quot; que devuelva un elemento nulo para la clase #{value.class}&quot;</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment">#--</span>
+  <span class="ruby-comment"># Contar elementos nulos y comprobar si se hace una matriz dispersa</span>
+  <span class="ruby-comment"># De momento, no dejamos añadir elementos nulos</span>
+  <span class="ruby-comment"># ¿o si?</span>
+  <span class="ruby-comment">#if(value != nil and value != value.class.null) # Y se puede comprobar para todos los tipos si es necesario. (con un método zero, por ejemplo)</span>
+    <span class="ruby-ivar">@contenido</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-identifier">value</span>
+  <span class="ruby-comment">#end </span>
+  <span class="ruby-comment">#++</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- set-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- set-method -->
+
+      
+        <div id="to_s-method" class="method-detail ">
+          <a name="method-i-to_s"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">to_s</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Permite representar de manera gráfica la matriz por consola.</p>
+            
+
+            
+            <div class="method-source-code" id="to_s-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">s</span> = <span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@N</span>)
+    <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">j</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@M</span>)
+      <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;#{@contenido[i][j].to_s}\t&quot;</span>
+      <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-string">&quot;\n&quot;</span>
+    <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">s</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- to_s-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- to_s-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+Mon, 25 Nov 2013 20:57:13 +0000
+./Gemfile	Tue, 12 Nov 2013 10:23:57 +0000
+./LICENSE.txt	Tue, 12 Nov 2013 10:12:32 +0000
+./log.txt	Tue, 19 Nov 2013 21:07:58 +0000
+./Guardfile	Tue, 19 Nov 2013 23:19:17 +0000
+./test/tc_mathexpansion.rb	Mon, 25 Nov 2013 20:53:39 +0000
+./Rakefile	Tue, 19 Nov 2013 21:07:58 +0000
+./lib/math_expansion/matriz.rb	Mon, 25 Nov 2013 19:43:22 +0000
+./lib/math_expansion/matriz_densa.rb	Mon, 25 Nov 2013 20:23:03 +0000
+./lib/math_expansion/version.rb	Mon, 25 Nov 2013 20:57:09 +0000
+./lib/math_expansion/racional.rb	Mon, 25 Nov 2013 20:45:34 +0000
+./lib/math_expansion/matriz_dispersa.rb	Mon, 25 Nov 2013 20:38:24 +0000
+./lib/math_expansion/gcd.rb	Mon, 25 Nov 2013 20:40:14 +0000
+./lib/math_expansion.rb	Mon, 25 Nov 2013 20:47:44 +0000
+./spec/matriz_spec.rb	Wed, 20 Nov 2013 12:11:26 +0000
+./spec/spec_helper.rb	Tue, 12 Nov 2013 10:25:42 +0000
