@@ -14,15 +14,20 @@ module MathExpansion
         i += 1
       end
     end
-    # Los parámetros indican en número de filas y columnas de la matriz, donde:
-    # * *n*: Número de filas.
-    # * *m*: Número de columnas.
+    # Constructor de la matriz. Crea una matriz dispersa de tamaño N*M vacía (Array de hashes vacíos).
+    # * *Argumentos*    :
+    #   - +n+: Número de filas. Debe ser mayor que 0.
+    #   - +m+: Número de columnas. Debe ser mayor que 0.
     def initialize(n, m)
       super
       reset
     end
     
     # Se devuelve una matriz dispersa a partir de otra matriz pasada por parámetro con los mismos valores. Metodo factoria. 
+    # * *Argumentos*    :
+    #   - +matriz+: Matriz densa. Si sólo tiene valores nulos, la matriz actual se inicializará a vacío.
+    # * *Devuelve*    :
+    #   - +obj+: Referencia al objeto creado.
     def self.copy(matriz)
       raise ArgumentError, 'Tipo invalido' unless matriz.is_a? MathExpansion::Matriz_Densa
       obj = new(matriz.N, matriz.M)
@@ -43,7 +48,10 @@ module MathExpansion
       end #endwhile i
       obj
     end #endmethod copy #++
+    
     # Devuelve el porcentaje de elementos nulos que tiene la matriz.
+    # * *Devuelve*    :
+    #   - Número flotante entre 0 y 1 que represente cuantos valores nulos existen en la matriz densa.
     def null_percent
       total = @N*@M
       no_nulos = 0
@@ -57,9 +65,12 @@ module MathExpansion
       nulos = total - no_nulos
       nulos.to_f/total.to_f
     end #-- #endmethod null_percent #++
-    # Devuelve el elemento almacenado en la matriz en la posición (i,j), donde:
-    # * *i*: Número de fila.
-    # * *j*: Número de columna.
+    # Permite obtener el elemento en la posición (i,j), donde:
+    # * *Argumentos*    :
+    #   - +i+: Número de fila.
+    #   - +j+: Número de columna.
+    # * *Devuelve*    :
+    #   - Valor almacenado en la fila +i+ y en la columna +j+. Devuelve nil si +i+ o +j+ están fuera de rango. Devuelve 0 (valor nulo) si no existe el elemento en la matriz.
     def get(i, j)
       if( !(i.is_a? Fixnum) or i < 0 or i >=@N or !(j.is_a? Fixnum) or j < 0 or j >= @M)
         return nil
@@ -71,10 +82,11 @@ module MathExpansion
         return 0
       end
     end #endmethod get #++
-    # Almacena el valor _value_ en la posición (i,j) de la matriz, donde:
-    # * *i*: Número de fila.
-    # * *j*: Número de columna.
-    # * *value*: Valor a almacenar.
+    # Establece el valor _value_ en la posición (i,j) de la matriz, donde:
+    # * *Argumentos*    :
+    #   - +i+: Número de fila.
+    #   - +j+: Número de columna.
+    #   - +value+: Valor a insertar en la matriz. Si se sobrepasa el número de valores nulos permitidos, no se harán modificaciones en la matriz.
     def set(i, j, value)
       if(!(value.class.respond_to? :null))
         puts "Se debe definir el metodo \"null\" que devuelva un elemento nulo para la clase #{value.class}"
@@ -97,7 +109,9 @@ module MathExpansion
       end
       
     end #-- #endmethod set #++
-    # Permite representar una matriz dispersa por consola.
+    # Permite representar de manera gráfica la matriz por consola.
+    # * *Devuelve*    :
+    #   - Objeto del tipo string con todos los elementos de la matriz.
     def to_s
       #--
       # Ejemplo: "Fila 0: \nFila 1: 0=>1 1=>3 \nFila 2: \n"
@@ -115,91 +129,10 @@ module MathExpansion
       end
       output
     end
-    # Permite sumar un elemento a la matriz.
-    def +(other)
-      		raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
-      		raise ArgumentError , 'Matriz no compatible' unless @N == other.N and @M == other.M
-  
-      		c = Matriz_Densa.new(@N, @M)
-      		i = 0
-		while(i < @N)
-        		j = 0
-        		while(j < @M)
-	      			c.set(i, j, get(i,j) + other.get(i,j))
-    	  			j += 1
-    			end 
-    			i += 1
-      		end
-		if(c.null_percent > 0.6)
-			c = Matriz_Dispersa.copy(c)
-		end
-      		c
-    end
-    #Permite restar un elemento a la matriz.
-    def -(other)
-      		raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
-      		raise ArgumentError , 'Matriz no compatible' unless @N == other.N and @M == other.M
-  
-      		c = Matriz_Densa.new(@N, @M)
-      		i = 0
-      		while(i < @N)
-        		j = 0
-        		while(j < @M)
-	      			c.set(i, j, get(i,j) - other.get(i,j))
-    	  			j += 1
-    			end
-    			i += 1
-      		end
-		if(c.null_percent > 0.6)
-			c = Matriz_Dispersa.copy(c)
-		end		
-      		c
-    end
-    #Permite multiplicar un elemento a la matriz.
-    def *(other)
-    		raise ArgumentError , 'Parametro invalido' unless other.is_a? Numeric or other.is_a? Matriz
-
-    		if(other.is_a? Numeric) #-- # Matriz * numero #++
-      			c = Matriz_Densa.new(@N, @M)
-	  		i = 0
-      			while(i < @N)
-        			j = 0
-        			while(j < @M)
-         				c.set(i, j, get(i,j)*other)
-         				j += 1
-	    			end #-- # while j #++
-	    			i += 1
-      			end #-- # while i #++
-    		else #-- # Matriz * Matriz #++
-      			raise ArgumentError , 'Matriz no compatible (A.N == B.M)' unless @M == other.N
-      			c = Matriz_Densa.new(@N, other.M)
-      			i = 0
-      			while(i < @N)
-        			j = 0
-        			while(j < other.M)
-                    k = 0
-					#--
-					#if (get(i,j).is_a? Fraccion)	      				
-					#	c.set(i, j, Fraccion.null
-					#else
-					#	c.set(i, j, 0)
-					#end
-             				#++
-                        while(k < @M)
-	        				c.set(i, j, get(i, k) * other.get(k,j) + c.get(i,j))
-	        				k += 1
-	      				end #-- # while k #++
-          				j += 1
-        			end #-- # while j #++
-	    			i += 1
-      			end #-- # while i #++
-    		end #-- # while else #++
-		if(c.null_percent > 0.6)
-			c = Matriz_Dispersa.copy(c)
-		end  
-    		c
-    end #-- # *(other) #++
-	# Devuelve el máximo valor no nulo almacenado en la matriz.
+    
+    # Devuelve el máximo valor no nulo almacenado en la matriz.
+    # * *Devuelve*    :
+    #   - Valor máximo no nulo almacenado en la matriz.
 	def max
 	  if(null_percent == 1.0)
 	    return nil  #-- # o return 0 #++
@@ -229,7 +162,9 @@ module MathExpansion
 	  
 	  max
 	end #++
-	# Devuelve el mínimo valor no nulo almacenado en la matriz.
+    # Devuelve el mínimo valor no nulo almacenado en la matriz.
+    # * *Devuelve*    :
+    #   - Valor mínimo no nulo almacenado en la matriz.
 	def min
 	  if(null_percent == 1.0)
 	    return nil #-- # o return 0 #++

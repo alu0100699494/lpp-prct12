@@ -10,13 +10,23 @@ module MathExpansion
     # Vector que contendrá los datos de la matriz.
     attr_reader :contenido
     
-    # Los parámetros corresponden con el número de filas y columnas de la matriz:
-    # * *n*: Número de filas.
-    # * *m*: Número de columnas.
+    # Constructor de la matriz. Crea una matriz de tamaño N*M sin contenido, inicializando sólo N y M.
+    # * *Argumentos*    :
+    #   - +n+: Número de filas. Debe ser mayor que 0.
+    #   - +m+: Número de columnas. Debe ser mayor que 0.
     def initialize(n, m)
       raise ArgumentError, 'Indice no valido' unless n.is_a? Fixnum and n > 0 and m.is_a? Fixnum and m > 0
     
       @N, @M = n, m
+    end
+    
+    
+    def get(i, j)
+      nil
+    end
+    
+    def set(i, j, val)
+      nil
     end
 
   end

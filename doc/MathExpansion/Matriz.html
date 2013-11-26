@@ -1,273 +1,961 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-  <title>Class: MathExpansion::Matriz</title>
+<title>class MathExpansion::Matriz - RDoc Documentation</title>
 
-  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
-  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../lib/math_expansion/matriz_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/math_expansion/matriz.rb">lib/math_expansion/matriz.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">Object</p>
-        
-      </div>
-      
 
-      
+  
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/math_expansion/matriz.rb
+    <li>lib/math_expansion/matriz_operaciones.rb
+  </ul>
+</nav>
 
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-new">::new</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../Gemfile.html">Gemfile</a></li>
-        
-          <li class="file"><a href="../Guardfile.html">Guardfile</a></li>
-        
-          <li class="file"><a href="../LICENSE_txt.html">LICENSE.txt</a></li>
-        
-          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
-        
-          <li class="file"><a href="../log_txt.html">log.txt</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../MathExpansion.html">MathExpansion</a></li>
-        
-          <li><a href="../MathExpansion/Fraccion.html">MathExpansion::Fraccion</a></li>
-        
-          <li><a href="../MathExpansion/Matriz.html">MathExpansion::Matriz</a></li>
-        
-          <li><a href="../MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a></li>
-        
-          <li><a href="../MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a></li>
-        
-          <li><a href="../Fixnum.html">Fixnum</a></li>
-        
-          <li><a href="../Float.html">Float</a></li>
-        
-          <li><a href="../String.html">String</a></li>
-        
-          <li><a href="../Test_Matriz.html">Test_Matriz</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="class">MathExpansion::Matriz</h1>
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
 
-    <div id="description" class="description">
-      
+    
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-get">#get</a>
+    
+    <li ><a href="#method-i-set">#set</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="../LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../doc/Fixnum_html.html">Fixnum.html</a>
+  
+    <li class="file"><a href="../doc/Float_html.html">Float.html</a>
+  
+    <li class="file"><a href="../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li class="file"><a href="../doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li class="file"><a href="../doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion_html.html">MathExpansion.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion/Fraccion_html.html">Fraccion.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion/Matriz_html.html">Matriz.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion/Matriz_Densa_html.html">Matriz_Densa.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion/Matriz_Dispersa_html.html">Matriz_Dispersa.html</a>
+  
+    <li class="file"><a href="../doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../doc/Test_Matriz_html.html">Test_Matriz.html</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../doc/doc/Fixnum_html_html.html">Fixnum_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Float_html_html.html">Float_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Gemfile_html_html.html">Gemfile_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Gemfile_lock_html_html.html">Gemfile_lock_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Guardfile_html_html.html">Guardfile_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/LICENSE_txt_html_html.html">LICENSE_txt_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion/Fraccion_html_html.html">Fraccion_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion/Matriz_Densa_html_html.html">Matriz_Densa_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion/Matriz_Dispersa_html_html.html">Matriz_Dispersa_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion/Matriz_html_html.html">Matriz_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion_html_html.html">MathExpansion_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/README_md_html_html.html">README_md_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Rakefile_html_html.html">Rakefile_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/String_html_html.html">String_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Test_Matriz_html_html.html">Test_Matriz_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Fixnum_html_html_html.html">Fixnum_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Float_html_html_html.html">Float_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Gemfile_html_html_html.html">Gemfile_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Gemfile_lock_html_html_html.html">Gemfile_lock_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Guardfile_html_html_html.html">Guardfile_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/LICENSE_txt_html_html_html.html">LICENSE_txt_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion/Fraccion_html_html_html.html">Fraccion_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html.html">Matriz_Densa_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html.html">Matriz_Dispersa_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion/Matriz_html_html_html.html">Matriz_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion_html_html_html.html">MathExpansion_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/README_md_html_html_html.html">README_md_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Rakefile_html_html_html.html">Rakefile_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/String_html_html_html.html">String_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Test_Matriz_html_html_html.html">Test_Matriz_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Fixnum_html_html_html_html.html">Fixnum_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Float_html_html_html_html.html">Float_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Gemfile_html_html_html_html.html">Gemfile_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Gemfile_lock_html_html_html_html.html">Gemfile_lock_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Guardfile_html_html_html_html.html">Guardfile_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/LICENSE_txt_html_html_html_html.html">LICENSE_txt_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion/Fraccion_html_html_html_html.html">Fraccion_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html_html.html">Matriz_Densa_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html_html.html">Matriz_Dispersa_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion/Matriz_html_html_html_html.html">Matriz_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion_html_html_html_html.html">MathExpansion_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/README_md_html_html_html_html.html">README_md_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Rakefile_html_html_html_html.html">Rakefile_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/String_html_html_html_html.html">String_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Test_Matriz_html_html_html_html.html">Test_Matriz_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/created_rid_html_html_html.html">created_rid_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Fixnum_html_html_html_html_html.html">Fixnum_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Float_html_html_html_html_html.html">Float_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html.html">Gemfile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html.html">Gemfile_lock_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html.html">Guardfile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html.html">LICENSE_txt_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion/Fraccion_html_html_html_html_html.html">Fraccion_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html_html_html.html">Matriz_Densa_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html_html_html.html">Matriz_Dispersa_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion/Matriz_html_html_html_html_html.html">Matriz_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion_html_html_html_html_html.html">MathExpansion_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/README_md_html_html_html_html_html.html">README_md_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html.html">Rakefile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/String_html_html_html_html_html.html">String_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Test_Matriz_html_html_html_html_html.html">Test_Matriz_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/created_rid_html_html_html_html.html">created_rid_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Fixnum_html_html_html_html_html_html.html">Fixnum_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Float_html_html_html_html_html_html.html">Float_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html_html.html">Gemfile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html_html.html">Gemfile_lock_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html_html.html">Guardfile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html_html.html">LICENSE_txt_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion/Fraccion_html_html_html_html_html_html.html">Fraccion_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html_html_html_html.html">Matriz_Densa_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html_html_html_html.html">Matriz_Dispersa_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion/Matriz_html_html_html_html_html_html.html">Matriz_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion_html_html_html_html_html_html.html">MathExpansion_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html_html.html">Rakefile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/String_html_html_html_html_html_html.html">String_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Test_Matriz_html_html_html_html_html_html.html">Test_Matriz_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/created_rid_html_html_html_html_html.html">created_rid_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/index_html_html_html_html_html_html.html">index_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html_html.html">darkfish_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html_html.html">jquery_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/index_html_html_html_html_html.html">index_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html.html">darkfish_js_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html.html">jquery_js_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/js/quicksearch_js_html_html_html_html.html">quicksearch_js_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/js/thickbox-compressed_js_html_html_html_html.html">thickbox-compressed_js_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/gcd_rb_html_html_html_html_html.html">gcd_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/matriz_densa_rb_html_html_html_html_html.html">matriz_densa_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html_html_html_html.html">matriz_dispersa_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/matriz_rb_html_html_html_html_html.html">matriz_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/racional_rb_html_html_html_html_html.html">racional_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/version_rb_html_html_html_html_html.html">version_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion_rb_html_html_html_html_html.html">math_expansion_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/log_txt_html_html_html_html_html.html">log_txt_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/rdoc_css_html_html_html_html.html">rdoc_css_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/spec/matriz_spec_rb_html_html_html_html_html.html">matriz_spec_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/spec/spec_helper_rb_html_html_html_html_html.html">spec_helper_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/test/tc_mathexpansion_rb_html_html_html_html_html.html">tc_mathexpansion_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/index_html_html_html_html.html">index_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/darkfish_js_html_html_html.html">darkfish_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/jquery_js_html_html_html.html">jquery_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/navigation_js_html_html_html.html">navigation_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/quicksearch_js_html_html_html.html">quicksearch_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/search_index_js_html_html_html.html">search_index_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/search_js_html_html_html.html">search_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/searcher_js_html_html_html.html">searcher_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/thickbox-compressed_js_html_html_html.html">thickbox-compressed_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/gcd_rb_html_html_html_html.html">gcd_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/matriz_densa_rb_html_html_html_html.html">matriz_densa_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html_html_html.html">matriz_dispersa_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/matriz_rb_html_html_html_html.html">matriz_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/racional_rb_html_html_html_html.html">racional_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/version_rb_html_html_html_html.html">version_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion_rb_html_html_html_html.html">math_expansion_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/log_html_html_html_html_html.html">log_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/log_txt_html_html_html_html.html">log_txt_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/math_expansion_gemspec_html_html_html_html.html">math_expansion_gemspec_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/rdoc_css_html_html_html.html">rdoc_css_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/spec/matriz_spec_rb_html_html_html_html.html">matriz_spec_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/spec/spec_helper_rb_html_html_html_html.html">spec_helper_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/table_of_contents_html_html_html_html.html">table_of_contents_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/test/tc_mathexpansion_rb_html_html_html_html.html">tc_mathexpansion_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/index_html_html_html.html">index_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/darkfish_js_html_html.html">darkfish_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/jquery_js_html_html.html">jquery_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/navigation_js_html_html.html">navigation_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/quicksearch_js_html_html.html">quicksearch_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/search_index_js_html_html.html">search_index_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/search_js_html_html.html">search_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/searcher_js_html_html.html">searcher_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/thickbox-compressed_js_html_html.html">thickbox-compressed_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/gcd_rb_html_html_html.html">gcd_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/matriz_densa_rb_html_html_html.html">matriz_densa_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html_html.html">matriz_dispersa_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/matriz_rb_html_html_html.html">matriz_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/racional_rb_html_html_html.html">racional_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/version_rb_html_html_html.html">version_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion_rb_html_html_html.html">math_expansion_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/log_html_html_html_html.html">log_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/log_txt_html_html_html.html">log_txt_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/math_expansion_gemspec_html_html_html.html">math_expansion_gemspec_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/rdoc_css_html_html.html">rdoc_css_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/spec/matriz_spec_rb_html_html_html.html">matriz_spec_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/spec/spec_helper_rb_html_html_html.html">spec_helper_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/table_of_contents_html_html_html.html">table_of_contents_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/test/tc_mathexpansion_rb_html_html_html.html">tc_mathexpansion_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/index_html_html.html">index_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/navigation_js_html.html">navigation_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/quicksearch_js_html.html">quicksearch_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/search_index_js_html.html">search_index_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/search_js_html.html">search_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/searcher_js_html.html">searcher_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/thickbox-compressed_js_html.html">thickbox-compressed_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/gcd_rb_html_html.html">gcd_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/matriz_densa_rb_html_html.html">matriz_densa_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html.html">matriz_dispersa_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/matriz_rb_html_html.html">matriz_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/racional_rb_html_html.html">racional_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/version_rb_html_html.html">version_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion_rb_html_html.html">math_expansion_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/log_html_html_html.html">log_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/log_txt_html_html.html">log_txt_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/math_expansion_gemspec_html_html.html">math_expansion_gemspec_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/rdoc_css_html.html">rdoc_css.html</a>
+  
+    <li class="file"><a href="../doc/doc/spec/matriz_spec_rb_html_html.html">matriz_spec_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/spec/spec_helper_rb_html_html.html">spec_helper_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/test/tc_mathexpansion_rb_html_html.html">tc_mathexpansion_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../doc/js/quicksearch_js.html">quicksearch.js</a>
+  
+    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../doc/js/thickbox-compressed_js.html">thickbox-compressed.js</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/gcd_rb_html.html">gcd_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/matriz_densa_rb_html.html">matriz_densa_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/matriz_dispersa_rb_html.html">matriz_dispersa_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/matriz_rb_html.html">matriz_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/racional_rb_html.html">racional_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/version_rb_html.html">version_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion_rb_html.html">math_expansion_rb.html</a>
+  
+    <li class="file"><a href="../doc/log_html_html.html">log_html.html</a>
+  
+    <li class="file"><a href="../doc/log_txt_html.html">log_txt.html</a>
+  
+    <li class="file"><a href="../doc/math_expansion_gemspec_html.html">math_expansion_gemspec.html</a>
+  
+    <li class="file"><a href="../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../doc/spec/matriz_spec_rb_html.html">matriz_spec_rb.html</a>
+  
+    <li class="file"><a href="../doc/spec/spec_helper_rb_html.html">spec_helper_rb.html</a>
+  
+    <li class="file"><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../doc/test/tc_mathexpansion_rb_html.html">tc_mathexpansion_rb.html</a>
+  
+    <li class="file"><a href="../log_html.html">log.html</a>
+  
+    <li class="file"><a href="../log_txt.html">log</a>
+  
+    <li class="file"><a href="../math_expansion_gemspec.html">math_expansion.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Fixnum.html">Fixnum</a>
+  
+    <li><a href="../Float.html">Float</a>
+  
+    <li><a href="../MathExpansion.html">MathExpansion</a>
+  
+    <li><a href="../MathExpansion/Fraccion.html">MathExpansion::Fraccion</a>
+  
+    <li><a href="../MathExpansion/Matriz.html">MathExpansion::Matriz</a>
+  
+    <li><a href="../MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a>
+  
+    <li><a href="../MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a>
+  
+    <li><a href="../String.html">String</a>
+  
+    <li><a href="../Test_Matriz.html">Test_Matriz</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MathExpansion::Matriz</h1>
+
+  <div id="description" class="description">
+    
 <p>Esta clase contendrá el número de filas y columnas de la matriz.</p>
 
-    </div><!-- description -->
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
 
     
+
     
+
     
-    <div id="5Buntitled-5D" class="documentation-section">
-      
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
 
       
+      <div id="attribute-i-M" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">M</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
-      
-
-      
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
-
+        <div class="method-description">
         
-        <div id="M-attribute-method" class="method-detail">
-          <a name="M"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">M</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
+        <p>Número de columnas.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-N" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">N</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
-          <div class="method-description">
+        <div class="method-description">
+        
+        <p>Número de filas.</p>
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-contenido" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">contenido</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        <p>Vector que contendrá los datos de la matriz.</p>
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(n, m)</span>
           
-          <p>Número de columnas.</p>
+          <span class="method-click-advice">click to toggle source</span>
           
-          </div>
         </div>
         
-        <div id="N-attribute-method" class="method-detail">
-          <a name="N"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">N</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
 
-          <div class="method-description">
+        <div class="method-description">
           
-          <p>Número de filas.</p>
-          
-          </div>
-        </div>
-        
-        <div id="contenido-attribute-method" class="method-detail">
-          <a name="contenido"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">contenido</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
-
-          <div class="method-description">
-          
-          <p>Vector que contendrá los datos de la matriz.</p>
-          
-          </div>
-        </div>
-        
-      </div><!-- attribute-method-details -->
-      
-
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
-
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(n, m)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Los parámetros corresponden con el número de filas y columnas de la matriz:</p>
+          <p>Constructor de la matriz. Crea una matriz de tamaño N*M sin contenido,
+inicializando sólo <a href="Matriz.html#attribute-i-N">#N</a> y <a
+href="Matriz.html#attribute-i-M">#M</a>.</p>
 <ul><li>
-<p><b>n</b>: Número de filas.</p>
+<p><strong>Argumentos</strong>    :</p>
+<ul><li>
+<p><code>n</code>: Número de filas. Debe ser mayor que 0.</p>
 </li><li>
-<p><b>m</b>: Número de columnas.</p>
+<p><code>m</code>: Número de columnas. Debe ser mayor que 0.</p>
 </li></ul>
-            
+</li></ul>
+          
+          
 
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/matriz.rb, line 16</span>
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/matriz.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">n</span>, <span class="ruby-identifier">m</span>)
-  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">'Indice no valido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">m</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;Indice no valido&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">m</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
 
   <span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span> = <span class="ruby-identifier">n</span>, <span class="ruby-identifier">m</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
-
+          </div><!-- new-source -->
           
+        </div>
 
-          
-        </div><!-- new-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- new-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- public-class-method-details -->
   
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
 
-  </div><!-- documentation -->
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
+        <div class="method-description">
+          
+          <p>Permite multiplicar un elemento a una matriz.</p>
+          
+          
 
-</body>
-</html>
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/matriz_operaciones.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Parametro invalido&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+
+  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>) <span class="ruby-comment"># Matriz * numero</span>
+    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span>)
+    
+    (<span class="ruby-ivar">@N</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      (<span class="ruby-ivar">@M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)<span class="ruby-operator">*</span><span class="ruby-identifier">other</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># Matriz * Matriz</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Matriz no compatible (A.N == B.M)&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@M</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">N</span>
+    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>)
+    
+    (<span class="ruby-ivar">@N</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      (<span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+        (<span class="ruby-ivar">@M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+          <span class="ruby-comment"># Esto NO es programación funcional...</span>
+          <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">k</span>) <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">c</span>.<span class="ruby-identifier">null_percent</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">MathExpansion</span><span class="ruby-operator">::</span><span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">c</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Permite sumar matrices (dispersas o densas) de iguales dimensiones.</p>
+<ul><li>
+<p><strong>Argumentos</strong>    :</p>
+<ul><li>
+<p><code>other</code>: <a href="Matriz.html">Matriz</a> densa o dispersa. Debe
+ser de igual tamaño que la actual.</p>
+</li></ul>
+</li><li>
+<p><strong>Devuelve</strong>    :</p>
+<ul><li>
+<p><a href="Matriz.html">Matriz</a> de tamaño N*M resultado de la suma de la
+matriz actual con <code>other</code>. Si el porcentaje de valores nulos es
+mayor al 60%, se devuelve una matriz dispersa. Si no, se devuelve una
+matriz densa.</p>
+</li></ul>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/matriz_operaciones.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Tipo invalido&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Matriz no compatible&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@N</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">N</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@M</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span>)
+  
+  <span class="ruby-comment">#(0...@N).each do |i|</span>
+    <span class="ruby-comment">#(0...@M).each do |j|</span>
+  (<span class="ruby-ivar">@N</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    (<span class="ruby-ivar">@M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">c</span>.<span class="ruby-identifier">null_percent</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">MathExpansion</span><span class="ruby-operator">::</span><span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">c</span>
+  <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Permite restar matrices (dispersas o densas) de iguales dimensiones.</p>
+<ul><li>
+<p><strong>Argumentos</strong>    :</p>
+<ul><li>
+<p><code>other</code>: <a href="Matriz.html">Matriz</a> densa o dispersa. Debe
+ser de igual tamaño que la actual.</p>
+</li></ul>
+</li><li>
+<p><strong>Devuelve</strong>    :</p>
+<ul><li>
+<p><a href="Matriz.html">Matriz</a> de tamaño N*M resultado de la resta de la
+matriz actual con <code>other</code>. Si el porcentaje de valores nulos es
+mayor al 60%, se devuelve una matriz dispersa. Si no, se devuelve una
+matriz densa.</p>
+</li></ul>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/matriz_operaciones.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Tipo invalido&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Matriz no compatible&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@N</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">N</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@M</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span>)
+  
+  (<span class="ruby-ivar">@N</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    (<span class="ruby-ivar">@M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">c</span>.<span class="ruby-identifier">null_percent</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.6</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">MathExpansion</span><span class="ruby-operator">::</span><span class="ruby-constant">Matriz_Dispersa</span>.<span class="ruby-identifier">copy</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">c</span>
+  <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-get" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get</span><span
+            class="method-args">(i, j)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/matriz.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>)
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get-method -->
+
+    
+      <div id="method-i-set" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set</span><span
+            class="method-args">(i, j, val)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="set-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/matriz.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 

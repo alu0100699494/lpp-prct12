@@ -1,176 +1,534 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html>
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-  <title>RDoc Documentation</title>
+<title>RDoc Documentation</title>
 
-  <link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
-  <script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
 
-</head>
-<body class="indexpage">
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
-  
-  <h1>RDoc Documentation</h1>
 
-  
-  <p>This is the API documentation for 'RDoc Documentation'.</p>
-  
+<body>
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  
-  
-  <h2>Files</h2>
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
   <ul>
-    
-      <li class="file"><a href="Gemfile.html">Gemfile</a></li>
-    
-      <li class="file"><a href="Guardfile.html">Guardfile</a></li>
-    
-      <li class="file"><a href="LICENSE_txt.html">LICENSE.txt</a></li>
-    
-      <li class="file"><a href="Rakefile.html">Rakefile</a></li>
-    
-      <li class="file"><a href="log_txt.html">log.txt</a></li>
-    
-  </ul>
   
-
-  <h2 id="classes">Classes/Modules</h2>
-  <ul>
-    
-    <li class="module"><a href="MathExpansion.html">MathExpansion</a></li>
-    
-    <li class="class"><a href="MathExpansion/Fraccion.html">MathExpansion::Fraccion</a></li>
-    
-    <li class="class"><a href="MathExpansion/Matriz.html">MathExpansion::Matriz</a></li>
-    
-    <li class="class"><a href="MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a></li>
-    
-    <li class="class"><a href="MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a></li>
-    
-    <li class="class"><a href="Fixnum.html">Fixnum</a></li>
-    
-    <li class="class"><a href="Float.html">Float</a></li>
-    
-    <li class="class"><a href="String.html">String</a></li>
-    
-    <li class="class"><a href="Test_Matriz.html">Test_Matriz</a></li>
-    
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/Fixnum_html.html">Fixnum.html</a>
+  
+    <li class="file"><a href="./doc/Float_html.html">Float.html</a>
+  
+    <li class="file"><a href="./doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="./doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li class="file"><a href="./doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li class="file"><a href="./doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion_html.html">MathExpansion.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion/Fraccion_html.html">Fraccion.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion/Matriz_html.html">Matriz.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion/Matriz_Densa_html.html">Matriz_Densa.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion/Matriz_Dispersa_html.html">Matriz_Dispersa.html</a>
+  
+    <li class="file"><a href="./doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="./doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="./doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="./doc/Test_Matriz_html.html">Test_Matriz.html</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./doc/doc/Fixnum_html_html.html">Fixnum_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Float_html_html.html">Float_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Gemfile_html_html.html">Gemfile_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Gemfile_lock_html_html.html">Gemfile_lock_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Guardfile_html_html.html">Guardfile_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/LICENSE_txt_html_html.html">LICENSE_txt_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/MathExpansion/Fraccion_html_html.html">Fraccion_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/MathExpansion/Matriz_Densa_html_html.html">Matriz_Densa_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/MathExpansion/Matriz_Dispersa_html_html.html">Matriz_Dispersa_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/MathExpansion/Matriz_html_html.html">Matriz_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/MathExpansion_html_html.html">MathExpansion_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/README_md_html_html.html">README_md_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Rakefile_html_html.html">Rakefile_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/String_html_html.html">String_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/Test_Matriz_html_html.html">Test_Matriz_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Fixnum_html_html_html.html">Fixnum_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Float_html_html_html.html">Float_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Gemfile_html_html_html.html">Gemfile_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Gemfile_lock_html_html_html.html">Gemfile_lock_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Guardfile_html_html_html.html">Guardfile_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/LICENSE_txt_html_html_html.html">LICENSE_txt_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/MathExpansion/Fraccion_html_html_html.html">Fraccion_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html.html">Matriz_Densa_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html.html">Matriz_Dispersa_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/MathExpansion/Matriz_html_html_html.html">Matriz_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/MathExpansion_html_html_html.html">MathExpansion_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/README_md_html_html_html.html">README_md_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Rakefile_html_html_html.html">Rakefile_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/String_html_html_html.html">String_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/Test_Matriz_html_html_html.html">Test_Matriz_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Fixnum_html_html_html_html.html">Fixnum_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Float_html_html_html_html.html">Float_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Gemfile_html_html_html_html.html">Gemfile_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Gemfile_lock_html_html_html_html.html">Gemfile_lock_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Guardfile_html_html_html_html.html">Guardfile_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/LICENSE_txt_html_html_html_html.html">LICENSE_txt_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/MathExpansion/Fraccion_html_html_html_html.html">Fraccion_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html_html.html">Matriz_Densa_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html_html.html">Matriz_Dispersa_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/MathExpansion/Matriz_html_html_html_html.html">Matriz_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/MathExpansion_html_html_html_html.html">MathExpansion_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/README_md_html_html_html_html.html">README_md_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Rakefile_html_html_html_html.html">Rakefile_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/String_html_html_html_html.html">String_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/Test_Matriz_html_html_html_html.html">Test_Matriz_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/created_rid_html_html_html.html">created_rid_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Fixnum_html_html_html_html_html.html">Fixnum_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Float_html_html_html_html_html.html">Float_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html.html">Gemfile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html.html">Gemfile_lock_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html.html">Guardfile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html.html">LICENSE_txt_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/MathExpansion/Fraccion_html_html_html_html_html.html">Fraccion_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html_html_html.html">Matriz_Densa_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html_html_html.html">Matriz_Dispersa_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/MathExpansion/Matriz_html_html_html_html_html.html">Matriz_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/MathExpansion_html_html_html_html_html.html">MathExpansion_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/README_md_html_html_html_html_html.html">README_md_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html.html">Rakefile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/String_html_html_html_html_html.html">String_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/Test_Matriz_html_html_html_html_html.html">Test_Matriz_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/created_rid_html_html_html_html.html">created_rid_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Fixnum_html_html_html_html_html_html.html">Fixnum_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Float_html_html_html_html_html_html.html">Float_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html_html.html">Gemfile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html_html.html">Gemfile_lock_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html_html.html">Guardfile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html_html.html">LICENSE_txt_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/MathExpansion/Fraccion_html_html_html_html_html_html.html">Fraccion_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html_html_html_html.html">Matriz_Densa_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html_html_html_html.html">Matriz_Dispersa_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/MathExpansion/Matriz_html_html_html_html_html_html.html">Matriz_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/MathExpansion_html_html_html_html_html_html.html">MathExpansion_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html_html.html">Rakefile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/String_html_html_html_html_html_html.html">String_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/Test_Matriz_html_html_html_html_html_html.html">Test_Matriz_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/created_rid_html_html_html_html_html.html">created_rid_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/index_html_html_html_html_html_html.html">index_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html_html.html">darkfish_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html_html.html">jquery_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/index_html_html_html_html_html.html">index_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html.html">darkfish_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html.html">jquery_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/quicksearch_js_html_html_html_html.html">quicksearch_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/js/thickbox-compressed_js_html_html_html_html.html">thickbox-compressed_js_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/lib/math_expansion/gcd_rb_html_html_html_html_html.html">gcd_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/lib/math_expansion/matriz_densa_rb_html_html_html_html_html.html">matriz_densa_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html_html_html_html.html">matriz_dispersa_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/lib/math_expansion/matriz_rb_html_html_html_html_html.html">matriz_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/lib/math_expansion/racional_rb_html_html_html_html_html.html">racional_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/lib/math_expansion/version_rb_html_html_html_html_html.html">version_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/lib/math_expansion_rb_html_html_html_html_html.html">math_expansion_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/log_txt_html_html_html_html_html.html">log_txt_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/rdoc_css_html_html_html_html.html">rdoc_css_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/spec/matriz_spec_rb_html_html_html_html_html.html">matriz_spec_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/spec/spec_helper_rb_html_html_html_html_html.html">spec_helper_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/doc/test/tc_mathexpansion_rb_html_html_html_html_html.html">tc_mathexpansion_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/index_html_html_html_html.html">index_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/darkfish_js_html_html_html.html">darkfish_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/jquery_js_html_html_html.html">jquery_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/navigation_js_html_html_html.html">navigation_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/quicksearch_js_html_html_html.html">quicksearch_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/search_index_js_html_html_html.html">search_index_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/search_js_html_html_html.html">search_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/searcher_js_html_html_html.html">searcher_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/js/thickbox-compressed_js_html_html_html.html">thickbox-compressed_js_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/lib/math_expansion/gcd_rb_html_html_html_html.html">gcd_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/lib/math_expansion/matriz_densa_rb_html_html_html_html.html">matriz_densa_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html_html_html.html">matriz_dispersa_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/lib/math_expansion/matriz_rb_html_html_html_html.html">matriz_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/lib/math_expansion/racional_rb_html_html_html_html.html">racional_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/lib/math_expansion/version_rb_html_html_html_html.html">version_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/lib/math_expansion_rb_html_html_html_html.html">math_expansion_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/log_html_html_html_html_html.html">log_html_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/log_txt_html_html_html_html.html">log_txt_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/math_expansion_gemspec_html_html_html_html.html">math_expansion_gemspec_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/rdoc_css_html_html_html.html">rdoc_css_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/spec/matriz_spec_rb_html_html_html_html.html">matriz_spec_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/spec/spec_helper_rb_html_html_html_html.html">spec_helper_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/table_of_contents_html_html_html_html.html">table_of_contents_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/doc/test/tc_mathexpansion_rb_html_html_html_html.html">tc_mathexpansion_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/index_html_html_html.html">index_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/darkfish_js_html_html.html">darkfish_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/jquery_js_html_html.html">jquery_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/navigation_js_html_html.html">navigation_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/quicksearch_js_html_html.html">quicksearch_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/search_index_js_html_html.html">search_index_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/search_js_html_html.html">search_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/searcher_js_html_html.html">searcher_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/js/thickbox-compressed_js_html_html.html">thickbox-compressed_js_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/lib/math_expansion/gcd_rb_html_html_html.html">gcd_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/lib/math_expansion/matriz_densa_rb_html_html_html.html">matriz_densa_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html_html.html">matriz_dispersa_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/lib/math_expansion/matriz_rb_html_html_html.html">matriz_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/lib/math_expansion/racional_rb_html_html_html.html">racional_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/lib/math_expansion/version_rb_html_html_html.html">version_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/lib/math_expansion_rb_html_html_html.html">math_expansion_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/log_html_html_html_html.html">log_html_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/log_txt_html_html_html.html">log_txt_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/math_expansion_gemspec_html_html_html.html">math_expansion_gemspec_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/rdoc_css_html_html.html">rdoc_css_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/spec/matriz_spec_rb_html_html_html.html">matriz_spec_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/spec/spec_helper_rb_html_html_html.html">spec_helper_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/table_of_contents_html_html_html.html">table_of_contents_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/doc/test/tc_mathexpansion_rb_html_html_html.html">tc_mathexpansion_rb_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/index_html_html.html">index_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/navigation_js_html.html">navigation_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/quicksearch_js_html.html">quicksearch_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/search_index_js_html.html">search_index_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/search_js_html.html">search_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/searcher_js_html.html">searcher_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/js/thickbox-compressed_js_html.html">thickbox-compressed_js.html</a>
+  
+    <li class="file"><a href="./doc/doc/lib/math_expansion/gcd_rb_html_html.html">gcd_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/lib/math_expansion/matriz_densa_rb_html_html.html">matriz_densa_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html.html">matriz_dispersa_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/lib/math_expansion/matriz_rb_html_html.html">matriz_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/lib/math_expansion/racional_rb_html_html.html">racional_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/lib/math_expansion/version_rb_html_html.html">version_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/lib/math_expansion_rb_html_html.html">math_expansion_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/log_html_html_html.html">log_html_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/log_txt_html_html.html">log_txt_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/math_expansion_gemspec_html_html.html">math_expansion_gemspec_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/rdoc_css_html.html">rdoc_css.html</a>
+  
+    <li class="file"><a href="./doc/doc/spec/matriz_spec_rb_html_html.html">matriz_spec_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/spec/spec_helper_rb_html_html.html">spec_helper_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
+  
+    <li class="file"><a href="./doc/doc/test/tc_mathexpansion_rb_html_html.html">tc_mathexpansion_rb_html.html</a>
+  
+    <li class="file"><a href="./doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="./doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="./doc/js/quicksearch_js.html">quicksearch.js</a>
+  
+    <li class="file"><a href="./doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="./doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="./doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="./doc/js/thickbox-compressed_js.html">thickbox-compressed.js</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/gcd_rb_html.html">gcd_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/matriz_densa_rb_html.html">matriz_densa_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/matriz_dispersa_rb_html.html">matriz_dispersa_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/matriz_rb_html.html">matriz_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/racional_rb_html.html">racional_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/version_rb_html.html">version_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion_rb_html.html">math_expansion_rb.html</a>
+  
+    <li class="file"><a href="./doc/log_html_html.html">log_html.html</a>
+  
+    <li class="file"><a href="./doc/log_txt_html.html">log_txt.html</a>
+  
+    <li class="file"><a href="./doc/math_expansion_gemspec_html.html">math_expansion_gemspec.html</a>
+  
+    <li class="file"><a href="./doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="./doc/spec/matriz_spec_rb_html.html">matriz_spec_rb.html</a>
+  
+    <li class="file"><a href="./doc/spec/spec_helper_rb_html.html">spec_helper_rb.html</a>
+  
+    <li class="file"><a href="./doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="./doc/test/tc_mathexpansion_rb_html.html">tc_mathexpansion_rb.html</a>
+  
+    <li class="file"><a href="./log_html.html">log.html</a>
+  
+    <li class="file"><a href="./log_txt.html">log</a>
+  
+    <li class="file"><a href="./math_expansion_gemspec.html">math_expansion.gemspec</a>
+  
   </ul>
+</nav>
 
-  <h2 id="methods">Methods</h2>
-  <ul>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-c-copy">::copy &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion.html#method-c-gcd">::gcd &mdash; MathExpansion</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-c-new">::new &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-c-new">::new &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Matriz.html#method-c-new">::new &mdash; MathExpansion::Matriz</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-c-new">::new &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-c-null">::null &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="Float.html#method-c-null">::null &mdash; Float</a></li>
-    
-      <li><a href="String.html#method-c-null">::null &mdash; String</a></li>
-    
-      <li><a href="Fixnum.html#method-c-null">::null &mdash; Fixnum</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-25">#% &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-2A">#* &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-2A">#* &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-i-2A">#* &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-2B">#+ &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-i-2B">#+ &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-2B">#+ &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-2D">#- &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-i-2D">#- &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-2D">#- &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-2D-40">#-@ &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-2F">#/ &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-3C-3D-3E">#<=> &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-abs">#abs &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-coerce">#coerce &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-den">#den &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-i-get">#get &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-get">#get &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-i-max">#max &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-max">#max &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-min">#min &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-i-min">#min &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-i-null_percent">#null_percent &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-null_percent">#null_percent &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-num">#num &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-reciprocal">#reciprocal &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-reducir">#reducir &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-reset">#reset &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-i-set">#set &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-set">#set &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="Test_Matriz.html#method-i-test_failure">#test_failure &mdash; Test_Matriz</a></li>
-    
-      <li><a href="Test_Matriz.html#method-i-test_simple">#test_simple &mdash; Test_Matriz</a></li>
-    
-      <li><a href="Test_Matriz.html#method-i-test_simple2">#test_simple2 &mdash; Test_Matriz</a></li>
-    
-      <li><a href="Test_Matriz.html#method-i-test_typecheck">#test_typecheck &mdash; Test_Matriz</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-to_f">#to_f &mdash; MathExpansion::Fraccion</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Densa.html#method-i-to_s">#to_s &mdash; MathExpansion::Matriz_Densa</a></li>
-    
-      <li><a href="MathExpansion/Matriz_Dispersa.html#method-i-to_s">#to_s &mdash; MathExpansion::Matriz_Dispersa</a></li>
-    
-      <li><a href="MathExpansion/Fraccion.html#method-i-to_s">#to_s &mdash; MathExpansion::Fraccion</a></li>
-    
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Fixnum.html">Fixnum</a>
+  
+    <li><a href="./Float.html">Float</a>
+  
+    <li><a href="./MathExpansion.html">MathExpansion</a>
+  
+    <li><a href="./MathExpansion/Fraccion.html">MathExpansion::Fraccion</a>
+  
+    <li><a href="./MathExpansion/Matriz.html">MathExpansion::Matriz</a>
+  
+    <li><a href="./MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a>
+  
+    <li><a href="./MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a>
+  
+    <li><a href="./String.html">String</a>
+  
+    <li><a href="./Test_Matriz.html">Test_Matriz</a>
+  
   </ul>
+</nav>
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
   </div>
-</body>
-</html>
+</nav>
+
+<div id="documentation" class="description">
+<p>This is the API documentation for RDoc Documentation.
+</div>
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

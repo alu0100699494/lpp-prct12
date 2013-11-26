@@ -1,242 +1,664 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-  <title>Class: MathExpansion::Fraccion</title>
+<title>class MathExpansion::Fraccion - RDoc Documentation</title>
 
-  <link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
 
-  <script src="../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../index.html">Home</a>
-          <a href="../index.html#classes">Classes</a>
-          <a href="../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../lib/math_expansion/racional_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/math_expansion/racional.rb">lib/math_expansion/racional.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">Object</p>
-        
-      </div>
-      
 
-      
+  
 
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/math_expansion/racional.rb
+  </ul>
+</nav>
 
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-new">::new</a></li>
-          
-          <li><a href="#method-c-null">::null</a></li>
-          
-          <li><a href="#method-i-25">#%</a></li>
-          
-          <li><a href="#method-i-2A">#*</a></li>
-          
-          <li><a href="#method-i-2B">#+</a></li>
-          
-          <li><a href="#method-i-2D">#-</a></li>
-          
-          <li><a href="#method-i-2D-40">#-@</a></li>
-          
-          <li><a href="#method-i-2F">#/</a></li>
-          
-          <li><a href="#method-i-3C-3D-3E">#<=></a></li>
-          
-          <li><a href="#method-i-abs">#abs</a></li>
-          
-          <li><a href="#method-i-coerce">#coerce</a></li>
-          
-          <li><a href="#method-i-den">#den</a></li>
-          
-          <li><a href="#method-i-num">#num</a></li>
-          
-          <li><a href="#method-i-reciprocal">#reciprocal</a></li>
-          
-          <li><a href="#method-i-reducir">#reducir</a></li>
-          
-          <li><a href="#method-i-to_f">#to_f</a></li>
-          
-          <li><a href="#method-i-to_s">#to_s</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <!-- Included Modules -->
-      <div id="includes-section" class="section">
-        <h3 class="section-header">Included Modules</h3>
-        <ul class="link-list">
-        
-        
-          <li><span class="include">Comparable</span></li>
-        
-        
-        </ul>
-      </div>
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../Gemfile.html">Gemfile</a></li>
-        
-          <li class="file"><a href="../Guardfile.html">Guardfile</a></li>
-        
-          <li class="file"><a href="../LICENSE_txt.html">LICENSE.txt</a></li>
-        
-          <li class="file"><a href="../Rakefile.html">Rakefile</a></li>
-        
-          <li class="file"><a href="../log_txt.html">log.txt</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../MathExpansion.html">MathExpansion</a></li>
-        
-          <li><a href="../MathExpansion/Fraccion.html">MathExpansion::Fraccion</a></li>
-        
-          <li><a href="../MathExpansion/Matriz.html">MathExpansion::Matriz</a></li>
-        
-          <li><a href="../MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a></li>
-        
-          <li><a href="../MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a></li>
-        
-          <li><a href="../Fixnum.html">Fixnum</a></li>
-        
-          <li><a href="../Float.html">Float</a></li>
-        
-          <li><a href="../String.html">String</a></li>
-        
-          <li><a href="../Test_Matriz.html">Test_Matriz</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="class">MathExpansion::Fraccion</h1>
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
 
-    <div id="description" class="description">
-      
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Comparable</span>
+  
+  
+  </ul>
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-c-null">::null</a>
+    
+    <li ><a href="#method-i-25">#%</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-2D-40">#-@</a>
+    
+    <li ><a href="#method-i-2F">#/</a>
+    
+    <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li ><a href="#method-i-abs">#abs</a>
+    
+    <li ><a href="#method-i-coerce">#coerce</a>
+    
+    <li ><a href="#method-i-den">#den</a>
+    
+    <li ><a href="#method-i-num">#num</a>
+    
+    <li ><a href="#method-i-reciprocal">#reciprocal</a>
+    
+    <li ><a href="#method-i-reducir">#reducir</a>
+    
+    <li ><a href="#method-i-to_f">#to_f</a>
+    
+    <li ><a href="#method-i-to_s">#to_s</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li class="file"><a href="../Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="../LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../doc/Fixnum_html.html">Fixnum.html</a>
+  
+    <li class="file"><a href="../doc/Float_html.html">Float.html</a>
+  
+    <li class="file"><a href="../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../doc/Gemfile_lock_html.html">Gemfile_lock.html</a>
+  
+    <li class="file"><a href="../doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li class="file"><a href="../doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion_html.html">MathExpansion.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion/Fraccion_html.html">Fraccion.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion/Matriz_html.html">Matriz.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion/Matriz_Densa_html.html">Matriz_Densa.html</a>
+  
+    <li class="file"><a href="../doc/MathExpansion/Matriz_Dispersa_html.html">Matriz_Dispersa.html</a>
+  
+    <li class="file"><a href="../doc/README_md_html.html">README_md.html</a>
+  
+    <li class="file"><a href="../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../doc/Test_Matriz_html.html">Test_Matriz.html</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../doc/doc/Fixnum_html_html.html">Fixnum_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Float_html_html.html">Float_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Gemfile_html_html.html">Gemfile_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Gemfile_lock_html_html.html">Gemfile_lock_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Guardfile_html_html.html">Guardfile_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/LICENSE_txt_html_html.html">LICENSE_txt_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion/Fraccion_html_html.html">Fraccion_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion/Matriz_Densa_html_html.html">Matriz_Densa_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion/Matriz_Dispersa_html_html.html">Matriz_Dispersa_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion/Matriz_html_html.html">Matriz_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/MathExpansion_html_html.html">MathExpansion_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/README_md_html_html.html">README_md_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Rakefile_html_html.html">Rakefile_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/String_html_html.html">String_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Test_Matriz_html_html.html">Test_Matriz_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Fixnum_html_html_html.html">Fixnum_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Float_html_html_html.html">Float_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Gemfile_html_html_html.html">Gemfile_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Gemfile_lock_html_html_html.html">Gemfile_lock_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Guardfile_html_html_html.html">Guardfile_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/LICENSE_txt_html_html_html.html">LICENSE_txt_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion/Fraccion_html_html_html.html">Fraccion_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html.html">Matriz_Densa_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html.html">Matriz_Dispersa_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion/Matriz_html_html_html.html">Matriz_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/MathExpansion_html_html_html.html">MathExpansion_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/README_md_html_html_html.html">README_md_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Rakefile_html_html_html.html">Rakefile_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/String_html_html_html.html">String_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/Test_Matriz_html_html_html.html">Test_Matriz_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Fixnum_html_html_html_html.html">Fixnum_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Float_html_html_html_html.html">Float_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Gemfile_html_html_html_html.html">Gemfile_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Gemfile_lock_html_html_html_html.html">Gemfile_lock_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Guardfile_html_html_html_html.html">Guardfile_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/LICENSE_txt_html_html_html_html.html">LICENSE_txt_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion/Fraccion_html_html_html_html.html">Fraccion_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html_html.html">Matriz_Densa_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html_html.html">Matriz_Dispersa_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion/Matriz_html_html_html_html.html">Matriz_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/MathExpansion_html_html_html_html.html">MathExpansion_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/README_md_html_html_html_html.html">README_md_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Rakefile_html_html_html_html.html">Rakefile_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/String_html_html_html_html.html">String_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/Test_Matriz_html_html_html_html.html">Test_Matriz_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/created_rid_html_html_html.html">created_rid_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Fixnum_html_html_html_html_html.html">Fixnum_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Float_html_html_html_html_html.html">Float_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html.html">Gemfile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html.html">Gemfile_lock_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html.html">Guardfile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html.html">LICENSE_txt_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion/Fraccion_html_html_html_html_html.html">Fraccion_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html_html_html.html">Matriz_Densa_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html_html_html.html">Matriz_Dispersa_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion/Matriz_html_html_html_html_html.html">Matriz_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/MathExpansion_html_html_html_html_html.html">MathExpansion_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/README_md_html_html_html_html_html.html">README_md_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html.html">Rakefile_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/String_html_html_html_html_html.html">String_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/Test_Matriz_html_html_html_html_html.html">Test_Matriz_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/created_rid_html_html_html_html.html">created_rid_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Fixnum_html_html_html_html_html_html.html">Fixnum_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Float_html_html_html_html_html_html.html">Float_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Gemfile_html_html_html_html_html_html.html">Gemfile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Gemfile_lock_html_html_html_html_html_html.html">Gemfile_lock_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Guardfile_html_html_html_html_html_html.html">Guardfile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/LICENSE_txt_html_html_html_html_html_html.html">LICENSE_txt_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion/Fraccion_html_html_html_html_html_html.html">Fraccion_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion/Matriz_Densa_html_html_html_html_html_html.html">Matriz_Densa_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion/Matriz_Dispersa_html_html_html_html_html_html.html">Matriz_Dispersa_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion/Matriz_html_html_html_html_html_html.html">Matriz_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/MathExpansion_html_html_html_html_html_html.html">MathExpansion_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Rakefile_html_html_html_html_html_html.html">Rakefile_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/String_html_html_html_html_html_html.html">String_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/Test_Matriz_html_html_html_html_html_html.html">Test_Matriz_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/created_rid_html_html_html_html_html.html">created_rid_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/index_html_html_html_html_html_html.html">index_html_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html_html.html">darkfish_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html_html.html">jquery_js_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/index_html_html_html_html_html.html">index_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/js/darkfish_js_html_html_html_html.html">darkfish_js_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/js/jquery_js_html_html_html_html.html">jquery_js_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/js/quicksearch_js_html_html_html_html.html">quicksearch_js_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/js/thickbox-compressed_js_html_html_html_html.html">thickbox-compressed_js_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/gcd_rb_html_html_html_html_html.html">gcd_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/matriz_densa_rb_html_html_html_html_html.html">matriz_densa_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html_html_html_html.html">matriz_dispersa_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/matriz_rb_html_html_html_html_html.html">matriz_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/racional_rb_html_html_html_html_html.html">racional_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion/version_rb_html_html_html_html_html.html">version_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/lib/math_expansion_rb_html_html_html_html_html.html">math_expansion_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/log_txt_html_html_html_html_html.html">log_txt_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/rdoc_css_html_html_html_html.html">rdoc_css_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/spec/matriz_spec_rb_html_html_html_html_html.html">matriz_spec_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/spec/spec_helper_rb_html_html_html_html_html.html">spec_helper_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/doc/test/tc_mathexpansion_rb_html_html_html_html_html.html">tc_mathexpansion_rb_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/index_html_html_html_html.html">index_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/darkfish_js_html_html_html.html">darkfish_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/jquery_js_html_html_html.html">jquery_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/navigation_js_html_html_html.html">navigation_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/quicksearch_js_html_html_html.html">quicksearch_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/search_index_js_html_html_html.html">search_index_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/search_js_html_html_html.html">search_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/searcher_js_html_html_html.html">searcher_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/js/thickbox-compressed_js_html_html_html.html">thickbox-compressed_js_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/gcd_rb_html_html_html_html.html">gcd_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/matriz_densa_rb_html_html_html_html.html">matriz_densa_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html_html_html.html">matriz_dispersa_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/matriz_rb_html_html_html_html.html">matriz_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/racional_rb_html_html_html_html.html">racional_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion/version_rb_html_html_html_html.html">version_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/lib/math_expansion_rb_html_html_html_html.html">math_expansion_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/log_html_html_html_html_html.html">log_html_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/log_txt_html_html_html_html.html">log_txt_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/math_expansion_gemspec_html_html_html_html.html">math_expansion_gemspec_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/rdoc_css_html_html_html.html">rdoc_css_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/spec/matriz_spec_rb_html_html_html_html.html">matriz_spec_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/spec/spec_helper_rb_html_html_html_html.html">spec_helper_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/table_of_contents_html_html_html_html.html">table_of_contents_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/doc/test/tc_mathexpansion_rb_html_html_html_html.html">tc_mathexpansion_rb_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/index_html_html_html.html">index_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/darkfish_js_html_html.html">darkfish_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/jquery_js_html_html.html">jquery_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/navigation_js_html_html.html">navigation_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/quicksearch_js_html_html.html">quicksearch_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/search_index_js_html_html.html">search_index_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/search_js_html_html.html">search_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/searcher_js_html_html.html">searcher_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/js/thickbox-compressed_js_html_html.html">thickbox-compressed_js_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/gcd_rb_html_html_html.html">gcd_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/matriz_densa_rb_html_html_html.html">matriz_densa_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html_html.html">matriz_dispersa_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/matriz_rb_html_html_html.html">matriz_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/racional_rb_html_html_html.html">racional_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion/version_rb_html_html_html.html">version_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/lib/math_expansion_rb_html_html_html.html">math_expansion_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/log_html_html_html_html.html">log_html_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/log_txt_html_html_html.html">log_txt_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/math_expansion_gemspec_html_html_html.html">math_expansion_gemspec_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/rdoc_css_html_html.html">rdoc_css_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/spec/matriz_spec_rb_html_html_html.html">matriz_spec_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/spec/spec_helper_rb_html_html_html.html">spec_helper_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/table_of_contents_html_html_html.html">table_of_contents_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/test/tc_mathexpansion_rb_html_html_html.html">tc_mathexpansion_rb_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/index_html_html.html">index_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/navigation_js_html.html">navigation_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/quicksearch_js_html.html">quicksearch_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/search_index_js_html.html">search_index_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/search_js_html.html">search_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/searcher_js_html.html">searcher_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/thickbox-compressed_js_html.html">thickbox-compressed_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/gcd_rb_html_html.html">gcd_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/matriz_densa_rb_html_html.html">matriz_densa_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/matriz_dispersa_rb_html_html.html">matriz_dispersa_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/matriz_rb_html_html.html">matriz_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/racional_rb_html_html.html">racional_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion/version_rb_html_html.html">version_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/lib/math_expansion_rb_html_html.html">math_expansion_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/log_html_html_html.html">log_html_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/log_txt_html_html.html">log_txt_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/math_expansion_gemspec_html_html.html">math_expansion_gemspec_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/rdoc_css_html.html">rdoc_css.html</a>
+  
+    <li class="file"><a href="../doc/doc/spec/matriz_spec_rb_html_html.html">matriz_spec_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/spec/spec_helper_rb_html_html.html">spec_helper_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/test/tc_mathexpansion_rb_html_html.html">tc_mathexpansion_rb_html.html</a>
+  
+    <li class="file"><a href="../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../doc/js/quicksearch_js.html">quicksearch.js</a>
+  
+    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../doc/js/thickbox-compressed_js.html">thickbox-compressed.js</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/gcd_rb_html.html">gcd_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/matriz_densa_rb_html.html">matriz_densa_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/matriz_dispersa_rb_html.html">matriz_dispersa_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/matriz_rb_html.html">matriz_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/racional_rb_html.html">racional_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion/version_rb_html.html">version_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/math_expansion_rb_html.html">math_expansion_rb.html</a>
+  
+    <li class="file"><a href="../doc/log_html_html.html">log_html.html</a>
+  
+    <li class="file"><a href="../doc/log_txt_html.html">log_txt.html</a>
+  
+    <li class="file"><a href="../doc/math_expansion_gemspec_html.html">math_expansion_gemspec.html</a>
+  
+    <li class="file"><a href="../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../doc/spec/matriz_spec_rb_html.html">matriz_spec_rb.html</a>
+  
+    <li class="file"><a href="../doc/spec/spec_helper_rb_html.html">spec_helper_rb.html</a>
+  
+    <li class="file"><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../doc/test/tc_mathexpansion_rb_html.html">tc_mathexpansion_rb.html</a>
+  
+    <li class="file"><a href="../log_html.html">log.html</a>
+  
+    <li class="file"><a href="../log_txt.html">log</a>
+  
+    <li class="file"><a href="../math_expansion_gemspec.html">math_expansion.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Fixnum.html">Fixnum</a>
+  
+    <li><a href="../Float.html">Float</a>
+  
+    <li><a href="../MathExpansion.html">MathExpansion</a>
+  
+    <li><a href="../MathExpansion/Fraccion.html">MathExpansion::Fraccion</a>
+  
+    <li><a href="../MathExpansion/Matriz.html">MathExpansion::Matriz</a>
+  
+    <li><a href="../MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a>
+  
+    <li><a href="../MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a>
+  
+    <li><a href="../String.html">String</a>
+  
+    <li><a href="../Test_Matriz.html">Test_Matriz</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MathExpansion::Fraccion</h1>
+
+  <div id="description" class="description">
+    
 <p>Esta clase permite representar números racionales de la forma
 <em>numerador/denominador</em>.</p>
 
-    </div><!-- description -->
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
 
     
+
     
+
     
-    <div id="5Buntitled-5D" class="documentation-section">
-      
 
-      
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
 
-      
-
-      
-
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
-
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
-
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(x,y)</span>
           
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(x,y)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
+          <span class="method-click-advice">click to toggle source</span>
           
+        </div>
+        
 
-          <div class="method-description">
-            
-            <p>Los parámetros que se pasan son el numerador y el denominador,
+        <div class="method-description">
+          
+          <p>Los parámetros que se pasan son el numerador y el denominador,
 respectivamente:</p>
 <ul><li>
-<p><b>x</b>: Numerador.</p>
+<p><strong>x</strong>: Numerador.</p>
 </li><li>
-<p><b>y</b>: Denominador.</p>
+<p><strong>y</strong>: Denominador.</p>
 </li></ul>
-            
+          
+          
 
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 17</span>
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 17</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">y</span>)
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Argumentos no enteros.'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span>
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Denominador nulo.'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Argumentos no enteros.&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">y</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fixnum</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">&#39;Denominador nulo.&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
 
     <span class="ruby-ivar">@num</span>, <span class="ruby-ivar">@den</span> = <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>
     <span class="ruby-identifier">reducir</span>
@@ -251,616 +673,613 @@ respectivamente:</p>
         <span class="ruby-ivar">@num</span> = <span class="ruby-operator">-</span><span class="ruby-ivar">@num</span>
     <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
+          </div><!-- new-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-c-null" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">null</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve la fracción nula (con valor 0) <em>0/1</em>.</p>
+          
           
 
           
-        </div><!-- new-method -->
-
-      
-        <div id="null-method" class="method-detail ">
-          <a name="method-c-null"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">null</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Devuelve la fracción nula (con valor 0) <em>0/1</em>.</p>
-            
-
-            
-            <div class="method-source-code" id="null-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 47</span>
+          <div class="method-source-code" id="null-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">null</span>
     <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-value">1</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- null-source -->
-            
-          </div>
-
+          </div><!-- null-source -->
           
+        </div>
 
-          
-        </div><!-- null-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- null-method -->
+
     
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
 
-      
-        <div id="25-method" class="method-detail ">
-          <a name="method-i-25"></a>
+    
+      <div id="method-i-25" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">%</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Permite obtener el resto entre la división de una fracción y otro elemento.</p>
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">%</span><span
-              class="method-args">(other)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Permite obtener el resto entre la división de una fracción y otro elemento.</p>
-            
-
-            
-            <div class="method-source-code" id="25-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 141</span>
+          <div class="method-source-code" id="25-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 141</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">%</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment">#-- # Operación módulo #++</span>
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">'Argumento no racional'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fraccion</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;Argumento no racional&#39;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fraccion</span>
     
     <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-value">1</span>) <span class="ruby-comment">#-- # Resto de una división de fracciones = siempre nulo (0/1) #++</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- 25-source -->
-            
-          </div>
+          </div><!-- 25-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- 25-method -->
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Permite multiplicar otro elemento a una fracción.</p>
+          
           
 
           
-        </div><!-- 25-method -->
-
-      
-        <div id="2A-method" class="method-detail ">
-          <a name="method-i-2A"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">*</span><span
-              class="method-args">(other)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Permite multiplicar otro elemento a una fracción.</p>
-            
-
-            
-            <div class="method-source-code" id="2A-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 113</span>
-<span class="ruby-keyword">def</span> *(<span class="ruby-identifier">other</span>) <span class="ruby-comment">#-- # Operación producto #++</span>
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 113</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment">#-- # Operación producto #++</span>
     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:den</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:num</span>)
-      <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@num</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+      <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@num</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
         <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">null</span>
       <span class="ruby-keyword">else</span>
-        <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>, <span class="ruby-ivar">@den</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>) <span class="ruby-comment"># a/b * c/d = (a*c)/(b*d)</span>
+        <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>, <span class="ruby-ivar">@den</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>) <span class="ruby-comment"># a/b * c/d = (a*c)/(b*d)</span>
       <span class="ruby-keyword">end</span>
     <span class="ruby-keyword">else</span>
-      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span>*<span class="ruby-identifier">other</span>, <span class="ruby-ivar">@den</span>)  <span class="ruby-comment"># a/b * c = (a*c)/b</span>
+      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>, <span class="ruby-ivar">@den</span>)  <span class="ruby-comment"># a/b * c = (a*c)/b</span>
     <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- 2A-source -->
-            
-          </div>
+          </div><!-- 2A-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Permite sumar otro elemento a una fracción.</p>
+          
           
 
           
-        </div><!-- 2A-method -->
-
-      
-        <div id="2B-method" class="method-detail ">
-          <a name="method-i-2B"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">+</span><span
-              class="method-args">(other)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Permite sumar otro elemento a una fracción.</p>
-            
-
-            
-            <div class="method-source-code" id="2B-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 97</span>
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 97</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment">#-- # Operación suma #++</span>
     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:den</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:num</span>)
-      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@den</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>, <span class="ruby-ivar">@den</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>) <span class="ruby-comment"># a/b + c/d = (a*d + b*c)/(b*d)</span>
+      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@den</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>, <span class="ruby-ivar">@den</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>) <span class="ruby-comment"># a/b + c/d = (a*d + b*c)/(b*d)</span>
     <span class="ruby-keyword">else</span>
-      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@den</span>*<span class="ruby-identifier">other</span>, <span class="ruby-ivar">@den</span>) <span class="ruby-comment"># a/b + c = (a + b*c)/b</span>
+      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@den</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>, <span class="ruby-ivar">@den</span>) <span class="ruby-comment"># a/b + c = (a + b*c)/b</span>
     <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- 2B-source -->
-            
-          </div>
+          </div><!-- 2B-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Permite restar otro elemento a una fracción.</p>
+          
           
 
           
-        </div><!-- 2B-method -->
-
-      
-        <div id="2D-method" class="method-detail ">
-          <a name="method-i-2D"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">-</span><span
-              class="method-args">(other)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Permite restar otro elemento a una fracción.</p>
-            
-
-            
-            <div class="method-source-code" id="2D-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 105</span>
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 105</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment">#-- # Operación resta #++</span>
     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:den</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:num</span>)
-      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@den</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>, <span class="ruby-ivar">@den</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>) <span class="ruby-comment"># a/b - c/d = (a*d - b*c)/(b*d)</span>
+      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@den</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>, <span class="ruby-ivar">@den</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>) <span class="ruby-comment"># a/b - c/d = (a*d - b*c)/(b*d)</span>
     <span class="ruby-keyword">else</span>
-      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@den</span>*<span class="ruby-identifier">other</span>, <span class="ruby-ivar">@den</span>) <span class="ruby-comment"># a/b - c = (a - b*c)/b</span>
+      <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@den</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>, <span class="ruby-ivar">@den</span>) <span class="ruby-comment"># a/b - c = (a - b*c)/b</span>
     <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- 2D-source -->
-            
-          </div>
+          </div><!-- 2D-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-2D-40" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-@</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve la fracción con signo negativo.</p>
+          
           
 
           
-        </div><!-- 2D-method -->
-
-      
-        <div id="2D-40-method" class="method-detail ">
-          <a name="method-i-2D-40"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">-@</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Devuelve la fracción con signo negativo.</p>
-            
-
-            
-            <div class="method-source-code" id="2D-40-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 88</span>
+          <div class="method-source-code" id="2D-40-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 88</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">-@</span> <span class="ruby-comment"># Operación negación</span>
     <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">-</span><span class="ruby-ivar">@num</span>, <span class="ruby-ivar">@den</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- 2D-40-source -->
-            
-          </div>
+          </div><!-- 2D-40-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- 2D-40-method -->
+
+    
+      <div id="method-i-2F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">/</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Permite dividir otro elemento a una fracción.</p>
+          
           
 
           
-        </div><!-- 2D-40-method -->
-
-      
-        <div id="2F-method" class="method-detail ">
-          <a name="method-i-2F"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">/</span><span
-              class="method-args">(other)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Permite dividir otro elemento a una fracción.</p>
-            
-
-            
-            <div class="method-source-code" id="2F-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 125</span>
+          <div class="method-source-code" id="2F-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 125</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">/</span>(<span class="ruby-identifier">other</span>) <span class="ruby-comment">#-- # Operación división #++</span>
     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:den</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:num</span>)
       <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
         <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">null</span>
       <span class="ruby-keyword">else</span>
-        <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>, <span class="ruby-ivar">@den</span>*<span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>) <span class="ruby-comment"># a/b / c/d = (a*d)/(b*c)</span>
+        <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>, <span class="ruby-ivar">@den</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>) <span class="ruby-comment"># a/b / c/d = (a*d)/(b*c)</span>
       <span class="ruby-keyword">end</span>
     <span class="ruby-keyword">else</span>
       <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
         <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">null</span>
       <span class="ruby-keyword">else</span>
-        <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span>, <span class="ruby-ivar">@den</span>*<span class="ruby-identifier">other</span>)
+        <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span>, <span class="ruby-ivar">@den</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>)
       <span class="ruby-keyword">end</span>
     <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- 2F-source -->
-            
-          </div>
-
+          </div><!-- 2F-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- 2F-method -->
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">&lt;=&gt;</span><span
+            class="method-args">(other)</span>
           
-        </div><!-- 2F-method -->
-
-      
-        <div id="3C-3D-3E-method" class="method-detail ">
-          <a name="method-i-3C-3D-3E"></a>
-
+          <span class="method-click-advice">click to toggle source</span>
           
-          <div class="method-heading">
-            <span class="method-name">&lt;=&gt;</span><span
-              class="method-args">(other)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+        </div>
+        
 
-          <div class="method-description">
-            
-            <p>Este método permite hacer operaciones comparacionales entre una fracción y
+        <div class="method-description">
+          
+          <p>Este método permite hacer operaciones comparacionales entre una fracción y
 otro elemento.</p>
-            
+          
+          
 
-            
-            <div class="method-source-code" id="3C-3D-3E-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 152</span>
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 152</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>)
-    <span class="ruby-comment">#-- #raise ArgumentError, 'Argumento no racional' unless other.is_a? Fraccion #++</span>
+    <span class="ruby-comment">#-- #raise ArgumentError, &#39;Argumento no racional&#39; unless other.is_a? Fraccion #++</span>
   
     <span class="ruby-comment">#-- # a/b &lt;=&gt; c/d -&gt; (a*d)/(b*d) &lt;=&gt; (c*b)/(d*b) -&gt; a*d &lt;=&gt; c*b #++</span>
     <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:den</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:num</span>)
-      (<span class="ruby-ivar">@num</span> * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>) <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span> * <span class="ruby-ivar">@den</span>)
+      (<span class="ruby-ivar">@num</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>) <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span> <span class="ruby-operator">*</span> <span class="ruby-ivar">@den</span>)
     <span class="ruby-keyword">else</span>
       (<span class="ruby-ivar">@num</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@den</span>.<span class="ruby-identifier">to_f</span>) <span class="ruby-operator">&lt;=&gt;</span> (<span class="ruby-identifier">other</span>)
     <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- 3C-3D-3E-source -->
-            
-          </div>
+          </div><!-- 3C-3D-3E-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- 3C-3D-3E-method -->
+
+    
+      <div id="method-i-abs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">abs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devulve el valor absoluto de una fracción</p>
+          
           
 
           
-        </div><!-- 3C-3D-3E-method -->
-
-      
-        <div id="abs-method" class="method-detail ">
-          <a name="method-i-abs"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">abs</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Devulve el valor absoluto de una fracción</p>
-            
-
-            
-            <div class="method-source-code" id="abs-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 70</span>
+          <div class="method-source-code" id="abs-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 70</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">abs</span>
     <span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span> = <span class="ruby-ivar">@num</span>, <span class="ruby-ivar">@den</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@num</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
-        <span class="ruby-identifier">a</span> = <span class="ruby-ivar">@num</span> * (<span class="ruby-value">-1</span>)
+        <span class="ruby-identifier">a</span> = <span class="ruby-ivar">@num</span> <span class="ruby-operator">*</span> (<span class="ruby-value">-1</span>)
     <span class="ruby-keyword">end</span>
     <span class="ruby-keyword">if</span> <span class="ruby-ivar">@den</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
-        <span class="ruby-identifier">b</span> = <span class="ruby-ivar">@den</span> * (<span class="ruby-value">-1</span>)
+        <span class="ruby-identifier">b</span> = <span class="ruby-ivar">@den</span> <span class="ruby-operator">*</span> (<span class="ruby-value">-1</span>)
     <span class="ruby-keyword">end</span>
     <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_i</span>,<span class="ruby-identifier">b</span>.<span class="ruby-identifier">to_i</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- abs-source -->
-            
-          </div>
-
+          </div><!-- abs-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- abs-method -->
+
+    
+      <div id="method-i-coerce" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">coerce</span><span
+            class="method-args">(other)</span>
           
-        </div><!-- abs-method -->
-
-      
-        <div id="coerce-method" class="method-detail ">
-          <a name="method-i-coerce"></a>
-
+          <span class="method-click-advice">click to toggle source</span>
           
-          <div class="method-heading">
-            <span class="method-name">coerce</span><span
-              class="method-args">(other)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+        </div>
+        
 
-          <div class="method-description">
-            
-            <p>Este método permite invertir el orden de los operandos para posibilitar las
+        <div class="method-description">
+          
+          <p>Este método permite invertir el orden de los operandos para posibilitar las
 operaciones aritméticas.</p>
-            
+          
+          
 
-            
-            <div class="method-source-code" id="coerce-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 43</span>
+          
+          <div class="method-source-code" id="coerce-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 43</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">other</span>)
     [<span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">other</span>,<span class="ruby-value">1</span>),<span class="ruby-keyword">self</span>]  
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- coerce-source -->
-            
-          </div>
+          </div><!-- coerce-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- coerce-method -->
+
+    
+      <div id="method-i-den" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">den</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve el valor del denominador.</p>
+          
           
 
           
-        </div><!-- coerce-method -->
-
-      
-        <div id="den-method" class="method-detail ">
-          <a name="method-i-den"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">den</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Devuelve el valor del denominador.</p>
-            
-
-            
-            <div class="method-source-code" id="den-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 39</span>
+          <div class="method-source-code" id="den-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 39</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">den</span>()
     <span class="ruby-ivar">@den</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- den-source -->
-            
-          </div>
+          </div><!-- den-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- den-method -->
+
+    
+      <div id="method-i-num" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">num</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve el valor del numerador.</p>
+          
           
 
           
-        </div><!-- den-method -->
-
-      
-        <div id="num-method" class="method-detail ">
-          <a name="method-i-num"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">num</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Devuelve el valor del numerador.</p>
-            
-
-            
-            <div class="method-source-code" id="num-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 35</span>
+          <div class="method-source-code" id="num-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">num</span>()
     <span class="ruby-ivar">@num</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- num-source -->
-            
-          </div>
+          </div><!-- num-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- num-method -->
+
+    
+      <div id="method-i-reciprocal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reciprocal</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Devuelve la fracción recíproca.</p>
+          
           
 
           
-        </div><!-- num-method -->
-
-      
-        <div id="reciprocal-method" class="method-detail ">
-          <a name="method-i-reciprocal"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">reciprocal</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Devuelve la fracción recíproca.</p>
-            
-
-            
-            <div class="method-source-code" id="reciprocal-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 81</span>
+          <div class="method-source-code" id="reciprocal-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 81</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">reciprocal</span>
     <span class="ruby-identifier">aux</span> = <span class="ruby-ivar">@num</span>
     <span class="ruby-ivar">@num</span> = <span class="ruby-ivar">@den</span>
     <span class="ruby-ivar">@den</span> = <span class="ruby-identifier">aux</span>
     <span class="ruby-constant">Fraccion</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span>,<span class="ruby-ivar">@den</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- reciprocal-source -->
-            
-          </div>
+          </div><!-- reciprocal-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- reciprocal-method -->
+
+    
+      <div id="method-i-reducir" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reducir</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Reduce la fracción a su mínima expresión.</p>
+          
           
 
           
-        </div><!-- reciprocal-method -->
-
-      
-        <div id="reducir-method" class="method-detail ">
-          <a name="method-i-reducir"></a>
-
-          
-          <div class="method-heading">
-            <span class="method-name">reducir</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            <p>Reduce la fracción a su mínima expresión.</p>
-            
-
-            
-            <div class="method-source-code" id="reducir-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 55</span>
+          <div class="method-source-code" id="reducir-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 55</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">reducir</span>
     <span class="ruby-identifier">mcd</span> = <span class="ruby-constant">MathExpansion</span><span class="ruby-operator">::</span><span class="ruby-identifier">gcd</span>(<span class="ruby-ivar">@num</span>,<span class="ruby-ivar">@den</span>)
     <span class="ruby-ivar">@num</span> = <span class="ruby-ivar">@num</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">mcd</span>
     <span class="ruby-ivar">@den</span> = <span class="ruby-ivar">@den</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">mcd</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- reducir-source -->
-            
-          </div>
-
+          </div><!-- reducir-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- reducir-method -->
+
+    
+      <div id="method-i-to_f" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_f</span><span
+            class="method-args">()</span>
           
-        </div><!-- reducir-method -->
-
-      
-        <div id="to_f-method" class="method-detail ">
-          <a name="method-i-to_f"></a>
-
+          <span class="method-click-advice">click to toggle source</span>
           
-          <div class="method-heading">
-            <span class="method-name">to_f</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+        </div>
+        
 
-          <div class="method-description">
-            
-            <p>Permite usar números en representación de punto flotante en el numerador y
+        <div class="method-description">
+          
+          <p>Permite usar números en representación de punto flotante en el numerador y
 en el denominador.</p>
-            
+          
+          
 
-            
-            <div class="method-source-code" id="to_f-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 61</span>
+          
+          <div class="method-source-code" id="to_f-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 61</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_f</span>
     <span class="ruby-ivar">@num</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-ivar">@den</span>.<span class="ruby-identifier">to_f</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- to_f-source -->
-            
-          </div>
-
+          </div><!-- to_f-source -->
           
+        </div>
 
+        
+
+        
+      </div><!-- to_f-method -->
+
+    
+      <div id="method-i-to_s" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_s</span><span
+            class="method-args">()</span>
           
-        </div><!-- to_f-method -->
-
-      
-        <div id="to_s-method" class="method-detail ">
-          <a name="method-i-to_s"></a>
-
+          <span class="method-click-advice">click to toggle source</span>
           
-          <div class="method-heading">
-            <span class="method-name">to_s</span><span
-              class="method-args">()</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+        </div>
+        
 
-          <div class="method-description">
-            
-            <p>Devuelve la representación de la fracción como
+        <div class="method-description">
+          
+          <p>Devuelve la representación de la fracción como
 “<em>numerador/denominador</em>”.</p>
-            
+          
+          
 
-            
-            <div class="method-source-code" id="to_s-source">
-<pre>
-<span class="ruby-comment"># File lib/math_expansion/racional.rb, line 51</span>
+          
+          <div class="method-source-code" id="to_s-source">
+            <pre><span class="ruby-comment"># File lib/math_expansion/racional.rb, line 51</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_s</span>
     <span class="ruby-node">&quot;#{@num}/#{@den}&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- to_s-source -->
-            
-          </div>
-
+          </div><!-- to_s-source -->
           
+        </div>
 
-          
-        </div><!-- to_s-method -->
+        
 
-      
-      </div><!-- public-instance-method-details -->
+        
+      </div><!-- to_s-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- public-instance-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 
