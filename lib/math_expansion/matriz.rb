@@ -20,11 +20,11 @@ module MathExpansion
       @N, @M = n, m
     end
     
-    
+    # Método que permite acceder a un elemento de la matriz. Devuelve _nil_. Redefinido en clases hijas.
     def get(i, j)
       nil
     end
-    
+    # Método que permite almacenar un elemento en la matriz. Devuelve _nil_. Redefinido en clases hijas.
     def set(i, j, val)
       nil
     end

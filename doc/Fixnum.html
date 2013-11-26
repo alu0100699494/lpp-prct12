@@ -1,272 +1,217 @@
-<!DOCTYPE html>
-
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 
-<title>class Fixnum - RDoc Documentation</title>
+  <title>Class: Fixnum</title>
 
-<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
-<script type="text/javascript">
-  var rdoc_rel_prefix = "./";
-</script>
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
 
-<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
-<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
-
-
+</head>
 <body id="top" class="class">
-<nav id="metadata">
-  <nav id="home-section" class="section">
-  <h3 class="section-header">
-    <a href="./index.html">Home</a>
-    <a href="./table_of_contents.html#classes">Classes</a>
-    <a href="./table_of_contents.html#methods">Methods</a>
-  </h3>
-</nav>
 
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
 
-  <nav id="search-section" class="section project-section" class="initially-hidden">
-  <form action="#" method="get" accept-charset="utf-8">
-    <h3 class="section-header">
-      <input type="text" name="search" placeholder="Search" id="search-field"
-             title="Type to search, Up and Down to navigate, Enter to load">
-    </h3>
-  </form>
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./test/tc_mathexpansion_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="test/tc_mathexpansion.rb">test/tc_mathexpansion.rb</a></li>
+          
+            <li><a href="./spec/matriz_spec_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="spec/matriz_spec.rb">spec/matriz_spec.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
 
-  <ul id="search-results" class="initially-hidden"></ul>
-</nav>
+      
+    </div>
 
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
 
-  
+      
 
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>spec/matriz_spec.rb
-    <li>test/tc_mathexpansion.rb
-  </ul>
-</nav>
+      
 
-    
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-null">::null</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+      <div id="fileindex-section" class="section project-section">
+        <h3 class="section-header">Files</h3>
+        <ul>
+        
+          <li class="file"><a href="./Gemfile.html">Gemfile</a></li>
+        
+          <li class="file"><a href="./Guardfile.html">Guardfile</a></li>
+        
+          <li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
+        
+          <li class="file"><a href="./Rakefile.html">Rakefile</a></li>
+        
+          <li class="file"><a href="./log_txt.html">log.txt</a></li>
+        
+        </ul>
+      </div>
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./MathExpansion.html">MathExpansion</a></li>
+        
+          <li><a href="./MathExpansion/Fraccion.html">MathExpansion::Fraccion</a></li>
+        
+          <li><a href="./MathExpansion/Matriz.html">MathExpansion::Matriz</a></li>
+        
+          <li><a href="./MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a></li>
+        
+          <li><a href="./MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a></li>
+        
+          <li><a href="./Fixnum.html">Fixnum</a></li>
+        
+          <li><a href="./Float.html">Float</a></li>
+        
+          <li><a href="./String.html">String</a></li>
+        
+          <li><a href="./Test_Matriz.html">Test_Matriz</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
   </div>
 
-  <div id="class-metadata">
-    
-    <nav id="parent-class-section" class="section">
-  <h3 class="section-header">Parent</h3>
-  
-  <p class="link">Object
-  
-</nav>
+  <div id="documentation">
+    <h1 class="class">Fixnum</h1>
 
-    
-    
-    <!-- Method Quickref -->
-<nav id="method-list-section" class="section">
-  <h3 class="section-header">Methods</h3>
-
-  <ul class="link-list">
-    
-    <li ><a href="#method-c-null">::null</a>
-    
-  </ul>
-</nav>
-
-  </div>
-
-  <div id="project-metadata">
-    <nav id="fileindex-section" class="section project-section">
-  <h3 class="section-header">Pages</h3>
-
-  <ul>
-  
-    <li class="file"><a href="./Gemfile.html">Gemfile</a>
-  
-    <li class="file"><a href="./Guardfile.html">Guardfile</a>
-  
-    <li class="file"><a href="./LICENSE_txt.html">LICENSE</a>
-  
-    <li class="file"><a href="./README_md.html">README</a>
-  
-    <li class="file"><a href="./Rakefile.html">Rakefile</a>
-  
-    <li class="file"><a href="./doc/Fixnum_html.html">Fixnum.html</a>
-  
-    <li class="file"><a href="./doc/Float_html.html">Float.html</a>
-  
-    <li class="file"><a href="./doc/Gemfile_html.html">Gemfile.html</a>
-  
-    <li class="file"><a href="./doc/Guardfile_html.html">Guardfile.html</a>
-  
-    <li class="file"><a href="./doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
-  
-    <li class="file"><a href="./doc/MathExpansion_html.html">MathExpansion.html</a>
-  
-    <li class="file"><a href="./doc/MathExpansion/Fraccion_html.html">Fraccion.html</a>
-  
-    <li class="file"><a href="./doc/MathExpansion/Matriz_html.html">Matriz.html</a>
-  
-    <li class="file"><a href="./doc/MathExpansion/Matriz_Densa_html.html">Matriz_Densa.html</a>
-  
-    <li class="file"><a href="./doc/MathExpansion/Matriz_Dispersa_html.html">Matriz_Dispersa.html</a>
-  
-    <li class="file"><a href="./doc/Rakefile_html.html">Rakefile.html</a>
-  
-    <li class="file"><a href="./doc/String_html.html">String.html</a>
-  
-    <li class="file"><a href="./doc/Test_Matriz_html.html">Test_Matriz.html</a>
-  
-    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
-  
-    <li class="file"><a href="./doc/index_html.html">index.html</a>
-  
-    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
-  
-    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
-  
-    <li class="file"><a href="./doc/js/quicksearch_js.html">quicksearch.js</a>
-  
-    <li class="file"><a href="./doc/js/thickbox-compressed_js.html">thickbox-compressed.js</a>
-  
-    <li class="file"><a href="./doc/lib/math_expansion/gcd_rb_html.html">gcd_rb.html</a>
-  
-    <li class="file"><a href="./doc/lib/math_expansion/matriz_densa_rb_html.html">matriz_densa_rb.html</a>
-  
-    <li class="file"><a href="./doc/lib/math_expansion/matriz_dispersa_rb_html.html">matriz_dispersa_rb.html</a>
-  
-    <li class="file"><a href="./doc/lib/math_expansion/matriz_rb_html.html">matriz_rb.html</a>
-  
-    <li class="file"><a href="./doc/lib/math_expansion/racional_rb_html.html">racional_rb.html</a>
-  
-    <li class="file"><a href="./doc/lib/math_expansion/version_rb_html.html">version_rb.html</a>
-  
-    <li class="file"><a href="./doc/lib/math_expansion_rb_html.html">math_expansion_rb.html</a>
-  
-    <li class="file"><a href="./doc/log_txt_html.html">log_txt.html</a>
-  
-    <li class="file"><a href="./doc/rdoc_css.html">rdoc.css</a>
-  
-    <li class="file"><a href="./doc/spec/matriz_spec_rb_html.html">matriz_spec_rb.html</a>
-  
-    <li class="file"><a href="./doc/spec/spec_helper_rb_html.html">spec_helper_rb.html</a>
-  
-    <li class="file"><a href="./doc/test/tc_mathexpansion_rb_html.html">tc_mathexpansion_rb.html</a>
-  
-    <li class="file"><a href="./log_html.html">log.html</a>
-  
-    <li class="file"><a href="./log_txt.html">log</a>
-  
-    <li class="file"><a href="./math_expansion_gemspec.html">math_expansion.gemspec</a>
-  
-  </ul>
-</nav>
-
-    <nav id="classindex-section" class="section project-section">
-  <h3 class="section-header">Class and Module Index</h3>
-
-  <ul class="link-list">
-  
-    <li><a href="./Fixnum.html">Fixnum</a>
-  
-    <li><a href="./Float.html">Float</a>
-  
-    <li><a href="./MathExpansion.html">MathExpansion</a>
-  
-    <li><a href="./MathExpansion/Fraccion.html">MathExpansion::Fraccion</a>
-  
-    <li><a href="./MathExpansion/Matriz.html">MathExpansion::Matriz</a>
-  
-    <li><a href="./MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a>
-  
-    <li><a href="./MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a>
-  
-    <li><a href="./String.html">String</a>
-  
-    <li><a href="./Test_Matriz.html">Test_Matriz</a>
-  
-  </ul>
-</nav>
-
-  </div>
-</nav>
-
-<div id="documentation">
-  <h1 class="class">class Fixnum</h1>
-
-  <div id="description" class="description">
-    
+    <div id="description" class="description">
+      
 <p><a href="Fixnum.html">Fixnum</a></p>
 
-  </div><!-- description -->
-
-  
-  
-  
-  <section id="5Buntitled-5D" class="documentation-section">
-    
+    </div><!-- description -->
 
     
-
     
-
     
+    <div id="5Buntitled-5D" class="documentation-section">
+      
 
-    <!-- Methods -->
-    
-     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Class Methods</h3>
+      
 
-    
-      <div id="method-c-null" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">null</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
+      
 
-        <div class="method-description">
-          
-          
-          
-          
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="null-method" class="method-detail ">
+          <a name="method-c-null"></a>
 
           
-          <div class="method-source-code" id="null-source">
-            <pre><span class="ruby-comment"># File spec/matriz_spec.rb, line 23</span>
+          <div class="method-heading">
+            <span class="method-name">null</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Devuelve el valor nulo de la clase <a href="Fixnum.html">Fixnum</a> (0).</p>
+            
+
+            
+            <div class="method-source-code" id="null-source">
+<pre>
+<span class="ruby-comment"># File test/tc_mathexpansion.rb, line 9</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">null</span>
-    <span class="ruby-value">0</span>
+        <span class="ruby-value">0</span>
 <span class="ruby-keyword">end</span></pre>
-          </div><!-- null-source -->
+            </div><!-- null-source -->
+            
+          </div>
+
           
-        </div>
 
-        
+          
+        </div><!-- null-method -->
 
-        
-      </div><!-- null-method -->
-
+      
+      </div><!-- public-class-method-details -->
     
-    </section><!-- public-class-method-details -->
+    </div><!-- 5Buntitled-5D -->
   
-  </section><!-- 5Buntitled-5D -->
 
-</div><!-- documentation -->
+  </div><!-- documentation -->
 
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
 
-<footer id="validator-badges">
-  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
-  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
-  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
-</footer>
+</body>
+</html>
 
