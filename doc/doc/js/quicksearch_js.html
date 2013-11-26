@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>quicksearch.js - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../../Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="../../LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="../../README_md.html">README</a>
+  
+    <li class="file"><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../doc/Fixnum_html.html">Fixnum.html</a>
+  
+    <li class="file"><a href="../../doc/Float_html.html">Float.html</a>
+  
+    <li class="file"><a href="../../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../../doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li class="file"><a href="../../doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li class="file"><a href="../../doc/MathExpansion_html.html">MathExpansion.html</a>
+  
+    <li class="file"><a href="../../doc/MathExpansion/Fraccion_html.html">Fraccion.html</a>
+  
+    <li class="file"><a href="../../doc/MathExpansion/Matriz_html.html">Matriz.html</a>
+  
+    <li class="file"><a href="../../doc/MathExpansion/Matriz_Densa_html.html">Matriz_Densa.html</a>
+  
+    <li class="file"><a href="../../doc/MathExpansion/Matriz_Dispersa_html.html">Matriz_Dispersa.html</a>
+  
+    <li class="file"><a href="../../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../../doc/Test_Matriz_html.html">Test_Matriz.html</a>
+  
+    <li class="file"><a href="../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../doc/js/quicksearch_js.html">quicksearch.js</a>
+  
+    <li class="file"><a href="../../doc/js/thickbox-compressed_js.html">thickbox-compressed.js</a>
+  
+    <li class="file"><a href="../../doc/lib/math_expansion/gcd_rb_html.html">gcd_rb.html</a>
+  
+    <li class="file"><a href="../../doc/lib/math_expansion/matriz_densa_rb_html.html">matriz_densa_rb.html</a>
+  
+    <li class="file"><a href="../../doc/lib/math_expansion/matriz_dispersa_rb_html.html">matriz_dispersa_rb.html</a>
+  
+    <li class="file"><a href="../../doc/lib/math_expansion/matriz_rb_html.html">matriz_rb.html</a>
+  
+    <li class="file"><a href="../../doc/lib/math_expansion/racional_rb_html.html">racional_rb.html</a>
+  
+    <li class="file"><a href="../../doc/lib/math_expansion/version_rb_html.html">version_rb.html</a>
+  
+    <li class="file"><a href="../../doc/lib/math_expansion_rb_html.html">math_expansion_rb.html</a>
+  
+    <li class="file"><a href="../../doc/log_txt_html.html">log_txt.html</a>
+  
+    <li class="file"><a href="../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../doc/spec/matriz_spec_rb_html.html">matriz_spec_rb.html</a>
+  
+    <li class="file"><a href="../../doc/spec/spec_helper_rb_html.html">spec_helper_rb.html</a>
+  
+    <li class="file"><a href="../../doc/test/tc_mathexpansion_rb_html.html">tc_mathexpansion_rb.html</a>
+  
+    <li class="file"><a href="../../log_html.html">log.html</a>
+  
+    <li class="file"><a href="../../log_txt.html">log</a>
+  
+    <li class="file"><a href="../../math_expansion_gemspec.html">math_expansion.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Fixnum.html">Fixnum</a>
+  
+    <li><a href="../../Float.html">Float</a>
+  
+    <li><a href="../../MathExpansion.html">MathExpansion</a>
+  
+    <li><a href="../../MathExpansion/Fraccion.html">MathExpansion::Fraccion</a>
+  
+    <li><a href="../../MathExpansion/Matriz.html">MathExpansion::Matriz</a>
+  
+    <li><a href="../../MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a>
+  
+    <li><a href="../../MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a>
+  
+    <li><a href="../../String.html">String</a>
+  
+    <li><a href="../../Test_Matriz.html">Test_Matriz</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<pre>JQuery QuickSearch - Hook up a form field to hide non-matching elements.
+$Id: quicksearch.js 53 2009-01-07 02:52:03Z deveiant $
+
+Author: Michael Granger &lt;mgranger@laika.com&gt;</pre>
+
+<p>jQuery.fn.quicksearch = function( target, searchElems, options ) {</p>
+
+<pre>// console.debug( &quot;Quicksearch fn&quot; );
+
+var settings = {
+        delay: 250,
+        clearButton: false,
+        highlightMatches: false,
+        focusOnLoad: false,
+        noSearchResultsIndicator: null
+};
+if ( options ) $.extend( settings, options );
+
+return jQuery(this).each( function() {
+        // console.debug( &quot;Creating a new quicksearch on %o for %o&quot;, this, searchElems );
+        new jQuery.quicksearch( this, searchElems, settings );
+});</pre>
+
+<p>};</p>
+
+<p>jQuery.quicksearch = function( searchBox, searchElems, settings ) {</p>
+
+<pre>var timeout;
+var boxdiv = $(searchBox).parents(&#39;div&#39;).eq(0);
+
+function init() {
+        setupKeyEventHandlers();
+        focusOnLoad();
+};
+
+function setupKeyEventHandlers() {
+        // console.debug( &quot;Hooking up the &#39;keypress&#39; event to %o&quot;, searchBox );
+        $(searchBox).
+                unbind( &#39;keyup&#39; ).
+                keyup( function(e) { return onSearchKey( e.keyCode ); });
+        $(searchBox).
+                unbind( &#39;keypress&#39; ).
+                keypress( function(e) {
+                        switch( e.which ) {
+                                // Execute the search on Enter, Tab, or Newline
+                                case 9:
+                                case 13:
+                                case 10:
+                                        clearTimeout( timeout );
+                                        e.preventDefault();
+                                        doQuickSearch();
+                                        break;
+
+                                // Allow backspace
+                                case 8:
+                                        return true;
+                                        break;
+
+                                // Only allow valid search characters
+                                default:
+                                        return validQSChar( e.charCode );
+                        }
+                });
+};
+
+function focusOnLoad() {
+        if ( !settings.focusOnLoad ) return false;
+        $(searchBox).focus();
+};
+
+function onSearchKey ( code ) {
+        clearTimeout( timeout );
+        // console.debug( &quot;...scheduling search.&quot; );
+        timeout = setTimeout( doQuickSearch, settings.delay );
+};
+
+function validQSChar( code ) {
+        var c = String.fromCharCode( code );
+        return (
+                (c == &#39;:&#39;) ||
+                (c &gt;= &#39;a&#39; &amp;&amp; c &lt;= &#39;z&#39;) ||
+                (c &gt;= &#39;A&#39; &amp;&amp; c &lt;= &#39;Z&#39;)
+          );
+};
+
+function doQuickSearch() {
+        var searchText = searchBox.value;
+        var pat = new RegExp( searchText, &quot;im&quot; );
+        var shownCount = 0;
+
+        if ( settings.noSearchResultsIndicator ) {
+                $(&#39;#&#39; + settings.noSearchResultsIndicator).hide();
+        }
+
+        // All elements start out hidden
+        $(searchElems).each( function(index) {
+                var str = $(this).text();
+
+                if ( pat.test(str) ) {
+                        shownCount += 1;
+                        $(this).fadeIn();
+                } else {
+                        $(this).hide();
+                }
+        });
+
+        if ( shownCount == 0 &amp;&amp; settings.noSearchResultsIndicator ) {
+                $(&#39;#&#39; + settings.noSearchResultsIndicator).slideDown();
+        }
+};
+
+init();</pre>
+
+<p>};</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

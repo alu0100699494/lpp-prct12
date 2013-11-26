@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>log.html - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="./LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="./README_md.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./doc/Fixnum_html.html">Fixnum.html</a>
+  
+    <li class="file"><a href="./doc/Float_html.html">Float.html</a>
+  
+    <li class="file"><a href="./doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="./doc/Guardfile_html.html">Guardfile.html</a>
+  
+    <li class="file"><a href="./doc/LICENSE_txt_html.html">LICENSE_txt.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion_html.html">MathExpansion.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion/Fraccion_html.html">Fraccion.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion/Matriz_html.html">Matriz.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion/Matriz_Densa_html.html">Matriz_Densa.html</a>
+  
+    <li class="file"><a href="./doc/MathExpansion/Matriz_Dispersa_html.html">Matriz_Dispersa.html</a>
+  
+    <li class="file"><a href="./doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="./doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="./doc/Test_Matriz_html.html">Test_Matriz.html</a>
+  
+    <li class="file"><a href="./doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="./doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="./doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="./doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="./doc/js/quicksearch_js.html">quicksearch.js</a>
+  
+    <li class="file"><a href="./doc/js/thickbox-compressed_js.html">thickbox-compressed.js</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/gcd_rb_html.html">gcd_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/matriz_densa_rb_html.html">matriz_densa_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/matriz_dispersa_rb_html.html">matriz_dispersa_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/matriz_rb_html.html">matriz_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/racional_rb_html.html">racional_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion/version_rb_html.html">version_rb.html</a>
+  
+    <li class="file"><a href="./doc/lib/math_expansion_rb_html.html">math_expansion_rb.html</a>
+  
+    <li class="file"><a href="./doc/log_txt_html.html">log_txt.html</a>
+  
+    <li class="file"><a href="./doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="./doc/spec/matriz_spec_rb_html.html">matriz_spec_rb.html</a>
+  
+    <li class="file"><a href="./doc/spec/spec_helper_rb_html.html">spec_helper_rb.html</a>
+  
+    <li class="file"><a href="./doc/test/tc_mathexpansion_rb_html.html">tc_mathexpansion_rb.html</a>
+  
+    <li class="file"><a href="./log_html.html">log.html</a>
+  
+    <li class="file"><a href="./log_txt.html">log</a>
+  
+    <li class="file"><a href="./math_expansion_gemspec.html">math_expansion.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Fixnum.html">Fixnum</a>
+  
+    <li><a href="./Float.html">Float</a>
+  
+    <li><a href="./MathExpansion.html">MathExpansion</a>
+  
+    <li><a href="./MathExpansion/Fraccion.html">MathExpansion::Fraccion</a>
+  
+    <li><a href="./MathExpansion/Matriz.html">MathExpansion::Matriz</a>
+  
+    <li><a href="./MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a>
+  
+    <li><a href="./MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a>
+  
+    <li><a href="./String.html">String</a>
+  
+    <li><a href="./Test_Matriz.html">Test_Matriz</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>&lt;!DOCTYPE html&gt; &lt;html lang=&#39;en&#39;&gt; &lt;head&gt;</p>
+
+<pre>&lt;title&gt;RSpec results&lt;/title&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+&lt;meta http-equiv=&quot;Expires&quot; content=&quot;-1&quot; /&gt;
+&lt;meta http-equiv=&quot;Pragma&quot; content=&quot;no-cache&quot; /&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-size: 80%;
+}
+&lt;/style&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  // &lt;![CDATA[</pre>
+
+<p>function addClass(element_id, classname) {</p>
+
+<pre>document.getElementById(element_id).className += (&quot; &quot; + classname);</pre>
+
+<p>}</p>
+
+<p>function removeClass(element_id, classname) {</p>
+
+<pre>var elem = document.getElementById(element_id);
+var classlist = elem.className.replace(classname,&#39;&#39;);
+elem.className = classlist;</pre>
+
+<p>}</p>
+
+<p>function moveProgressBar(percentDone) {</p>
+
+<pre>document.getElementById(&quot;rspec-header&quot;).style.width = percentDone +&quot;%&quot;;</pre>
+
+<p>}</p>
+
+<p>function makeRed(element_id) {</p>
+
+<pre>removeClass(element_id, &#39;passed&#39;);
+removeClass(element_id, &#39;not_implemented&#39;);
+addClass(element_id,&#39;failed&#39;);</pre>
+
+<p>}</p>
+
+<p>function makeYellow(element_id) {</p>
+
+<pre class="ruby"><span class="ruby-identifier">var</span> <span class="ruby-identifier">elem</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">getElementById</span>(<span class="ruby-identifier">element_id</span>);
+<span class="ruby-keyword">if</span> (<span class="ruby-identifier">elem</span>.<span class="ruby-identifier">className</span>.<span class="ruby-identifier">indexOf</span>(<span class="ruby-string">&quot;failed&quot;</span>) <span class="ruby-operator">==</span> <span class="ruby-value">-1</span>) {  <span class="ruby-regexp">//</span> <span class="ruby-keyword">class</span> <span class="ruby-identifier">doesn</span><span class="ruby-string">&#39;t includes failed
+  if (elem.className.indexOf(&quot;not_implemented&quot;) == -1) { // class doesn&#39;</span><span class="ruby-identifier">t</span> <span class="ruby-identifier">include</span> <span class="ruby-identifier">not_implemented</span>
+    <span class="ruby-identifier">removeClass</span>(<span class="ruby-identifier">element_id</span>, <span class="ruby-string">&#39;passed&#39;</span>);
+    <span class="ruby-identifier">addClass</span>(<span class="ruby-identifier">element_id</span>,<span class="ruby-string">&#39;not_implemented&#39;</span>);
+  }
+}
+</pre>
+
+<p>}</p>
+
+<p>function apply_filters() {</p>
+
+<pre>var passed_filter = document.getElementById(&#39;passed_checkbox&#39;).checked;
+var failed_filter = document.getElementById(&#39;failed_checkbox&#39;).checked;
+var pending_filter = document.getElementById(&#39;pending_checkbox&#39;).checked;
+
+assign_display_style(&quot;example passed&quot;, passed_filter);
+assign_display_style(&quot;example failed&quot;, failed_filter);
+assign_display_style(&quot;example not_implemented&quot;, pending_filter);
+
+assign_display_style_for_group(&quot;example_group passed&quot;, passed_filter);
+assign_display_style_for_group(&quot;example_group not_implemented&quot;, pending_filter, pending_filter || passed_filter);
+assign_display_style_for_group(&quot;example_group failed&quot;, failed_filter, failed_filter || pending_filter || passed_filter);</pre>
+
+<p>}</p>
+
+<p>function get_display_style(display_flag) {</p>
+
+<pre>var style_mode = &#39;none&#39;;
+if (display_flag == true) {
+  style_mode = &#39;block&#39;;
+}
+return style_mode;</pre>
+
+<p>}</p>
+
+<p>function assign_display_style(classname, display_flag) {</p>
+
+<pre>var style_mode = get_display_style(display_flag);
+var elems = document.getElementsByClassName(classname)
+for (var i=0; i&lt;elems.length;i++) {
+  elems[i].style.display = style_mode;
+}</pre>
+
+<p>}</p>
+
+<p>function assign_display_style_for_group(classname, display_flag,
+subgroup_flag) {</p>
+
+<pre>var display_style_mode = get_display_style(display_flag);
+var subgroup_style_mode = get_display_style(subgroup_flag);
+var elems = document.getElementsByClassName(classname)
+for (var i=0; i&lt;elems.length;i++) {
+  var style_mode = display_style_mode;
+  if ((display_flag != subgroup_flag) &amp;&amp; (elems[i].getElementsByTagName(&#39;dt&#39;)[0].innerHTML.indexOf(&quot;, &quot;) != -1)) {
+    elems[i].style.display = subgroup_style_mode;
+  } else {
+    elems[i].style.display = display_style_mode;
+  }
+}</pre>
+
+<p>}</p>
+
+<pre>  // ]]&gt;
+&lt;/script&gt;
+&lt;style type=&quot;text/css&quot;&gt;</pre>
+
+<p>rspec-header {</p>
+
+<pre>background: #65C400; color: #fff; height: 4em;</pre>
+
+<p>}</p>
+
+<p>.rspec-report h1 {</p>
+
+<pre>margin: 0px 10px 0px 10px;
+padding: 10px;
+font-family: &quot;Lucida Grande&quot;, Helvetica, sans-serif;
+font-size: 1.8em;
+position: absolute;</pre>
+
+<p>}</p>
+
+<p>label {</p>
+
+<pre>float:left;</pre>
+
+<p>}</p>
+
+<p>display-filters {</p>
+
+<pre>float:left;
+padding: 28px 0 0 40%;
+font-family: &quot;Lucida Grande&quot;, Helvetica, sans-serif;</pre>
+
+<p>}</p>
+
+<p>summary {</p>
+
+<pre>float:right;
+padding: 5px 10px;
+font-family: &quot;Lucida Grande&quot;, Helvetica, sans-serif;
+text-align: right;</pre>
+
+<p>}</p>
+
+<p>summary p {</p>
+
+<pre>margin: 0 0 0 2px;</pre>
+
+<p>}</p>
+
+<p>summary totals {</p>
+
+<pre>font-size: 1.2em;</pre>
+
+<p>}</p>
+
+<p>.example_group {</p>
+
+<pre>margin: 0 10px 5px;
+background: #fff;</pre>
+
+<p>}</p>
+
+<p>dl {</p>
+
+<pre>margin: 0; padding: 0 0 5px;
+font: normal 11px &quot;Lucida Grande&quot;, Helvetica, sans-serif;</pre>
+
+<p>}</p>
+
+<p>dt {</p>
+
+<pre>padding: 3px;
+background: #65C400;
+color: #fff;
+font-weight: bold;</pre>
+
+<p>}</p>
+
+<p>dd {</p>
+
+<pre>margin: 5px 0 5px 5px;
+padding: 3px 3px 3px 18px;</pre>
+
+<p>}</p>
+
+<p>dd .duration {</p>
+
+<pre>padding-left: 5px;
+text-align: right;
+right: 0px;
+float:right;</pre>
+
+<p>}</p>
+
+<p>dd.example.passed {</p>
+
+<pre>border-left: 5px solid #65C400;
+border-bottom: 1px solid #65C400;
+background: #DBFFB4; color: #3D7700;</pre>
+
+<p>}</p>
+
+<p>dd.example.not_implemented {</p>
+
+<pre>border-left: 5px solid #FAF834;
+border-bottom: 1px solid #FAF834;
+background: #FCFB98; color: #131313;</pre>
+
+<p>}</p>
+
+<p>dd.example.pending_fixed {</p>
+
+<pre>border-left: 5px solid #0000C2;
+border-bottom: 1px solid #0000C2;
+color: #0000C2; background: #D3FBFF;</pre>
+
+<p>}</p>
+
+<p>dd.example.failed {</p>
+
+<pre>border-left: 5px solid #C20000;
+border-bottom: 1px solid #C20000;
+color: #C20000; background: #FFFBD3;</pre>
+
+<p>}</p>
+
+<p>dt.not_implemented {</p>
+
+<pre>color: #000000; background: #FAF834;</pre>
+
+<p>}</p>
+
+<p>dt.pending_fixed {</p>
+
+<pre>color: #FFFFFF; background: #C40D0D;</pre>
+
+<p>}</p>
+
+<p>dt.failed {</p>
+
+<pre>color: #FFFFFF; background: #C40D0D;</pre>
+
+<p>}</p>
+
+<p>rspec-header.not_implemented {</p>
+
+<pre>color: #000000; background: #FAF834;</pre>
+
+<p>}</p>
+
+<p>rspec-header.pending_fixed {</p>
+
+<pre>color: #FFFFFF; background: #C40D0D;</pre>
+
+<p>}</p>
+
+<p>rspec-header.failed {</p>
+
+<pre>color: #FFFFFF; background: #C40D0D;</pre>
+
+<p>}</p>
+
+<p>.backtrace {</p>
+
+<pre>color: #000;
+font-size: 12px;</pre>
+
+<p>}</p>
+
+<p>a {</p>
+
+<pre>color: #BE5C00;</pre>
+
+<p>}</p>
+
+<pre>Ruby code, style similar to vibrant ink</pre>
+
+<p>.ruby {</p>
+
+<pre>font-size: 12px;
+font-family: monospace;
+color: white;
+background-color: black;
+padding: 0.1em 0 0.2em 0;</pre>
+
+<p>}</p>
+
+<p>.ruby .keyword { color: #FF6600; } .ruby .constant { color: #339999; }
+.ruby .attribute { color: white; } .ruby .global { color: white; } .ruby
+.module { color: white; } .ruby .class { color: white; } .ruby .string {
+color: #66FF00; } .ruby .ident { color: white; } .ruby .method { color:
+#FFCC00; } .ruby .number { color: white; } .ruby .char { color: white; }
+.ruby .comment { color: #9933CC; } .ruby .symbol { color: white; } .ruby
+.regex { color: #44B4CC; } .ruby .punct { color: white; } .ruby .escape {
+color: white; } .ruby .interp { color: white; } .ruby .expr { color: white;
+}</p>
+
+<p>.ruby .offending { background-color: gray; } .ruby .linenum {</p>
+
+<pre>width: 75px;
+padding: 0.1em 1em 0.2em 0;
+color: #000000;
+background-color: #FFFBD3;</pre>
+
+<p>}</p>
+
+<pre>&lt;/style&gt;</pre>
+
+<p>&lt;/head&gt; &lt;body&gt; &lt;div class=“rspec-report”&gt;</p>
+
+<p>&lt;div id=“rspec-header”&gt;</p>
+
+<pre>&lt;div id=&quot;label&quot;&gt;
+  &lt;h1&gt;RSpec Code Examples&lt;/h1&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;display-filters&quot;&gt;
+  &lt;input id=&quot;passed_checkbox&quot;  name=&quot;passed_checkbox&quot;  type=&quot;checkbox&quot; checked=&quot;checked&quot; onchange=&quot;apply_filters()&quot; value=&quot;1&quot; /&gt; &lt;label for=&quot;passed_checkbox&quot;&gt;Passed&lt;/label&gt;
+  &lt;input id=&quot;failed_checkbox&quot;  name=&quot;failed_checkbox&quot;  type=&quot;checkbox&quot; checked=&quot;checked&quot; onchange=&quot;apply_filters()&quot; value=&quot;2&quot; /&gt; &lt;label for=&quot;failed_checkbox&quot;&gt;Failed&lt;/label&gt;
+  &lt;input id=&quot;pending_checkbox&quot; name=&quot;pending_checkbox&quot; type=&quot;checkbox&quot; checked=&quot;checked&quot; onchange=&quot;apply_filters()&quot; value=&quot;3&quot; /&gt; &lt;label for=&quot;pending_checkbox&quot;&gt;Pending&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;summary&quot;&gt;
+  &lt;p id=&quot;totals&quot;&gt;&amp;#160;&lt;/p&gt;
+  &lt;p id=&quot;duration&quot;&gt;&amp;#160;&lt;/p&gt;
+&lt;/div&gt;</pre>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;div class=“results”&gt; &lt;div id=“div_group_1” class=“example_group
+passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 0px;&quot;&gt;
+&lt;dt id=&quot;example_group_1&quot; class=&quot;passed&quot;&gt;MathExpansion::Matriz&lt;/dt&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;div id=“div_group_2” class=“example_group passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 15px;&quot;&gt;
+&lt;dt id=&quot;example_group_2&quot; class=&quot;passed&quot;&gt; # Almacenamiento de matrices. &lt;/dt&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;4.1&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe almacenar el numero de filas.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;8.3&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe almacenar el numero de columnas.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;12.5&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe almacenar un contenido.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00100s&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;div id=“div_group_3” class=“example_group passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 0px;&quot;&gt;
+&lt;dt id=&quot;example_group_3&quot; class=&quot;passed&quot;&gt;MathExpansion::Matriz_Densa&lt;/dt&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;div id=“div_group_4” class=“example_group passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 15px;&quot;&gt;
+&lt;dt id=&quot;example_group_4&quot; class=&quot;passed&quot;&gt; # Almacenamiento de matrices. &lt;/dt&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;16.6&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder acceder a los datos almacenados en la matriz &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00200s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;20.8&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se deben poder modificar los datos almacenados en la matriz &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;25.0&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se deben poder almacenar todo tipo de datos numericos (flotantes, enteros, etc...) &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;div id=“div_group_5” class=“example_group passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 15px;&quot;&gt;
+&lt;dt id=&quot;example_group_5&quot; class=&quot;passed&quot;&gt; # Operaciones con matrices densas. &lt;/dt&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;29.1&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder sumar dos matrices &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;33.3&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder restar dos matrices &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;37.5&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder multiplicar dos matrices &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;41.6&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Si una m. densa tiene mas de un 60% de nulos, debe ser dispersa.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;45.8&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder operar con Fracciones.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;div id=“div_group_6” class=“example_group passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 15px;&quot;&gt;
+&lt;dt id=&quot;example_group_6&quot; class=&quot;passed&quot;&gt; # Operaciones varias. &lt;/dt&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;50.0&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder calcular el maximo de una matriz densa (elemento no nulo)&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;54.1&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder calcular el minimo de una matriz densa (elemento no nulo)&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;div id=“div_group_7” class=“example_group passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 0px;&quot;&gt;
+&lt;dt id=&quot;example_group_7&quot; class=&quot;passed&quot;&gt;MathExpansion::Matriz_Dispersa&lt;/dt&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;div id=“div_group_8” class=“example_group passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 15px;&quot;&gt;
+&lt;dt id=&quot;example_group_8&quot; class=&quot;passed&quot;&gt; # Almacenamiento de matrices. &lt;/dt&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;58.3&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder crear matrices dispersas vacias o a partir de matrices densas.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;62.5&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder calcular el porcentaje de elementos nulos de la matriz dispersa.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00100s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;66.6&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder acceder a los elementos de la matriz dispersa.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;</pre>
+
+<p>Borrado el elemento 1,0 por sobrepasar el numero de elementos no nulos
+(Porcentaje actual: 0.6666666666666666 Borrado el elemento 1,1 por
+sobrepasar el numero de elementos no nulos (Porcentaje actual:
+0.6666666666666666 Borrado el elemento 2,0 por sobrepasar el numero de
+elementos no nulos (Porcentaje actual: 0.6666666666666666 Borrado el
+elemento 2,1 por sobrepasar el numero de elementos no nulos (Porcentaje
+actual: 0.6666666666666666</p>
+
+<pre>  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;70.8&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se deben poder modificar los elementos de la matriz dispersa.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00100s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;75.0&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder transformar una matriz dispersa a una cadena de caracteres.&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;div id=“div_group_9” class=“example_group passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 15px;&quot;&gt;
+&lt;dt id=&quot;example_group_9&quot; class=&quot;passed&quot;&gt; # Operaciones con matrices dispersas. &lt;/dt&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;79.1&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder sumar dos matrices &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;83.3&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder restar dos matrices &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00100s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;87.5&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder multiplicar dos matrices &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;91.6&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder hacer operaciones con Fracciones. &lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00100s&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;div id=“div_group_10” class=“example_group passed”&gt;</p>
+
+<pre>&lt;dl style=&quot;margin-left: 15px;&quot;&gt;
+&lt;dt id=&quot;example_group_10&quot; class=&quot;passed&quot;&gt; # Operaciones varias. &lt;/dt&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;95.8&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder calcular el maximo de una matriz densa (elemento no nulo)&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;moveProgressBar(&#39;100.0&#39;);&lt;/script&gt;
+  &lt;dd class=&quot;example passed&quot;&gt;&lt;span class=&quot;passed_spec_name&quot;&gt; # Se debe poder calcular el minimo de una matriz densa (elemento no nulo)&lt;/span&gt;&lt;span class=&#39;duration&#39;&gt;0.00000s&lt;/span&gt;&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+
+<p>&lt;/div&gt; &lt;script
+type=“text/javascript”&gt;document.getElementById(&#39;duration&#39;).innerHTML
+= “Finished in &lt;strong&gt;1.26307
+seconds&lt;/strong&gt;”;&lt;/script&gt; &lt;script
+type=“text/javascript”&gt;document.getElementById(&#39;totals&#39;).innerHTML
+= “24 examples, 0 failures”;&lt;/script&gt; &lt;/div&gt; &lt;/div&gt;
+&lt;/body&gt; &lt;/html&gt;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

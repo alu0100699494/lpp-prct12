@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>class Float - RDoc Documentation</title>
+<title>README - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body id="top" class="class">
+<body class="file">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -44,42 +44,17 @@
 
 
   
+<div id="table-of-contents">
+  <nav class="section">
+    <h3 class="section-header">Table of Contents</h3>
+    <ul>
+      <li><a href="#label-MathExpansion">MathExpansion</a>
+      <li><a href="#label-Instalaci%C3%B3n">Instalación</a>
+      <li><a href="#label-Planteamiento">Planteamiento</a>
+    </ul>
+  </nav>
+</div>
 
-  <div id="file-metadata">
-    <nav id="file-list-section" class="section">
-  <h3 class="section-header">Defined In</h3>
-  <ul>
-    <li>spec/matriz_spec.rb
-    <li>test/tc_mathexpansion.rb
-  </ul>
-</nav>
-
-    
-  </div>
-
-  <div id="class-metadata">
-    
-    <nav id="parent-class-section" class="section">
-  <h3 class="section-header">Parent</h3>
-  
-  <p class="link">Object
-  
-</nav>
-
-    
-    
-    <!-- Method Quickref -->
-<nav id="method-list-section" class="section">
-  <h3 class="section-header">Methods</h3>
-
-  <ul class="link-list">
-    
-    <li ><a href="#method-c-null">::null</a>
-    
-  </ul>
-</nav>
-
-  </div>
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -197,71 +172,48 @@
   </div>
 </nav>
 
-<div id="documentation">
-  <h1 class="class">class Float</h1>
-
-  <div id="description" class="description">
-    
-<p><a href="Float.html">Float</a></p>
-
-  </div><!-- description -->
-
+<div id="documentation" class="description">
   
-  
-  
-  <section id="5Buntitled-5D" class="documentation-section">
-    
+<h1 id="label-MathExpansion"><a href="MathExpansion.html">MathExpansion</a><span><a href="#label-MathExpansion">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
 
-    
+<p>Útil gema de Ruby para representar matrices densas y dispersas.</p>
 
-    
+<h2 id="label-Instalaci%C3%B3n">Instalación<span><a href="#label-Instalaci%C3%B3n">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
 
-    
+<p>Añada esta línea al fichero <a href="Gemfile.html">Gemfile</a> de su
+aplicación:</p>
 
-    <!-- Methods -->
-    
-     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Class Methods</h3>
+<pre>gem &#39;math_expansion&#39;</pre>
 
-    
-      <div id="method-c-null" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">null</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
+<p>Y a continuación ejecute:</p>
 
-        <div class="method-description">
-          
-          
-          
-          
+<pre>$ bundle</pre>
 
-          
-          <div class="method-source-code" id="null-source">
-            <pre><span class="ruby-comment"># File spec/matriz_spec.rb, line 35</span>
-<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">null</span>
-    <span class="ruby-value">0.0</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- null-source -->
-          
-        </div>
+<p>O instale manualmente:</p>
 
-        
+<pre>$ gem install math_expansion</pre>
 
-        
-      </div><!-- null-method -->
+<h2 id="label-Planteamiento">Planteamiento<span><a href="#label-Planteamiento">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
 
-    
-    </section><!-- public-class-method-details -->
-  
-  </section><!-- 5Buntitled-5D -->
+<p>La clase Matriz contendrá el número de filas, número de columnas y un
+vector de contenido.</p>
 
-</div><!-- documentation -->
+<p>La matriz densa se representará como en la práctica anterior.
+La matriz
+dispersa se representará como un Array que contendrá un Hash por cada fila.
+Cada par clave-valor del hash representará la fila de un elemento no nulo y
+el valor de ese elemento, respectivamente.</p>
+
+<p>Las operaciones entre matrices se hará de manera natural, operando con las
+matrices dadas independientemente de que sean densas o dispersas. Dado que
+en cualquier operación puede cambiar el número de valores nulos de manera
+impredecible, será en la matriz resultado (en principio densa) donde se
+hará una comprobación de los valores nulos de la misma, y si éste es
+superior al 60%, la matriz resultado se convertirá a dispersa; en caso
+contrario, la matriz resultado seguirá siendo densa.</p>
+
+</div>
+
 
 
 <footer id="validator-badges">
