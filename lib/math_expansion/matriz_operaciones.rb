@@ -22,11 +22,11 @@ module MathExpansion
         end
       end
       
-      if (c.null_percent > 0.6)
-        return MathExpansion::Matriz_Dispersa.copy(c)
-      else
-        return c
-      end 
+      #if (c.null_percent > 0.6)
+      #  return MathExpansion::Matriz_Dispersa.copy(c)
+      #else
+      #  return c
+      #end 
     end # +(other) #++
     
     # Permite restar matrices (dispersas o densas) de iguales dimensiones.
@@ -45,11 +45,11 @@ module MathExpansion
         end
       end
       
-      if (c.null_percent > 0.6)
-        return MathExpansion::Matriz_Dispersa.copy(c)
-      else
-        return c
-      end 
+      #if (c.null_percent > 0.6)
+      #  return MathExpansion::Matriz_Dispersa.copy(c)
+      #else
+      #  return c
+      #end 
     end # -(other) #++
     
     # Permite multiplicar un elemento a una matriz.
@@ -80,11 +80,11 @@ module MathExpansion
         end
       end
 
-      if (c.null_percent > 0.6)
-        return MathExpansion::Matriz_Dispersa.copy(c)
-      else
-        return c
-      end
+      #if (c.null_percent > 0.6)
+      #  return MathExpansion::Matriz_Dispersa.copy(c)
+      #else
+      #  return c
+      #end
     end # *(other) #++
     
   end
