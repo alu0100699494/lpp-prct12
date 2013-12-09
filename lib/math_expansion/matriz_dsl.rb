@@ -77,10 +77,10 @@ module MathExpansion
           
           @resultado = @operandos[0] # Densa
           if(@modo_resultado == :dispersa)
-            @resultado = Matriz_Densa.new(@operando[0])
+            @resultado = Matriz_Dispersa.copy(@operando[0])
           elsif(@modo_resultado == :auto)
             if(@resultado.null_percent > 0.6) # Pasar a dispersa si tiene más de un 60% de elementos nulos
-              @resultado = Matriz_Dispersa.new(@operando[0])
+              @resultado = Matriz_Dispersa.copy(@operando[0])
             end
           end
           
@@ -90,9 +90,20 @@ module MathExpansion
             puts "fichero lolwut omg lalalala"
           end
         # Fin lectura
-        #when :suma
-        
-        
+        when :suma
+          raise RuntimeError , 'Numero de operandos invalidos' unless @operandos.size() == 2
+          
+          @resultado = @operandos[0].suma_noauto(@operandos[1]) # Densa
+          if(@modo_resultado == :dispersa or (@modo_resultado == :auto and @resultado.null_percent >= 0.6))
+            @resultado = Matriz_Dispersa.copy(@resultado)
+          end
+          
+          if(@modo == :consola)
+            puts @resultado.to_s
+          elsif(@modo == :fichero)
+            File.open('output.me', 'w') { |file| file.write(@resultado.to_s) }
+          end
+        # Fin suma
         #when :resta
         
         

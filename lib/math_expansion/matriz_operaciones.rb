@@ -94,20 +94,14 @@ module MathExpansion
       raise ArgumentError , 'Matriz no compatible' unless @N == other.N and @M == other.M
       c = Matriz_Densa.new(@N, @M)
       
-      #(0...@N).each do |i|
-        #(0...@M).each do |j|
       (@N).times do |i|
         (@M).times do |j|
           c.set(i, j, get(i,j) + other.get(i,j))
         end
       end
+      c
     end # +(other) #++
     
-    # Permite restar matrices (dispersas o densas) de iguales dimensiones.
-    # * *Argumentos*    :
-    #   - +other+: Matriz densa o dispersa. Debe ser de igual tamaño que la actual.
-    # * *Devuelve*    :
-    #   - Matriz de tamaño N*M resultado de la resta de la matriz actual con +other+. Si el porcentaje de valores nulos es mayor al 60%, se devuelve una matriz dispersa. Si no, se devuelve una matriz densa.
     def resta_noauto(other)
       raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
       raise ArgumentError , 'Matriz no compatible' unless @N == other.N and @M == other.M
@@ -118,6 +112,7 @@ module MathExpansion
           c.set(i, j, get(i,j) - other.get(i,j))
         end
       end
+      c
     end # -(other) #++
     
     # Permite multiplicar un elemento a una matriz.
@@ -147,6 +142,7 @@ module MathExpansion
           end
         end
       end
+      c
     end # *(other) #++
     
   end

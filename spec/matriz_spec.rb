@@ -53,8 +53,26 @@ describe MathExpansion::MatrizDSL do
     end
     
     describe " # Operaciones con matrices." do
-      it " # Se deben poder leer matrices." do
+      it " # Se deben poder sumar matrices." do
+        @m1 = MathExpansion::MatrizDSL.new("suma") do
+          opcion "fichero"        
+          opcion "auto"
         
+          operando [[-1, -1],[1, 1]]
+          operando [[1,1], [3, -1]]
+        end
+        @m1.resultado.to_s.should == "Fila 0: \nFila 1: 0=>4 \n"
+        
+        @m2 = MathExpansion::MatrizDSL.new("suma") do
+          opcion "nada"        
+          opcion "denSA"
+        
+          operando [[-1, -1],[1, 1]]
+          operando [[1,1], [3, -1]]
+        end
+        @m2.resultado.to_s.should == "0\t0\t\n4\t0\t\n"
+        
+        # Resto de operaciones aquí
       end
     end
 end
