@@ -71,8 +71,17 @@ describe MathExpansion::MatrizDSL do
           operando [[1,1], [3, -1]]
         end
         @m2.resultado.to_s.should == "0\t0\t\n4\t0\t\n"
+      end
         
-        # Resto de operaciones aquí
+      it " Se deben poder restar matrices." do
+        @m1 = MathExpansion::MatrizDSL.new("resta") do
+          opcion "nada"
+          opcion "auto"
+
+          operando [[MathExpansion::Fraccion.new(2,5),MathExpansion::Fraccion.new(2,5)],[MathExpansion::Fraccion.new(2,5),MathExpansion::Fraccion.new(2,5)]]
+          operando [[MathExpansion::Fraccion.new(1,5),MathExpansion::Fraccion.new(1,5)],[MathExpansion::Fraccion.new(1,5),MathExpansion::Fraccion.new(1,5)]]
+        end
+        @m1.resultado.to_s.should == "1/5\t1/5\t\n1/5\t1/5\t\n"
       end
     end
 end
