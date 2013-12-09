@@ -73,7 +73,7 @@ describe MathExpansion::MatrizDSL do
         @m2.resultado.to_s.should == "0\t0\t\n4\t0\t\n"
       end
         
-      it " Se deben poder restar matrices." do
+      it " # Se deben poder restar matrices." do
         @m1 = MathExpansion::MatrizDSL.new("resta") do
           opcion "nada"
           opcion "auto"
@@ -82,6 +82,17 @@ describe MathExpansion::MatrizDSL do
           operando [[MathExpansion::Fraccion.new(1,5),MathExpansion::Fraccion.new(1,5)],[MathExpansion::Fraccion.new(1,5),MathExpansion::Fraccion.new(1,5)]]
         end
         @m1.resultado.to_s.should == "1/5\t1/5\t\n1/5\t1/5\t\n"
+      end
+  
+      it " # Se deben poder multiplicar matrices." do
+        @m1 = MathExpansion::MatrizDSL.new("multiplicacion") do
+          opcion "nada"
+          opcion "auto"
+
+          operando [[2,0,1],[3,0,0],[5,1,1]]
+          operando [[1,0,1],[1,2,1],[1,1,0]]
+        end
+        @m1.resultado.to_s.should == "3\t1\t2\t\n3\t0\t3\t\n7\t3\t6\t\n"
       end
     end
 end
