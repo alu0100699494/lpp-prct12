@@ -87,7 +87,7 @@ module MathExpansion
           if(@modo == :consola)
             puts @resultado.to_s
           elsif(@modo == :fichero)
-            puts "fichero lolwut omg lalalala"
+            File.open('output.me', 'w') { |file| file.write(@resultado.to_s) }
           end
         # Fin lectura
         when :suma
@@ -104,15 +104,38 @@ module MathExpansion
             File.open('output.me', 'w') { |file| file.write(@resultado.to_s) }
           end
         # Fin suma
-        #when :resta
-        
-        
-        #when :multiplicacion
-        
+        when :resta
+          raise RuntimeError , 'Numero de operandos invalidos' unless @operandos.size() == 2
+
+          @resultado = @operandos[0].resta_noauto(@operandos[1]) #Densa
+          if(@modo_resultado == :dispersa or (@modo_resultado == :auto and @resultado.null_percent >= 0.6))
+            @resultado = Matriz_Dispersa.copy(@resultado)
+          end
+
+          if(@modo == :consola)
+            puts @resultado.to_s
+          elsif(@modo == :fichero)
+            File.open('output.me', 'w') { |file| file.write(@resultado.to_s) }
+          end
+        # Fin resta
+        when :multiplicacion
+          raise RuntimeError, 'Numero de operandos invalidos' unless @operandos.size() == 2
+
+          @resultado = @operandos[0].multiplicacion_noauto(@operandos[1]) #Densa
+          if(@modo_resultado == :dispersa or (@modo_resultado == :auto and @resultado.null_percent >= 0.6))
+            @resultado = Matriz_Dispersa.copy(@resultado)
+          end
+
+          if(@modo == :consola)
+            puts @resultado.to_s
+          elsif(@modo == :ficehro)
+            File.open('output.me', 'w') { |file| file.write(@resultado.to_s) }
+          end
+        # Fin multiplicacion
         else
           puts "ERROR: Unknown option", @operacion
       end
     end
-    
+     
   end
 end
