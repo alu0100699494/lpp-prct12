@@ -8,13 +8,13 @@ module MathExpansion
       attr_accessor :resultado
       
     def initialize(tipo_operacion, &block)
-      raise ArgumentError , 'Tipo invalido' unless str.is_a? String
+      raise ArgumentError , 'Tipo invalido' unless tipo_operacion.is_a? String
      
       @operandos = []
+      @modo_resultado = :auto
       @resultado = nil
-      @modo = nil
-      @resultado = nil
-      @operacion = nil
+      @modo = :consola
+      @operacion = :lectura
       #@contador_operandos = 0
       
       case tipo_operacion
@@ -28,60 +28,80 @@ module MathExpansion
           @operacion = :lectura
         else
           puts "ERROR: Unknown option", tipo_operacion
-          @operacion = :lectura
       end
       
+      if block_given?  
+        if block.arity == 1
+          yield self
+        else
+          instance_eval &block 
+        end
+      end
+      
+      run
     end
     
     protected
     def operando(matriz_bidimensional)
       raise ArgumentError , 'Tipo invalido' unless matriz_bidimensional.is_a? Array
       
-      operando << Matriz_Densa.new(matriz_bidimensional)
+      @operandos << Matriz_Densa.leerArray(matriz_bidimensional)
     end
     
-    def option(str)
-      raise ArgumentError , 'Tipo invalido' unless str.is_a? String
-      str.downcase!
+    def opcion(str_)
+      raise ArgumentError , 'Tipo invalido' unless str_.is_a? String
+      str = str_.downcase
       
       case str
         when "densa"
-          @resultado = :densa
+          @modo_resultado = :densa
         when "dispersa"
-          @resultado = :dispersa
+          @modo_resultado = :dispersa
         when "auto"
-          @resultado = :auto
+          @modo_resultado = :auto
         when "consola"
           @modo = :consola
         when "fichero"
           @modo = :fichero
+        when "nada"
+          @modo = :nada
         else
           puts "ERROR: Unknown option", str
-          @resultado = :auto
-          @modo = :consola
       end
     end
     
     def run
       case @operacion
-        when :suma
-        
-        
-        when :resta
-        
-        
-        when :multiplicacion
-        
-        
         when :lectura
+          raise RuntimeError , 'Numero de operandos invalidos' unless @operandos.size() == 1
+          
+          @resultado = @operandos[0] # Densa
+          if(@modo_resultado == :dispersa)
+            @resultado = Matriz_Densa.new(@operando[0])
+          elsif(@modo_resultado == :auto)
+            if(@resultado.null_percent > 0.6) # Pasar a dispersa si tiene más de un 60% de elementos nulos
+              @resultado = Matriz_Dispersa.new(@operando[0])
+            end
+          end
+          
+          if(@modo == :consola)
+            puts @resultado.to_s
+          elsif(@modo == :fichero)
+            puts "fichero lolwut omg lalalala"
+          end
+        # Fin lectura
+        #when :suma
         
+        
+        #when :resta
+        
+        
+        #when :multiplicacion
         
         else
-        
+          puts "ERROR: Unknown option", @operacion
       end
     end
-    
-    public
     
   end
 end

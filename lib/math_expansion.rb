@@ -3,6 +3,7 @@ require "./lib/math_expansion/matriz.rb"
 require "./lib/math_expansion/matriz_densa.rb"
 require "./lib/math_expansion/matriz_dispersa.rb"
 require "./lib/math_expansion/matriz_operaciones.rb"
+require "./lib/math_expansion/matriz_dsl.rb"
 
 require "./lib/math_expansion/racional.rb"
 require "./lib/math_expansion/gcd.rb"

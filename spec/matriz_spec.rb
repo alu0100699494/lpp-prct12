@@ -17,6 +17,48 @@ describe MathExpansion::Matriz do
     end
 end
 
+
+describe MathExpansion::MatrizDSL do
+    before :all do
+        class Fixnum
+            def self.null
+                0
+            end
+        end
+        
+        class String
+            def self.null
+                ""
+            end
+        end
+        
+        class Float
+            def self.null
+                0.0
+            end
+        end
+        
+        # Etc
+    end
+    describe " # Almacenamiento de operandos y matrices." do
+      it " # Se debe poder leer una matriz." do
+        @m1 = MathExpansion::MatrizDSL.new("lectura") do
+          opcion "nada"        
+          opcion "auto"
+        
+          operando [[1, 2],[3,4]]
+        end
+        @m1.resultado.to_s.should == "1\t2\t\n3\t4\t\n"
+      end
+    end
+    
+    describe " # Operaciones con matrices." do
+      it " # Se deben poder leer matrices." do
+        
+      end
+    end
+end
+
 describe MathExpansion::Matriz_Densa do
     before :all do
         class Fixnum
