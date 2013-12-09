@@ -60,6 +60,9 @@ describe MathExpansion::Matriz_Densa do
             @m1.get(0,0).should eq(1)
             @m1.get(0,1).should eq(2)
         end
+        it " # Se debe poder leer los datos de una matriz " do      
+            (MathExpansion::Matriz_Densa.leerArray([[1, 2, 3],[4,5,6]])).to_s.should == "1\t2\t3\t\n4\t5\t6\t\n"
+        end
         it " # Se deben poder modificar los datos almacenados en la matriz " do     
             @m1.set(0,0,5)
             @m1.get(0,0).should eq(5)
