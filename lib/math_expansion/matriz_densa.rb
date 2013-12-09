@@ -134,5 +134,22 @@ module MathExpansion
 	end
 	m
     end #-- # Method min
+    
+    # Devuelve el mínimo valor almacenado en la matriz.
+    # * *Argumentos*    :
+    #   - Array bidimensional (clase Array).
+    # * *Devuelve*    :
+    #   - Matriz densa copiada de ese array.
+    def self.leerArray(array)
+      raise ArgumentError , 'Tipo invalido' unless array.is_a? Array
+      
+      c = Matriz_Densa.new(array.size(), array[0].size())
+      array.each_index do |i|
+        array[i].each_index do |j|
+          c.set(i, j, array[i][j])
+        end
+      end
+      c
+    end #-- # Method leerArray
   end # Class
 end # Module #++
