@@ -72,10 +72,12 @@ module MathExpansion
           (other.M).times do |j|
             buffer = (0...@M).inject(0) { |acc, k| get(i, k) * other.get(k,j) + acc }
             c.set(i, j, buffer)
+            #--
             #(@M).times do |k|
               # Esto NO es programación funcional...
               # c.set(i, j, get(i, k) * other.get(k,j) + c.get(i,j))
             #end
+            #++
           end
         end
       end
@@ -87,8 +89,15 @@ module MathExpansion
       end
     end # *(other) #++
     
-    
+    #--
     ## OPERACIONES NO AUTOMATIZADAS CON RESPECTO AL RESULTADO ##
+    #++
+    # Permite sumar matrices, resultando siempre en una matriz densa.
+    # * *Argumentos*    :
+    #   - +other+: Matriz densa o dispersa. Debe ser de igual tamaño que la actual.
+    # * *Devuelve*    :
+    #   - Matriz de tamaño N*M resultado de la suma de la matriz actual con +other+.
+    # 
     def suma_noauto(other)
       raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
       raise ArgumentError , 'Matriz no compatible' unless @N == other.N and @M == other.M
@@ -101,7 +110,11 @@ module MathExpansion
       end
       c
     end # +(other) #++
-    
+    # Permite restar matrices, resultando siempre en una matriz densa.
+    # * *Argumentos*    :
+    #   - +other+: Matriz densa o dispersa. Debe ser de igual tamaño que la actual.
+    # * *Devuelve*    :
+    #   - Matriz de tamaño N*M resultado de la resta de la matriz actual con +other+.
     def resta_noauto(other)
       raise ArgumentError , 'Tipo invalido' unless other.is_a? Matriz
       raise ArgumentError , 'Matriz no compatible' unless @N == other.N and @M == other.M
@@ -115,7 +128,7 @@ module MathExpansion
       c
     end # -(other) #++
     
-    # Permite multiplicar un elemento a una matriz.
+    # Permite multiplicar un elemento a una matriz, resultando siempre en una matriz densa.
     def multiplicacion_noauto(other)
       raise ArgumentError , 'Parametro invalido' unless other.is_a? Numeric or other.is_a? Matriz
 
@@ -135,10 +148,12 @@ module MathExpansion
           (other.M).times do |j|
             buffer = (0...@M).inject(0) { |acc, k| get(i, k) * other.get(k,j) + acc }
             c.set(i, j, buffer)
+            #--
             #(@M).times do |k|
               # Esto NO es programación funcional...
               # c.set(i, j, get(i, k) * other.get(k,j) + c.get(i,j))
             #end
+            #++
           end
         end
       end

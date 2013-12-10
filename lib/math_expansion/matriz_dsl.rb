@@ -4,9 +4,14 @@ require "./lib/math_expansion/matriz_densa.rb"
 require "./lib/math_expansion/matriz_operaciones.rb"
 
 module MathExpansion
+  # Permite representar matrices usando un DSL.
   class MatrizDSL < Matriz
+      # En este atributo se alamacenará el resultado de la operación.
       attr_accessor :resultado
-      
+    # Permite crear matrices usando un DSL.
+    # * *Argumentos*:
+    #   - +tipo_operacion+: Indica la operación que se desea realizar.
+    #   - +block+: Bloque que se pasa por parámetro con las opciones deseadas. Uso de la funcionalidad del DSL.
     def initialize(tipo_operacion, &block)
       raise ArgumentError , 'Tipo invalido' unless tipo_operacion.is_a? String
      
@@ -15,8 +20,9 @@ module MathExpansion
       @resultado = nil
       @modo = :consola
       @operacion = :lectura
+      #--
       #@contador_operandos = 0
-      
+      #++
       case tipo_operacion
         when "suma"
           @operacion = :suma
@@ -42,12 +48,14 @@ module MathExpansion
     end
     
     protected
+    # Método del DSL que permite especificar operandos (matrices).
     def operando(matriz_bidimensional)
       raise ArgumentError , 'Tipo invalido' unless matriz_bidimensional.is_a? Array
       
       @operandos << Matriz_Densa.leerArray(matriz_bidimensional)
     end
     
+    # Método del DSL que permite especificar diversas opciones (tipo de matriz resultado, operaciones de E/S...)
     def opcion(str_)
       raise ArgumentError , 'Tipo invalido' unless str_.is_a? String
       str = str_.downcase
@@ -70,6 +78,7 @@ module MathExpansion
       end
     end
     
+    # Ejecuta las operaciones que se hayan indicado en el bloque de DSL.
     def run
       case @operacion
         when :lectura
@@ -89,7 +98,9 @@ module MathExpansion
           elsif(@modo == :fichero)
             File.open('output.me', 'w') { |file| file.write(@resultado.to_s) }
           end
+        #--
         # Fin lectura
+        #++
         when :suma
           raise RuntimeError , 'Numero de operandos invalidos' unless @operandos.size() == 2
           
@@ -103,7 +114,9 @@ module MathExpansion
           elsif(@modo == :fichero)
             File.open('output.me', 'w') { |file| file.write(@resultado.to_s) }
           end
+        #--
         # Fin suma
+        #++
         when :resta
           raise RuntimeError , 'Numero de operandos invalidos' unless @operandos.size() == 2
 
@@ -117,7 +130,9 @@ module MathExpansion
           elsif(@modo == :fichero)
             File.open('output.me', 'w') { |file| file.write(@resultado.to_s) }
           end
+        #--
         # Fin resta
+        #++
         when :multiplicacion
           raise RuntimeError, 'Numero de operandos invalidos' unless @operandos.size() == 2
 
@@ -131,7 +146,9 @@ module MathExpansion
           elsif(@modo == :ficehro)
             File.open('output.me', 'w') { |file| file.write(@resultado.to_s) }
           end
+        #--
         # Fin multiplicacion
+        #++
         else
           puts "ERROR: Unknown option", @operacion
       end

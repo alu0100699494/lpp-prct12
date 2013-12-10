@@ -65,6 +65,8 @@
         <h3 class="section-header">Methods</h3>
         <ul class="link-list">
           
+          <li><a href="#method-c-leerArray">::leerArray</a></li>
+          
           <li><a href="#method-c-new">::new</a></li>
           
           <li><a href="#method-i-get">#get</a></li>
@@ -128,6 +130,8 @@
         
           <li><a href="../MathExpansion/Matriz.html">MathExpansion::Matriz</a></li>
         
+          <li><a href="../MathExpansion/MatrizDSL.html">MathExpansion::MatrizDSL</a></li>
+        
           <li><a href="../MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a></li>
         
           <li><a href="../MathExpansion/Matriz_Dispersa.html">MathExpansion::Matriz_Dispersa</a></li>
@@ -175,6 +179,58 @@ será muy similar a como se suelen representar tradicionalmente.</p>
       
       <div id="public-class-method-details" class="method-section section">
         <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="leerArray-method" class="method-detail ">
+          <a name="method-c-leerArray"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">leerArray</span><span
+              class="method-args">(array)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Devuelve el mínimo valor almacenado en la matriz.</p>
+<ul><li>
+<p><b>Argumentos</b>    :</p>
+<ul><li>
+<p>Array bidimensional (clase Array).</p>
+</li></ul>
+</li><li>
+<p><b>Devuelve</b>    :</p>
+<ul><li>
+<p><a href="Matriz.html">Matriz</a> densa copiada de ese array.</p>
+</li></ul>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="leerArray-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_densa.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">leerArray</span>(<span class="ruby-identifier">array</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Tipo invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">array</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Array</span>
+  
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">array</span>.<span class="ruby-identifier">size</span>(), <span class="ruby-identifier">array</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">size</span>())
+  <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">array</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">each_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">array</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- leerArray-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- leerArray-method -->
 
       
         <div id="new-method" class="method-detail ">

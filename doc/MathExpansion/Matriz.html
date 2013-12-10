@@ -78,7 +78,13 @@
           
           <li><a href="#method-i-get">#get</a></li>
           
+          <li><a href="#method-i-multiplicacion_noauto">#multiplicacion_noauto</a></li>
+          
+          <li><a href="#method-i-resta_noauto">#resta_noauto</a></li>
+          
           <li><a href="#method-i-set">#set</a></li>
+          
+          <li><a href="#method-i-suma_noauto">#suma_noauto</a></li>
           
         </ul>
       </div>
@@ -128,6 +134,8 @@
           <li><a href="../MathExpansion/Fraccion.html">MathExpansion::Fraccion</a></li>
         
           <li><a href="../MathExpansion/Matriz.html">MathExpansion::Matriz</a></li>
+        
+          <li><a href="../MathExpansion/MatrizDSL.html">MathExpansion::MatrizDSL</a></li>
         
           <li><a href="../MathExpansion/Matriz_Densa.html">MathExpansion::Matriz_Densa</a></li>
         
@@ -319,10 +327,12 @@ href="Matriz.html#attribute-i-M">M</a>.</p>
       (<span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
         <span class="ruby-identifier">buffer</span> = (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@M</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">acc</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">k</span>) * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">acc</span> }
         <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">buffer</span>)
+        <span class="ruby-comment">#--</span>
         <span class="ruby-comment">#(@M).times do |k|</span>
           <span class="ruby-comment"># Esto NO es programación funcional...</span>
           <span class="ruby-comment"># c.set(i, j, get(i, k) * other.get(k,j) + c.get(i,j))</span>
         <span class="ruby-comment">#end</span>
+        <span class="ruby-comment">#++</span>
       <span class="ruby-keyword">end</span>
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
@@ -503,6 +513,123 @@ actual con <tt>other</tt>. Si el porcentaje de valores nulos es mayor al
         </div><!-- get-method -->
 
       
+        <div id="multiplicacion_noauto-method" class="method-detail ">
+          <a name="method-i-multiplicacion_noauto"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">multiplicacion_noauto</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Permite multiplicar un elemento a una matriz, resultando siempre en una
+matriz densa.</p>
+            
+
+            
+            <div class="method-source-code" id="multiplicacion_noauto-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_operaciones.rb, line 132</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">multiplicacion_noauto</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Parametro invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+
+  <span class="ruby-keyword">if</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>) <span class="ruby-comment"># Matriz * numero</span>
+    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span>)
+    
+    (<span class="ruby-ivar">@N</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      (<span class="ruby-ivar">@M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>)*<span class="ruby-identifier">other</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-comment"># Matriz * Matriz</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Matriz no compatible (A.N == B.M)'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@M</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">N</span>
+    <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>)
+    
+    (<span class="ruby-ivar">@N</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+      (<span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">buffer</span> = (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@M</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">acc</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">k</span>) * <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">k</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">acc</span> }
+        <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">buffer</span>)
+        <span class="ruby-comment">#--</span>
+        <span class="ruby-comment">#(@M).times do |k|</span>
+          <span class="ruby-comment"># Esto NO es programación funcional...</span>
+          <span class="ruby-comment"># c.set(i, j, get(i, k) * other.get(k,j) + c.get(i,j))</span>
+        <span class="ruby-comment">#end</span>
+        <span class="ruby-comment">#++</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- multiplicacion_noauto-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- multiplicacion_noauto-method -->
+
+      
+        <div id="resta_noauto-method" class="method-detail ">
+          <a name="method-i-resta_noauto"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">resta_noauto</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Permite restar matrices, resultando siempre en una matriz densa.</p>
+<ul><li>
+<p><b>Argumentos</b>    :</p>
+<ul><li>
+<p><tt>other</tt>: <a href="Matriz.html">Matriz</a> densa o dispersa. Debe ser
+de igual tamaño que la actual.</p>
+</li></ul>
+</li><li>
+<p><b>Devuelve</b>    :</p>
+<ul><li>
+<p><a href="Matriz.html">Matriz</a> de tamaño N*<a
+href="Matriz.html#attribute-i-M">M</a> resultado de la resta de la matriz
+actual con <tt>other</tt>.</p>
+</li></ul>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="resta_noauto-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_operaciones.rb, line 118</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">resta_noauto</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Tipo invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Matriz no compatible'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@N</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">N</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@M</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span>)
+  
+  (<span class="ruby-ivar">@N</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    (<span class="ruby-ivar">@M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- resta_noauto-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- resta_noauto-method -->
+
+      
         <div id="set-method" class="method-detail ">
           <a name="method-i-set"></a>
 
@@ -535,6 +662,62 @@ actual con <tt>other</tt>. Si el porcentaje de valores nulos es mayor al
 
           
         </div><!-- set-method -->
+
+      
+        <div id="suma_noauto-method" class="method-detail ">
+          <a name="method-i-suma_noauto"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">suma_noauto</span><span
+              class="method-args">(other)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Permite sumar matrices, resultando siempre en una matriz densa.</p>
+<ul><li>
+<p><b>Argumentos</b>    :</p>
+<ul><li>
+<p><tt>other</tt>: <a href="Matriz.html">Matriz</a> densa o dispersa. Debe ser
+de igual tamaño que la actual.</p>
+</li></ul>
+</li><li>
+<p><b>Devuelve</b>    :</p>
+<ul><li>
+<p><a href="Matriz.html">Matriz</a> de tamaño N*<a
+href="Matriz.html#attribute-i-M">M</a> resultado de la suma de la matriz
+actual con <tt>other</tt>.</p>
+</li></ul>
+</li></ul>
+            
+
+            
+            <div class="method-source-code" id="suma_noauto-source">
+<pre>
+<span class="ruby-comment"># File lib/math_expansion/matriz_operaciones.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">suma_noauto</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Tipo invalido'</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Matriz</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span> , <span class="ruby-string">'Matriz no compatible'</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@N</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">N</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@M</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-constant">M</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-constant">Matriz_Densa</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@N</span>, <span class="ruby-ivar">@M</span>)
+  
+  (<span class="ruby-ivar">@N</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    (<span class="ruby-ivar">@M</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, <span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">i</span>,<span class="ruby-identifier">j</span>))
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- suma_noauto-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- suma_noauto-method -->
 
       
       </div><!-- public-instance-method-details -->
