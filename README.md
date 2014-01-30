@@ -1,5 +1,6 @@
 # MathExpansion
 
+
 Útil gema de Ruby para representar matrices densas y dispersas.
 
 ## Instalación
